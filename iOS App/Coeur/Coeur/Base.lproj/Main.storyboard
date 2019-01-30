@@ -70,5 +70,31 @@
             </objects>
             <point key="canvasLocation" x="871" y="134"/>
         </scene>
+        <!--Profile Detail View Controller-->
+        <scene sceneID="YJQ-8S-WTA">
+            <objects>
+                <viewController id="Kjy-1l-Ope" customClass="ProfileDetailViewController" customModule="Coeur" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kDr-Ce-F37">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Your Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wow-Wf-gKD">
+                                <rect key="frame" x="143" y="66" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wow-Wf-gKD" firstAttribute="top" secondItem="lku-Vg-gpy" secondAttribute="top" constant="46" id="d4b-u1-Sji"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lku-Vg-gpy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WUZ-sd-jsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1560.8" y="133.5832083958021"/>
+        </scene>
     </scenes>
 </document>
