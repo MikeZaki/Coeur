@@ -21,6 +21,8 @@
 		276F34AC217BCE55005B52F5 /* PulseCaptureOrgan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F34AB217BCE54005B52F5 /* PulseCaptureOrgan.swift */; };
 		27871C8D218E033200B2114A /* PeakCountOrgan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27871C8C218E033200B2114A /* PeakCountOrgan.swift */; };
 		278F22A62183CC5700EADF35 /* FilterOrgan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F22A52183CC5700EADF35 /* FilterOrgan.swift */; };
+		74F8E3EB2203F03C008D1E84 /* AVCaptureDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8E3EA2203F03C008D1E84 /* AVCaptureDeviceExtension.swift */; };
+		74F8E3F1220409F4008D1E84 /* CaptureSessionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8E3F0220409F4008D1E84 /* CaptureSessionSpec.swift */; };
 		C5DBDB5233A566425994E27A /* Pods_Pulse_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DE3550E1C1D14C4BE66BAC /* Pods_Pulse_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +83,8 @@
 		278F22A52183CC5700EADF35 /* FilterOrgan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOrgan.swift; sourceTree = "<group>"; };
 		27D6345D217C906700E6DA8A /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Downloads/Charts-3.1.1/Charts.xcodeproj"; sourceTree = "<group>"; };
 		3EA0EA2B493C1B013209F403 /* Pods-Pulse_iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pulse_iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pulse_iOSTests/Pods-Pulse_iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		74F8E3EA2203F03C008D1E84 /* AVCaptureDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCaptureDeviceExtension.swift; sourceTree = "<group>"; };
+		74F8E3F0220409F4008D1E84 /* CaptureSessionSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureSessionSpec.swift; sourceTree = "<group>"; };
 		A2194694A396E231B2F77114 /* Pods_Pulse_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pulse_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5DE3550E1C1D14C4BE66BAC /* Pods_Pulse_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pulse_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88B99076ECA2A1A56EF91D0 /* Pods-Pulse_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pulse_iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pulse_iOSTests/Pods-Pulse_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +153,9 @@
 		276F34762179C518005B52F5 /* Pulse_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				74F8E3EF220409D8008D1E84 /* Model */,
+				74F8E3EE22040986008D1E84 /* Feature */,
+				74F8E3EC22040974008D1E84 /* Common */,
 				276F34772179C518005B52F5 /* AppDelegate.swift */,
 				276F34792179C518005B52F5 /* ViewController.swift */,
 				276F347B2179C518005B52F5 /* Main.storyboard */,
@@ -161,6 +168,7 @@
 				27D6345D217C906700E6DA8A /* Charts.xcodeproj */,
 				278F22A52183CC5700EADF35 /* FilterOrgan.swift */,
 				27871C8C218E033200B2114A /* PeakCountOrgan.swift */,
+				74F8E3EA2203F03C008D1E84 /* AVCaptureDeviceExtension.swift */,
 			);
 			path = Pulse_iOS;
 			sourceTree = "<group>";
@@ -190,6 +198,36 @@
 				27D63465217C906700E6DA8A /* ChartsTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		74F8E3EC22040974008D1E84 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				74F8E3ED2204097C008D1E84 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		74F8E3ED2204097C008D1E84 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		74F8E3EE22040986008D1E84 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		74F8E3EF220409D8008D1E84 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				74F8E3F0220409F4008D1E84 /* CaptureSessionSpec.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E45ACA471D2E5A8D7DED3122 /* Pods */ = {
@@ -439,9 +477,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				276F34A82179C5ED005B52F5 /* CapturePreviewView.swift in Sources */,
+				74F8E3EB2203F03C008D1E84 /* AVCaptureDeviceExtension.swift in Sources */,
 				27871C8D218E033200B2114A /* PeakCountOrgan.swift in Sources */,
 				276F34AA217BC8AB005B52F5 /* PulsePPGOrgan.swift in Sources */,
 				276F347A2179C518005B52F5 /* ViewController.swift in Sources */,
+				74F8E3F1220409F4008D1E84 /* CaptureSessionSpec.swift in Sources */,
 				276F34782179C518005B52F5 /* AppDelegate.swift in Sources */,
 				276F34AC217BCE55005B52F5 /* PulseCaptureOrgan.swift in Sources */,
 				278F22A62183CC5700EADF35 /* FilterOrgan.swift in Sources */,

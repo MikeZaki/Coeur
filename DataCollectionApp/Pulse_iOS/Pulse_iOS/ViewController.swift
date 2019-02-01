@@ -34,7 +34,8 @@ class ViewController: UIViewController, ppgOrganDelegate {
   }
   
   func ppgOrganDidBeat(with values: [ChartDataEntry]) {
-    
+    captureOrgan.configureTorch()
+
     let line1 = LineChartDataSet(values: values, label: "PPG")
     line1.colors = [UIColor.red]
     line1.drawCirclesEnabled = false

@@ -17,13 +17,12 @@ class PulsePPGOrgan:
   AVCapturePhotoCaptureDelegate {
   
   private let captureOrgan: PulseCaptureOrgan
-  private let filterOrgan = FilterOrgan()
+  private let lowPassFilter = LowPassFilter()
   private let bufferQueue: DispatchQueue = DispatchQueue(label: "sample_buffer_queue")
   private var frameCount: Int = 0
   private var ppgData: [ChartDataEntry] = []
   private var hueData: [Double] = []
   private var photoCaptureOutput: AVCapturePhotoOutput = AVCapturePhotoOutput()
-  
   weak var delegate: ppgOrganDelegate?
   
   init(captureOrgan: PulseCaptureOrgan) {
@@ -51,7 +50,6 @@ class PulsePPGOrgan:
   }
   
   
-  // MARK: Sample Buffer Delegate
   func captureOutput(_ output: AVCaptureOutput, didOutputSampleBuffer sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
     
     // first we want to grab the pixel buffer from the sample buffer.
@@ -78,11 +76,11 @@ class PulsePPGOrgan:
     var g:Float = 0
     var b:Float = 0
     
-    for _ in 0..<height {
+    for y in 0..<height {
       for x in stride(from: 0, to: bytesPerRow, by: 4) {
-        b += Float(buffer[x])
-        g += Float(buffer[x+1])
-        r += Float(buffer[x+2])
+        b += Float(buffer[y * bytesPerRow + x])
+        g += Float(buffer[y * bytesPerRow + x + 1])
+        r += Float(buffer[y * bytesPerRow + x + 2])
       }
     }
     
@@ -98,9 +96,10 @@ class PulsePPGOrgan:
     
     // Manage Data Entry
     let ppgEntry = ChartDataEntry(x: Double(frameCount),
-                                  y: Double(self.filterOrgan.lowPassFilter(newValue: hue)))
+                                  y: Double(self.lowPassFilter.lowPassFilter(newValue: hue)))
     
-    hueData.append(Double(self.filterOrgan.lowPassFilter(newValue: hue)))
+    hueData.append(Double(self.lowPassFilter.lowPassFilter(newValue: hue)))
+    print(hueData.count)
     
     // We need to keep the stream at a maximum of 100 points so that the
     if ppgData.count > 100 {
@@ -115,31 +114,6 @@ class PulsePPGOrgan:
     }
     
     CVPixelBufferUnlockBaseAddress(cvimagebuffer, CVPixelBufferLockFlags(rawValue: 0))
-  }
-  
-  // MARK: Photo Capture
-  func photoCapturePressed() {
-    // Make sure capturePhotoOutput is valid
-    
-    // Get an instance of AVCapturePhotoSettings class
-    let photoSettings = AVCapturePhotoSettings()
-    
-    // Set photo settings for our need
-    photoSettings.isDualCameraDualPhotoDeliveryEnabled = true
-    
-    // Call capturePhoto method by passing our photo settings and a
-    // delegate implementing AVCapturePhotoCaptureDelegate
-    photoCaptureOutput.capturePhoto(with: photoSettings, delegate: self)
-    
-    print(photoCaptureOutput.availableRawPhotoPixelFormatTypes)
-    
-    guard let availableRawFormat = photoCaptureOutput.availableRawPhotoPixelFormatTypes.first else { return }
-    let photoSettings2 = AVCapturePhotoSettings(rawPixelFormatType: OSType(availableRawFormat),
-                                                processedFormat: [AVVideoCodecKey : AVVideoCodecType.jpeg])
-  }
-  
-  func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-    
   }
 }
 

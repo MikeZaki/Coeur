@@ -1,6 +1,6 @@
 import UIKit
 
-public class FilterOrgan {
+public class LowPassFilter {
   
   private struct Constants {
     static let alpha: CGFloat = 0.7
@@ -10,11 +10,10 @@ public class FilterOrgan {
     struct Filter {
       static var value: CGFloat = 0.0
     }
-    print(Filter.value)
-    let filteredValue = Constants.alpha * ((Filter.value == 0) ? newValue : Filter.value) +
-                        (1 - Constants.alpha) * newValue
-    Filter.value = filteredValue
     
+    let previousValue = (Filter.value == 0) ? newValue : Filter.value
+    let filteredValue = Constants.alpha * previousValue + (1 - Constants.alpha) * newValue
+    Filter.value = filteredValue
     return filteredValue
   }
 }

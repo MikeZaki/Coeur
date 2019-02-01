@@ -12,7 +12,7 @@ import AVFoundation
 final class PulseCaptureOrgan: NSObject {
   
   struct Constants {
-    static let frameRate: Float = 30 
+    static let frameRate: Float = 60
   }
   
   private let captureSession = AVCaptureSession()
@@ -26,7 +26,6 @@ final class PulseCaptureOrgan: NSObject {
   override init() {
     super.init()
     
-    requestAccessForMediaDevices()
     setupCameraDevice()
     captureSession.sessionPreset = AVCaptureSessionPresetLow
     addInputToSession()
@@ -34,9 +33,11 @@ final class PulseCaptureOrgan: NSObject {
   }
   
   private func setupCameraDevice() {
-    guard let videoCaptureDevice = AVCaptureDevice.defaultDevice(withDeviceType: .builtInWideAngleCamera,
-                                                                 mediaType: AVMediaTypeVideo,
-                                                                 position: .back) else {
+    guard let videoCaptureDevice = AVCaptureDevice.defaultDevice(
+      withDeviceType: .builtInWideAngleCamera,
+      mediaType: AVMediaTypeVideo,
+      position: .back) else
+    {
       print("Unable to get camera device.")
       return
     }
@@ -70,47 +71,57 @@ final class PulseCaptureOrgan: NSObject {
   }
   
   private func setupCaptureSettings() {
-    /*
-     We need to find the lowest resolution frame rate possible. The lower the resolution the easier 
-     it is to notice small changes which we will be using to detect the Pulse of the user. 
-    */
-    guard let camera = self.camera else {
-      return
+    guard let camera = self.camera else { return }
+    let preferredSpec = CaptureSessionSpec(fps: 60, size: CGSize(width: 640, height: 480))
+    do {
+        // update the format with a preferred fps
+        camera.updateFormatWithPreferredCaptureSessionSpec(preferredSpec: preferredSpec)
     }
-    var currentFormat: AVCaptureDevice.Format = camera.activeFormat// default value.
-    camera.formats.forEach({ f in
-      guard let format = f as? AVCaptureDevice.Format else { return }
-      let frameRates = format.videoSupportedFrameRateRanges[0]
-      
-      if ((frameRates as! AVFrameRateRange).maxFrameRate == Float64(Constants.frameRate) &&
-        (CMVideoFormatDescriptionGetDimensions(format.formatDescription).width <
-          CMVideoFormatDescriptionGetDimensions(currentFormat.formatDescription).width &&
-          CMVideoFormatDescriptionGetDimensions(format.formatDescription).height < CMVideoFormatDescriptionGetDimensions(currentFormat.formatDescription).height)
-        )
-      {
-        currentFormat = format;
-      }
-    })
     
-    // Once we have the correct format, we now want to set the config on the capture device.
+//    var currentFormat: AVCaptureDevice.Format = camera.activeFormat// default value.
+//    camera.formats.forEach({ f in
+//
+////      guard let format = f as? AVCaptureDevice.Format else { return }
+////      let frameRates = format.videoSupportedFrameRateRanges[0]
+////      if ((frameRates as! AVFrameRateRange).maxFrameRate == Float64(Constants.frameRate) &&
+////        (CMVideoFormatDescriptionGetDimensions(format.formatDescription).width < CMVideoFormatDescriptionGetDimensions(currentFormat.formatDescription).width &&
+////          CMVideoFormatDescriptionGetDimensions(format.formatDescription).height < CMVideoFormatDescriptionGetDimensions(currentFormat.formatDescription).height)
+////        )
+////      {
+////        currentFormat = format;
+////      }
+//      print(f)
+//    })
+//
+//    // Once we have the correct format, we now want to set the config on the capture device.
     do {
         // First lock the device for config:
         try camera.lockForConfiguration()
-      
+
         camera.torchMode = .on
-        camera.activeFormat = currentFormat
-        camera.activeVideoMaxFrameDuration = CMTimeMake(1, Int32(Constants.frameRate)) 
-        camera.activeVideoMinFrameDuration = CMTimeMake(1, Int32(Constants.frameRate)) 
+        camera.activeVideoMaxFrameDuration = CMTimeMake(1, Int32(Constants.frameRate))
+        camera.activeVideoMinFrameDuration = CMTimeMake(1, Int32(Constants.frameRate))
         camera.unlockForConfiguration()
     } catch(let error) {
-    	print(error)
+      print(error)
     }
   }
   
-  // MARK: Public Interface
-  public func add(videoOutput: AVCaptureVideoDataOutput) {
-    guard permissionGranted else { return }
+  public func configureTorch() {
+    guard let camera = self.camera else { return }
+    do {
+      try camera.lockForConfiguration()
+      
+      camera.torchMode = .on
+      
+      camera.unlockForConfiguration()
+    } catch {}
+  }
     
+    
+  
+  // MARK: Public Interface
+  public func add(videoOutput: AVCaptureVideoDataOutput) {    
     sessionQueue.async {
       guard self.captureSession.canAddOutput(videoOutput) else { return }
       self.captureSession.addOutput(videoOutput)
@@ -126,22 +137,9 @@ final class PulseCaptureOrgan: NSObject {
     self.capturePhotoOutput.isDualCameraDualPhotoDeliveryEnabled = true
   }
   
-  public func requestAccessForMediaDevices() {
-    AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo) {
-      (granted: Bool) -> Void in
-      guard granted else {
-        /// Report an error. We didn't get access to hardware.
-        return
-      }
-      
-      /// All good, access granted.
-      self.permissionGranted = true
-    }
-  }
-  
   // MARK: I/O
   public func start() {
-    sessionQueue.async { 
+    sessionQueue.async {
       self.captureSession.startRunning()
     }
   }
