@@ -11,7 +11,7 @@ import AVFoundation
 import Charts
 import VideoToolbox
 
-class PulsePPGOrgan:
+public class PulsePPGOrgan:
   NSObject,
   AVCaptureVideoDataOutputSampleBufferDelegate,
   AVCapturePhotoCaptureDelegate {
@@ -20,10 +20,14 @@ class PulsePPGOrgan:
   private let lowPassFilter = LowPassFilter()
   private let bufferQueue: DispatchQueue = DispatchQueue(label: "sample_buffer_queue")
   private var frameCount: Int = 0
-  private var ppgData: [ChartDataEntry] = []
-  private var hueData: [Double] = []
   private var photoCaptureOutput: AVCapturePhotoOutput = AVCapturePhotoOutput()
   weak var delegate: ppgOrganDelegate?
+  
+  private var ppgData: [ChartDataEntry] = []
+  private var hueData: [Double] = []
+  private var meanHue: Double {
+    return hueData.reduce(0, +) / Double(hueData.count)
+  }
   
   init(captureOrgan: PulseCaptureOrgan) {
     self.captureOrgan = captureOrgan
@@ -40,7 +44,7 @@ class PulsePPGOrgan:
     // we need to set the out pixel value to 32bit RGBRA so that we can appropriately manippulate.
     videoOutput.videoSettings = [
       (kCVPixelBufferPixelFormatTypeKey as NSString) :
-      NSNumber(value: kCVPixelFormatType_32BGRA as UInt32)
+      NSNumber(value: kCVPixelFormatType_420YpCbCr8BiPlanarFullRange as UInt32)
     ] as [String : Any]
     
     videoOutput.alwaysDiscardsLateVideoFrames = false
@@ -49,74 +53,53 @@ class PulsePPGOrgan:
     self.captureOrgan.start()
   }
   
-  
-  func captureOutput(_ output: AVCaptureOutput, didOutputSampleBuffer sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-    
-    // first we want to grab the pixel buffer from the sample buffer.
+  public func captureOutput(_ output: AVCaptureOutput, didOutputSampleBuffer sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+//     first we want to grab the pixel buffer from the sample buffer.
     guard let cvimagebuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
       return
     }
-    
+
     // increment the frame count
     frameCount += 1
-    
+
     // We need to lock the buffer so we can manipulate pixel data on the cpu
     CVPixelBufferLockBaseAddress(cvimagebuffer, CVPixelBufferLockFlags(rawValue: 0))
-    
-    let baseAddress = CVPixelBufferGetBaseAddress(cvimagebuffer)
+    let yPlanBufferAddress = CVPixelBufferGetBaseAddressOfPlane(cvimagebuffer, 0)
     
     let width = CVPixelBufferGetWidth(cvimagebuffer)
     let height = CVPixelBufferGetHeight(cvimagebuffer)
     
-    // Raw Pixel data
-    let buffer = unsafeBitCast(baseAddress, to: UnsafeMutablePointer<UInt8>.self)
-    let bytesPerRow = CVPixelBufferGetBytesPerRow(cvimagebuffer)
+    let buffer = unsafeBitCast(yPlanBufferAddress, to: UnsafeMutablePointer<UInt8>.self)
+    let bytesPerRow = CVPixelBufferGetBytesPerRowOfPlane(cvimagebuffer, 0)
     
-    var r:Float = 0
-    var g:Float = 0
-    var b:Float = 0
-    
-    for y in 0..<height {
-      for x in stride(from: 0, to: bytesPerRow, by: 4) {
-        b += Float(buffer[y * bytesPerRow + x])
-        g += Float(buffer[y * bytesPerRow + x + 1])
-        r += Float(buffer[y * bytesPerRow + x + 2])
+    var Y:Float = 0
+    for y in stride(from: 0, to: height, by: 4) {
+      for x in stride(from: 0, to: bytesPerRow , by: 4) {
+        Y += Float(buffer[y * bytesPerRow + x])
       }
     }
     
-    let averageR: CGFloat = CGFloat(r / Float(width * height * 255))
-    let averageG: CGFloat = CGFloat(g / Float(width * height * 255))
-    let averageB: CGFloat = CGFloat(b / Float(width * height * 255))
-    
-    // We want to convert our R, G and B values into a hue value as hue is best for tracking PPG
-    // with this particular method. We leverage the UIColor API to do this:
-    let frameColor = UIColor(red: averageR, green: averageG, blue: averageB, alpha: 1)
-    var hue: CGFloat = 0, sat: CGFloat = 0, bright: CGFloat = 0
-    frameColor.getHue(&hue, saturation: &sat, brightness: &bright, alpha: nil)
-    
-    // Manage Data Entry
-    let ppgEntry = ChartDataEntry(x: Double(frameCount),
-                                  y: Double(self.lowPassFilter.lowPassFilter(newValue: hue)))
-    
-    hueData.append(Double(self.lowPassFilter.lowPassFilter(newValue: hue)))
-    print(hueData.count)
-    
-    // We need to keep the stream at a maximum of 100 points so that the
-    if ppgData.count > 100 {
-      ppgData.removeFirst()
+    let newWidth = width / 4
+    let newHeight = height / 4
+    let averageY: CGFloat = CGFloat(Y / Float(newWidth * newHeight * 255))
+
+    // before we add the ppg value we need to make sure its valid (after the cuttoff point)
+    let filteredHue = Double(lowPassFilter.lowPassFilter(newValue: averageY))
+    hueData.append(filteredHue)
+
+    var smoothedValue = filteredHue
+    if frameCount > 5 {
+      let end = hueData.count - 1
+      let start = hueData.count - 5
+      smoothedValue = DataProcessor.butterworthBandpassFilter(inputData: Array(hueData[start...end]))
     }
     
-    ppgData.append(ppgEntry)
-    
-    // update the delegate:
-    DispatchQueue.main.async {
-      self.delegate?.ppgOrganDidBeat(with: self.ppgData)
-    }
-    
+    self.delegate?.ppgOrgan(self, didCapture: smoothedValue)
+  
     CVPixelBufferUnlockBaseAddress(cvimagebuffer, CVPixelBufferLockFlags(rawValue: 0))
   }
 }
 
 public protocol ppgOrganDelegate: class {
-  func ppgOrganDidBeat(with values: [ChartDataEntry])
+  func ppgOrgan(_ ppgOrgan: PulsePPGOrgan, didCapture ppgValue: Double)
 }

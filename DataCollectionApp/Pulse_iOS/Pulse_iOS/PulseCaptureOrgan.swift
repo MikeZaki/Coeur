@@ -66,44 +66,15 @@ final class PulseCaptureOrgan: NSObject {
     }
     
     captureSession.addInput(captureInput)
-    
     captureSession.commitConfiguration()
   }
   
   private func setupCaptureSettings() {
     guard let camera = self.camera else { return }
-    let preferredSpec = CaptureSessionSpec(fps: 60, size: CGSize(width: 640, height: 480))
+    let preferredSpec = CaptureSessionSpec(fps: 240, size: CGSize(width: 640, height: 480))
     do {
         // update the format with a preferred fps
         camera.updateFormatWithPreferredCaptureSessionSpec(preferredSpec: preferredSpec)
-    }
-    
-//    var currentFormat: AVCaptureDevice.Format = camera.activeFormat// default value.
-//    camera.formats.forEach({ f in
-//
-////      guard let format = f as? AVCaptureDevice.Format else { return }
-////      let frameRates = format.videoSupportedFrameRateRanges[0]
-////      if ((frameRates as! AVFrameRateRange).maxFrameRate == Float64(Constants.frameRate) &&
-////        (CMVideoFormatDescriptionGetDimensions(format.formatDescription).width < CMVideoFormatDescriptionGetDimensions(currentFormat.formatDescription).width &&
-////          CMVideoFormatDescriptionGetDimensions(format.formatDescription).height < CMVideoFormatDescriptionGetDimensions(currentFormat.formatDescription).height)
-////        )
-////      {
-////        currentFormat = format;
-////      }
-//      print(f)
-//    })
-//
-//    // Once we have the correct format, we now want to set the config on the capture device.
-    do {
-        // First lock the device for config:
-        try camera.lockForConfiguration()
-
-        camera.torchMode = .on
-        camera.activeVideoMaxFrameDuration = CMTimeMake(1, Int32(Constants.frameRate))
-        camera.activeVideoMinFrameDuration = CMTimeMake(1, Int32(Constants.frameRate))
-        camera.unlockForConfiguration()
-    } catch(let error) {
-      print(error)
     }
   }
   
@@ -117,8 +88,6 @@ final class PulseCaptureOrgan: NSObject {
       camera.unlockForConfiguration()
     } catch {}
   }
-    
-    
   
   // MARK: Public Interface
   public func add(videoOutput: AVCaptureVideoDataOutput) {    

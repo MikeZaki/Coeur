@@ -23,6 +23,7 @@
 		278F22A62183CC5700EADF35 /* FilterOrgan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F22A52183CC5700EADF35 /* FilterOrgan.swift */; };
 		74F8E3EB2203F03C008D1E84 /* AVCaptureDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8E3EA2203F03C008D1E84 /* AVCaptureDeviceExtension.swift */; };
 		74F8E3F1220409F4008D1E84 /* CaptureSessionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8E3F0220409F4008D1E84 /* CaptureSessionSpec.swift */; };
+		74F8E3F32205361E008D1E84 /* DataProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8E3F22205361D008D1E84 /* DataProcessor.swift */; };
 		C5DBDB5233A566425994E27A /* Pods_Pulse_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DE3550E1C1D14C4BE66BAC /* Pods_Pulse_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		3EA0EA2B493C1B013209F403 /* Pods-Pulse_iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pulse_iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pulse_iOSTests/Pods-Pulse_iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		74F8E3EA2203F03C008D1E84 /* AVCaptureDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCaptureDeviceExtension.swift; sourceTree = "<group>"; };
 		74F8E3F0220409F4008D1E84 /* CaptureSessionSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureSessionSpec.swift; sourceTree = "<group>"; };
+		74F8E3F22205361D008D1E84 /* DataProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProcessor.swift; sourceTree = "<group>"; };
 		A2194694A396E231B2F77114 /* Pods_Pulse_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pulse_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5DE3550E1C1D14C4BE66BAC /* Pods_Pulse_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pulse_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88B99076ECA2A1A56EF91D0 /* Pods-Pulse_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pulse_iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pulse_iOSTests/Pods-Pulse_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				278F22A52183CC5700EADF35 /* FilterOrgan.swift */,
 				27871C8C218E033200B2114A /* PeakCountOrgan.swift */,
 				74F8E3EA2203F03C008D1E84 /* AVCaptureDeviceExtension.swift */,
+				74F8E3F22205361D008D1E84 /* DataProcessor.swift */,
 			);
 			path = Pulse_iOS;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				74F8E3F1220409F4008D1E84 /* CaptureSessionSpec.swift in Sources */,
 				276F34782179C518005B52F5 /* AppDelegate.swift in Sources */,
 				276F34AC217BCE55005B52F5 /* PulseCaptureOrgan.swift in Sources */,
+				74F8E3F32205361E008D1E84 /* DataProcessor.swift in Sources */,
 				278F22A62183CC5700EADF35 /* FilterOrgan.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

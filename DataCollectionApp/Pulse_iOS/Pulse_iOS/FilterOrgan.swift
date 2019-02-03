@@ -3,7 +3,7 @@ import UIKit
 public class LowPassFilter {
   
   private struct Constants {
-    static let alpha: CGFloat = 0.7
+    static let alpha: CGFloat = 0.6
   }
   
   public func lowPassFilter(newValue: CGFloat) -> CGFloat {

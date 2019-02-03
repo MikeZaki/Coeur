@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,20 +19,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1px-Wm-YIE" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <rect key="frame" x="0.0" y="100" width="375" height="467"/>
                                 <color key="backgroundColor" red="0.88637107329999998" green="0.86972944429999999" blue="0.8730964672" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAz-mb-5De">
+                                <rect key="frame" x="30" y="607" width="315" height="32"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="endCapture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LzC-JC-3dq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1px-Wm-YIE" secondAttribute="bottom" id="0xx-jf-9Ti"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1px-Wm-YIE" secondAttribute="bottom" constant="100" id="0xx-jf-9Ti"/>
+                            <constraint firstItem="bAz-mb-5De" firstAttribute="top" secondItem="1px-Wm-YIE" secondAttribute="bottom" constant="40" id="1H3-C0-Hyv"/>
                             <constraint firstItem="1px-Wm-YIE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="ML0-Kz-4xK"/>
                             <constraint firstAttribute="trailing" secondItem="1px-Wm-YIE" secondAttribute="trailing" id="SQx-iN-7e9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bAz-mb-5De" secondAttribute="trailing" constant="30" id="b8y-zI-9g3"/>
+                            <constraint firstItem="bAz-mb-5De" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="bRs-nq-jSn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bAz-mb-5De" secondAttribute="bottom" constant="28" id="cCW-CZ-mtf"/>
                             <constraint firstItem="1px-Wm-YIE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ssc-Js-4p0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="endCaptureButton" destination="bAz-mb-5De" id="DnD-oC-4Yh"/>
                         <outlet property="lineChartView" destination="1px-Wm-YIE" id="A1P-Ai-MAI"/>
                     </connections>
                 </viewController>
