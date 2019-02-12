@@ -16,6 +16,7 @@
 		74DCB09B21F93AB7007E2E41 /* CoeurUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DCB09A21F93AB7007E2E41 /* CoeurUITests.swift */; };
 		DC5B2924220245AB007DED78 /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B2923220245AB007DED78 /* ProfileDetailViewController.swift */; };
 		DCC8DB4521F9452C000C8E5F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC8DB4421F9452C000C8E5F /* HomeViewController.swift */; };
+		DCF6B83C2210BA82001C0C56 /* MeasureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF6B83B2210BA82001C0C56 /* MeasureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		74DCB09C21F93AB7007E2E41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC5B2923220245AB007DED78 /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
 		DCC8DB4421F9452C000C8E5F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DCF6B83B2210BA82001C0C56 /* MeasureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				74DCB08621F93AB7007E2E41 /* Info.plist */,
 				DCC8DB4421F9452C000C8E5F /* HomeViewController.swift */,
 				DC5B2923220245AB007DED78 /* ProfileDetailViewController.swift */,
+				DCF6B83B2210BA82001C0C56 /* MeasureViewController.swift */,
 			);
 			path = Coeur;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				74DCB07D21F93AB4007E2E41 /* ViewController.swift in Sources */,
 				DC5B2924220245AB007DED78 /* ProfileDetailViewController.swift in Sources */,
 				74DCB07B21F93AB4007E2E41 /* AppDelegate.swift in Sources */,
+				DCF6B83C2210BA82001C0C56 /* MeasureViewController.swift in Sources */,
 				DCC8DB4521F9452C000C8E5F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
