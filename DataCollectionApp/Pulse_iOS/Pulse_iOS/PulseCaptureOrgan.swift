@@ -71,7 +71,7 @@ final class PulseCaptureOrgan: NSObject {
   
   private func setupCaptureSettings() {
     guard let camera = self.camera else { return }
-    let preferredSpec = CaptureSessionSpec(fps: 240, size: CGSize(width: 640, height: 480))
+    let preferredSpec = CaptureSessionSpec(fps: 120, size: CGSize(width: 1920, height: 1080))
     do {
         // update the format with a preferred fps
         camera.updateFormatWithPreferredCaptureSessionSpec(preferredSpec: preferredSpec)

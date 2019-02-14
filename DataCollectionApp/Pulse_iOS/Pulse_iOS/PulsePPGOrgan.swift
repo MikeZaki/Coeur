@@ -47,7 +47,7 @@ public class PulsePPGOrgan:
       NSNumber(value: kCVPixelFormatType_420YpCbCr8BiPlanarFullRange as UInt32)
     ] as [String : Any]
     
-    videoOutput.alwaysDiscardsLateVideoFrames = false
+    videoOutput.alwaysDiscardsLateVideoFrames = true
     
     self.captureOrgan.add(videoOutput: videoOutput)
     self.captureOrgan.start()
@@ -73,19 +73,19 @@ public class PulsePPGOrgan:
     let bytesPerRow = CVPixelBufferGetBytesPerRowOfPlane(cvimagebuffer, 0)
     
     var Y:Float = 0
-    for y in stride(from: 0, to: height, by: 4) {
-      for x in stride(from: 0, to: bytesPerRow , by: 4) {
+    for y in stride(from: 0, to: height, by: 10) {
+      for x in stride(from: 0, to: bytesPerRow , by: 10) {
         Y += Float(buffer[y * bytesPerRow + x])
       }
     }
     
-    let newWidth = width / 4
-    let newHeight = height / 4
-    let averageY: CGFloat = CGFloat(Y / Float(newWidth * newHeight * 255))
+    let newWidth = width / 10
+    let newHeight = height / 10
+    let averageY: Double = Double(Y / Float(newWidth * newHeight * 255))
 
     // before we add the ppg value we need to make sure its valid (after the cuttoff point)
     let filteredHue = Double(lowPassFilter.lowPassFilter(newValue: averageY))
-    hueData.append(filteredHue)
+    hueData.append(averageY)
 
     var smoothedValue = filteredHue
     if frameCount > 5 {

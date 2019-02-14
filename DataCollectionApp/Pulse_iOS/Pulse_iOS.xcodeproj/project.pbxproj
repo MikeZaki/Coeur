@@ -16,11 +16,10 @@
 		276F34822179C519005B52F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276F34802179C519005B52F5 /* LaunchScreen.storyboard */; };
 		276F348D2179C519005B52F5 /* Pulse_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F348C2179C519005B52F5 /* Pulse_iOSTests.swift */; };
 		276F34982179C519005B52F5 /* Pulse_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F34972179C519005B52F5 /* Pulse_iOSUITests.swift */; };
-		276F34A82179C5ED005B52F5 /* CapturePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F34A62179C5EC005B52F5 /* CapturePreviewView.swift */; };
 		276F34AA217BC8AB005B52F5 /* PulsePPGOrgan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F34A9217BC8AB005B52F5 /* PulsePPGOrgan.swift */; };
 		276F34AC217BCE55005B52F5 /* PulseCaptureOrgan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F34AB217BCE54005B52F5 /* PulseCaptureOrgan.swift */; };
-		27871C8D218E033200B2114A /* PeakCountOrgan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27871C8C218E033200B2114A /* PeakCountOrgan.swift */; };
 		278F22A62183CC5700EADF35 /* FilterOrgan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F22A52183CC5700EADF35 /* FilterOrgan.swift */; };
+		74E4FFF0220CBB9600F5F281 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E4FFEF220CBB9600F5F281 /* HomeViewController.swift */; };
 		74F8E3EB2203F03C008D1E84 /* AVCaptureDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8E3EA2203F03C008D1E84 /* AVCaptureDeviceExtension.swift */; };
 		74F8E3F1220409F4008D1E84 /* CaptureSessionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8E3F0220409F4008D1E84 /* CaptureSessionSpec.swift */; };
 		74F8E3F32205361E008D1E84 /* DataProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F8E3F22205361D008D1E84 /* DataProcessor.swift */; };
@@ -77,13 +76,12 @@
 		276F34932179C519005B52F5 /* Pulse_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Pulse_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		276F34972179C519005B52F5 /* Pulse_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulse_iOSUITests.swift; sourceTree = "<group>"; };
 		276F34992179C519005B52F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		276F34A62179C5EC005B52F5 /* CapturePreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CapturePreviewView.swift; sourceTree = "<group>"; };
 		276F34A9217BC8AB005B52F5 /* PulsePPGOrgan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsePPGOrgan.swift; sourceTree = "<group>"; };
 		276F34AB217BCE54005B52F5 /* PulseCaptureOrgan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulseCaptureOrgan.swift; sourceTree = "<group>"; };
-		27871C8C218E033200B2114A /* PeakCountOrgan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeakCountOrgan.swift; sourceTree = "<group>"; };
 		278F22A52183CC5700EADF35 /* FilterOrgan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOrgan.swift; sourceTree = "<group>"; };
 		27D6345D217C906700E6DA8A /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Downloads/Charts-3.1.1/Charts.xcodeproj"; sourceTree = "<group>"; };
 		3EA0EA2B493C1B013209F403 /* Pods-Pulse_iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pulse_iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pulse_iOSTests/Pods-Pulse_iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		74E4FFEF220CBB9600F5F281 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		74F8E3EA2203F03C008D1E84 /* AVCaptureDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCaptureDeviceExtension.swift; sourceTree = "<group>"; };
 		74F8E3F0220409F4008D1E84 /* CaptureSessionSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureSessionSpec.swift; sourceTree = "<group>"; };
 		74F8E3F22205361D008D1E84 /* DataProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProcessor.swift; sourceTree = "<group>"; };
@@ -164,14 +162,13 @@
 				276F347E2179C519005B52F5 /* Assets.xcassets */,
 				276F34802179C519005B52F5 /* LaunchScreen.storyboard */,
 				276F34832179C519005B52F5 /* Info.plist */,
-				276F34A62179C5EC005B52F5 /* CapturePreviewView.swift */,
 				276F34AB217BCE54005B52F5 /* PulseCaptureOrgan.swift */,
 				276F34A9217BC8AB005B52F5 /* PulsePPGOrgan.swift */,
 				27D6345D217C906700E6DA8A /* Charts.xcodeproj */,
 				278F22A52183CC5700EADF35 /* FilterOrgan.swift */,
-				27871C8C218E033200B2114A /* PeakCountOrgan.swift */,
 				74F8E3EA2203F03C008D1E84 /* AVCaptureDeviceExtension.swift */,
 				74F8E3F22205361D008D1E84 /* DataProcessor.swift */,
+				74E4FFEF220CBB9600F5F281 /* HomeViewController.swift */,
 			);
 			path = Pulse_iOS;
 			sourceTree = "<group>";
@@ -479,13 +476,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				276F34A82179C5ED005B52F5 /* CapturePreviewView.swift in Sources */,
 				74F8E3EB2203F03C008D1E84 /* AVCaptureDeviceExtension.swift in Sources */,
-				27871C8D218E033200B2114A /* PeakCountOrgan.swift in Sources */,
 				276F34AA217BC8AB005B52F5 /* PulsePPGOrgan.swift in Sources */,
 				276F347A2179C518005B52F5 /* ViewController.swift in Sources */,
 				74F8E3F1220409F4008D1E84 /* CaptureSessionSpec.swift in Sources */,
 				276F34782179C518005B52F5 /* AppDelegate.swift in Sources */,
+				74E4FFF0220CBB9600F5F281 /* HomeViewController.swift in Sources */,
 				276F34AC217BCE55005B52F5 /* PulseCaptureOrgan.swift in Sources */,
 				74F8E3F32205361E008D1E84 /* DataProcessor.swift in Sources */,
 				278F22A62183CC5700EADF35 /* FilterOrgan.swift in Sources */,
@@ -670,7 +666,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "MikeZaki.Pulse-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "MikeZaki.Pulse-iOS.data";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -690,7 +686,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "MikeZaki.Pulse-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "MikeZaki.Pulse-iOS.data";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

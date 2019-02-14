@@ -3,12 +3,12 @@ import UIKit
 public class LowPassFilter {
   
   private struct Constants {
-    static let alpha: CGFloat = 0.6
+    static let alpha: Double = 0.6
   }
   
-  public func lowPassFilter(newValue: CGFloat) -> CGFloat {
+  public func lowPassFilter(newValue: Double) -> Double {
     struct Filter {
-      static var value: CGFloat = 0.0
+      static var value: Double = 0.0
     }
     
     let previousValue = (Filter.value == 0) ? newValue : Filter.value

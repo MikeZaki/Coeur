@@ -67,7 +67,7 @@ class ViewController: UIViewController, ppgOrganDelegate {
     let chartData = ChartDataEntry(x: frames, y: ppgValue)
     frames += 1
     ppgChartData.append(chartData)
-    
+
     DispatchQueue.main.async {
       self.ppgOrganDidBeat()
     }
@@ -99,10 +99,29 @@ class ViewController: UIViewController, ppgOrganDelegate {
     let fileManager = FileManager.default
     do {
       let path = try fileManager.url(for: .documentDirectory, in: .allDomainsMask, appropriateFor: nil, create: false)
-      let fileURL = path.appendingPathComponent("CSVRec.csv")
+      let fileURL = path.appendingPathComponent("CSVRec-\(getTodayString()).csv")
       try csvString.write(to: fileURL, atomically: true, encoding: .utf8)
     } catch {
       print("error creating file")
     }
+  }
+  
+  func getTodayString() -> String{
+    
+    let date = Date()
+    let calender = Calendar.current
+    let components = calender.dateComponents([.year,.month,.day,.hour,.minute,.second], from: date)
+    
+    let year = components.year
+    let month = components.month
+    let day = components.day
+    let hour = components.hour
+    let minute = components.minute
+    let second = components.second
+    
+    let today_string = String(year!) + "-" + String(month!) + "-" + String(day!) + " " + String(hour!)  + ":" + String(minute!) + ":" +  String(second!)
+    
+    return today_string
+    
   }
 }
