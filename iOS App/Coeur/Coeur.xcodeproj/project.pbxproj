@@ -15,6 +15,7 @@
 		74DCB09021F93AB7007E2E41 /* CoeurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DCB08F21F93AB7007E2E41 /* CoeurTests.swift */; };
 		74DCB09B21F93AB7007E2E41 /* CoeurUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DCB09A21F93AB7007E2E41 /* CoeurUITests.swift */; };
 		DCC8DB4521F9452C000C8E5F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC8DB4421F9452C000C8E5F /* HomeViewController.swift */; };
+		F5C77AF7222F4A6F00327385 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C77AF6222F4A6F00327385 /* DashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		74DCB09A21F93AB7007E2E41 /* CoeurUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoeurUITests.swift; sourceTree = "<group>"; };
 		74DCB09C21F93AB7007E2E41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCC8DB4421F9452C000C8E5F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F5C77AF6222F4A6F00327385 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				74DCB08321F93AB7007E2E41 /* LaunchScreen.storyboard */,
 				74DCB08621F93AB7007E2E41 /* Info.plist */,
 				DCC8DB4421F9452C000C8E5F /* HomeViewController.swift */,
+				F5C77AF6222F4A6F00327385 /* DashboardViewController.swift */,
 			);
 			path = Coeur;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				74DCB07D21F93AB4007E2E41 /* ViewController.swift in Sources */,
 				74DCB07B21F93AB4007E2E41 /* AppDelegate.swift in Sources */,
 				DCC8DB4521F9452C000C8E5F /* HomeViewController.swift in Sources */,
+				F5C77AF7222F4A6F00327385 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
