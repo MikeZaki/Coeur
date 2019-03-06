@@ -80,7 +80,6 @@
             </objects>
             <point key="canvasLocation" x="869.60000000000002" y="133.5832083958021"/>
         </scene>
-        <!--Avatar Creation View Controller-->
         <scene sceneID="Dya-WT-nZx">
             <objects>
                 <viewController id="50Q-Iy-ykJ" customClass="AvatarCreationViewController" customModule="Coeur" customModuleProvider="target" sceneMemberID="viewController">
