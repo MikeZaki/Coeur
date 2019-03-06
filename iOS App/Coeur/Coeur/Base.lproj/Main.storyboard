@@ -145,5 +145,42 @@
             </objects>
             <point key="canvasLocation" x="1645.5999999999999" y="133.5832083958021"/>
         </scene>
+        <!--Trends View Controller-->
+        <scene sceneID="kIK-kQ-skJ">
+            <objects>
+                <viewController id="1Ul-mO-FZ5" customClass="TrendsViewController" customModule="Coeur" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PbF-oX-98b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average this week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1i-DB-Hgc">
+                                <rect key="frame" x="118" y="138" width="139" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.4342760135" blue="0.78222407459999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120/70" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BM7-K4-K7s">
+                                <rect key="frame" x="145" y="175" width="85" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="1" green="0.4342760135" blue="0.78222407459999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Q1i-DB-Hgc" firstAttribute="top" secondItem="Jdn-pT-bay" secondAttribute="top" constant="118" id="PF1-JQ-arm"/>
+                            <constraint firstItem="BM7-K4-K7s" firstAttribute="top" secondItem="Q1i-DB-Hgc" secondAttribute="top" constant="37" id="fRf-NQ-s8t"/>
+                            <constraint firstItem="Jdn-pT-bay" firstAttribute="trailing" secondItem="BM7-K4-K7s" secondAttribute="trailing" constant="145" id="hEj-4i-BUs"/>
+                            <constraint firstItem="Q1i-DB-Hgc" firstAttribute="leading" secondItem="Jdn-pT-bay" secondAttribute="leading" constant="118" id="pyr-xC-OGR"/>
+                            <constraint firstItem="BM7-K4-K7s" firstAttribute="leading" secondItem="Jdn-pT-bay" secondAttribute="leading" constant="145" id="vRZ-X4-aTq"/>
+                            <constraint firstItem="Jdn-pT-bay" firstAttribute="trailing" secondItem="Q1i-DB-Hgc" secondAttribute="trailing" constant="118" id="wB9-8N-h9u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jdn-pT-bay"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aEX-Gg-oSu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2396" y="134"/>
+        </scene>
     </scenes>
 </document>
