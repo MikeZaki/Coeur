@@ -1,5 +1,5 @@
 //
-//  ProfileDetailViewController.swift
+//  MeasureViewController.swift
 //  Coeur
 //
 //  Created by Sally Moon on 2019-01-30.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileDetailViewController: UIViewController {
+class MeasureViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
