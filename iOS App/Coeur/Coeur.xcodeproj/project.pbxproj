@@ -14,6 +14,8 @@
 		74DCB08521F93AB7007E2E41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DCB08321F93AB7007E2E41 /* LaunchScreen.storyboard */; };
 		74DCB09021F93AB7007E2E41 /* CoeurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DCB08F21F93AB7007E2E41 /* CoeurTests.swift */; };
 		74DCB09B21F93AB7007E2E41 /* CoeurUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DCB09A21F93AB7007E2E41 /* CoeurUITests.swift */; };
+		74E7A0E2222F5EB800329141 /* ProfileDetailStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74E7A0E1222F5EB800329141 /* ProfileDetailStoryBoard.storyboard */; };
+		DC5B2924220245AB007DED78 /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B2923220245AB007DED78 /* ProfileDetailViewController.swift */; };
 		DCC8DB4521F9452C000C8E5F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC8DB4421F9452C000C8E5F /* HomeViewController.swift */; };
 		F5A8AD07220245B500E03A3D /* AvatarCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A8AD06220245B500E03A3D /* AvatarCreationViewController.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +51,8 @@
 		74DCB09621F93AB7007E2E41 /* CoeurUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoeurUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DCB09A21F93AB7007E2E41 /* CoeurUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoeurUITests.swift; sourceTree = "<group>"; };
 		74DCB09C21F93AB7007E2E41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74E7A0E1222F5EB800329141 /* ProfileDetailStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileDetailStoryBoard.storyboard; sourceTree = "<group>"; };
+		DC5B2923220245AB007DED78 /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
 		DCC8DB4421F9452C000C8E5F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F5A8AD06220245B500E03A3D /* AvatarCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCreationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +113,8 @@
 				74DCB08621F93AB7007E2E41 /* Info.plist */,
 				DCC8DB4421F9452C000C8E5F /* HomeViewController.swift */,
 				F5A8AD06220245B500E03A3D /* AvatarCreationViewController.swift */,
+				DC5B2923220245AB007DED78 /* ProfileDetailViewController.swift */,
+				74E7A0E1222F5EB800329141 /* ProfileDetailStoryBoard.storyboard */,
 			);
 			path = Coeur;
 			sourceTree = "<group>";
@@ -237,6 +243,7 @@
 			files = (
 				74DCB08521F93AB7007E2E41 /* LaunchScreen.storyboard in Resources */,
 				74DCB08221F93AB7007E2E41 /* Assets.xcassets in Resources */,
+				74E7A0E2222F5EB800329141 /* ProfileDetailStoryBoard.storyboard in Resources */,
 				74DCB08021F93AB4007E2E41 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +271,7 @@
 			files = (
 				F5A8AD07220245B500E03A3D /* AvatarCreationViewController.swift in Sources */,
 				74DCB07D21F93AB4007E2E41 /* ViewController.swift in Sources */,
+				DC5B2924220245AB007DED78 /* ProfileDetailViewController.swift in Sources */,
 				74DCB07B21F93AB4007E2E41 /* AppDelegate.swift in Sources */,
 				DCC8DB4521F9452C000C8E5F /* HomeViewController.swift in Sources */,
 			);
