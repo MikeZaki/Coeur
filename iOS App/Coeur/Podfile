@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Coeur' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Coeur
+  pod 'FirebaseUI'
+
+  target 'CoeurTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'CoeurUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
