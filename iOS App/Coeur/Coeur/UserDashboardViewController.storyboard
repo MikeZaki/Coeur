@@ -18,50 +18,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blockIcon" translatesAutoresizingMaskIntoConstraints="NO" id="lMk-re-xHH" userLabel="BP grid">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qd2-NM-Sni">
+                                <rect key="frame" x="191" y="82" width="83" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="blockIcon" translatesAutoresizingMaskIntoConstraints="NO" id="lMk-re-xHH" userLabel="BP grid">
                                 <rect key="frame" x="21" y="158" width="162" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blockIcon" translatesAutoresizingMaskIntoConstraints="NO" id="918-8t-4hh" userLabel="BP grid">
-                                <rect key="frame" x="20" y="314" width="334" height="263"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="135/90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oxw-mb-zr3" userLabel="BP value">
-                                <rect key="frame" x="48" y="197" width="109" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="135/90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oxw-mb-zr3" userLabel="BP value">
+                                <rect key="frame" x="45" y="197" width="109" height="42"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today's blood pressure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcL-Hl-Hb1" userLabel="BP label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Today's blood pressure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcL-Hl-Hb1" userLabel="BP label">
                                 <rect key="frame" x="37" y="262" width="131" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blockIcon" translatesAutoresizingMaskIntoConstraints="NO" id="n4O-jr-Qgr" userLabel="Streak grid">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="blockIcon" translatesAutoresizingMaskIntoConstraints="NO" id="n4O-jr-Qgr" userLabel="Streak grid">
                                 <rect key="frame" x="191" y="158" width="162" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="day streak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRd-gW-fwe" userLabel="Streak label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="day streak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRd-gW-fwe" userLabel="Streak label">
                                 <rect key="frame" x="267" y="263" width="58" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4h-ph-Dem" userLabel="Streak value">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4h-ph-Dem" userLabel="Streak value">
                                 <rect key="frame" x="220" y="241" width="39" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="streakIcon" translatesAutoresizingMaskIntoConstraints="NO" id="xo0-1k-fga">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="streakIcon" translatesAutoresizingMaskIntoConstraints="NO" id="xo0-1k-fga">
                                 <rect key="frame" x="246" y="174" width="49" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="blockIcon" translatesAutoresizingMaskIntoConstraints="NO" id="918-8t-4hh" userLabel="Dailies grid">
+                                <rect key="frame" x="20" y="314" width="334" height="263"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVJ-DE-XKU" userLabel="Dailies Button">
+                                <rect key="frame" x="37" y="408" width="90" height="95"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.84999999999999998" height="1"/>
+                                <state key="normal" title="Button" image="checkIcon"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Go on on jog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Go5-6J-J5R" userLabel="Dailies text">
+                                <rect key="frame" x="163" y="445" width="96" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sDD-AL-yLy">
                                 <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -74,28 +84,30 @@
                                     <tabBarItem title="Community" id="zLa-sN-Bn5"/>
                                 </items>
                             </tabBar>
-                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVJ-DE-XKU" userLabel="Dailies Button">
-                                <rect key="frame" x="37" y="408" width="90" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.84999999999999998" height="1"/>
-                                <state key="normal" title="Button" image="checkIcon"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Go on on jog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Go5-6J-J5R" userLabel="Dailies text">
-                                <rect key="frame" x="163" y="445" width="96" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qd2-NM-Sni">
-                                <rect key="frame" x="191" y="82" width="83" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Oxw-mb-zr3" firstAttribute="leading" secondItem="lMk-re-xHH" secondAttribute="trailing" constant="-260" id="Cru-fH-IQN"/>
+                            <constraint firstItem="918-8t-4hh" firstAttribute="leading" secondItem="FVJ-DE-XKU" secondAttribute="trailing" constant="-107" id="EpD-dX-89W"/>
+                            <constraint firstItem="EcL-Hl-Hb1" firstAttribute="top" secondItem="lMk-re-xHH" secondAttribute="bottom" constant="-44" id="Fs6-GV-xGW"/>
+                            <constraint firstItem="n4O-jr-Qgr" firstAttribute="leading" secondItem="q4h-ph-Dem" secondAttribute="trailing" constant="-68" id="H4U-co-JTW"/>
+                            <constraint firstItem="n4O-jr-Qgr" firstAttribute="leading" secondItem="xjK-cT-e7O" secondAttribute="trailing" constant="-184" id="JYS-hI-9MA"/>
+                            <constraint firstItem="EcL-Hl-Hb1" firstAttribute="leading" secondItem="lMk-re-xHH" secondAttribute="trailing" constant="-146" id="KNo-t1-xdZ"/>
+                            <constraint firstItem="Go5-6J-J5R" firstAttribute="top" secondItem="918-8t-4hh" secondAttribute="bottom" constant="-132" id="ZmB-gc-8ns"/>
+                            <constraint firstItem="lMk-re-xHH" firstAttribute="top" secondItem="xjK-cT-e7O" secondAttribute="top" constant="138" id="bOk-4A-npX"/>
+                            <constraint firstItem="n4O-jr-Qgr" firstAttribute="top" secondItem="xo0-1k-fga" secondAttribute="bottom" constant="-87" id="dX4-LI-eJT"/>
+                            <constraint firstItem="lMk-re-xHH" firstAttribute="top" secondItem="Oxw-mb-zr3" secondAttribute="bottom" constant="-81" id="eXp-IX-jm8"/>
+                            <constraint firstItem="lMk-re-xHH" firstAttribute="leading" secondItem="xjK-cT-e7O" secondAttribute="leading" constant="21" id="kqD-bP-3yX"/>
+                            <constraint firstItem="eRd-gW-fwe" firstAttribute="top" secondItem="n4O-jr-Qgr" secondAttribute="bottom" constant="-43" id="mTh-1p-dOf"/>
+                            <constraint firstItem="eRd-gW-fwe" firstAttribute="leading" secondItem="n4O-jr-Qgr" secondAttribute="trailing" constant="-86" id="pe9-Wg-T9t"/>
+                            <constraint firstItem="n4O-jr-Qgr" firstAttribute="leading" secondItem="xo0-1k-fga" secondAttribute="trailing" constant="-104" id="r7E-kG-xQG"/>
+                            <constraint firstItem="xjK-cT-e7O" firstAttribute="top" secondItem="n4O-jr-Qgr" secondAttribute="bottom" constant="-286" id="s6F-Q2-Ak3"/>
+                            <constraint firstItem="q4h-ph-Dem" firstAttribute="top" secondItem="n4O-jr-Qgr" secondAttribute="bottom" constant="-65" id="sOh-aX-Fe0"/>
+                            <constraint firstItem="Go5-6J-J5R" firstAttribute="leading" secondItem="918-8t-4hh" secondAttribute="trailing" constant="-191" id="vJJ-og-OMX"/>
+                            <constraint firstItem="FVJ-DE-XKU" firstAttribute="top" secondItem="918-8t-4hh" secondAttribute="bottom" constant="-169" id="vua-6K-l97"/>
+                            <constraint firstItem="918-8t-4hh" firstAttribute="leading" secondItem="xjK-cT-e7O" secondAttribute="leading" constant="20" id="yOn-eA-Gqd"/>
+                            <constraint firstItem="918-8t-4hh" firstAttribute="top" secondItem="xjK-cT-e7O" secondAttribute="top" constant="294" id="zpr-Ox-VM9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xjK-cT-e7O"/>
                     </view>
                 </viewController>
