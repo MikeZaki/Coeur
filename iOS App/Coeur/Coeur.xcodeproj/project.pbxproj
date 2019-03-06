@@ -14,6 +14,7 @@
 		74DCB08521F93AB7007E2E41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DCB08321F93AB7007E2E41 /* LaunchScreen.storyboard */; };
 		74DCB09021F93AB7007E2E41 /* CoeurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DCB08F21F93AB7007E2E41 /* CoeurTests.swift */; };
 		74DCB09B21F93AB7007E2E41 /* CoeurUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DCB09A21F93AB7007E2E41 /* CoeurUITests.swift */; };
+		74E7A0E6222F6FF600329141 /* MeasurementResultViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74E7A0E5222F6FF600329141 /* MeasurementResultViewController.storyboard */; };
 		DC3DA667222CBD7D00678537 /* MeasurementResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3DA666222CBD7D00678537 /* MeasurementResultViewController.swift */; };
 		DC5B2924220245AB007DED78 /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B2923220245AB007DED78 /* ProfileDetailViewController.swift */; };
 		DCC8DB4521F9452C000C8E5F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC8DB4421F9452C000C8E5F /* HomeViewController.swift */; };
@@ -51,6 +52,7 @@
 		74DCB09621F93AB7007E2E41 /* CoeurUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoeurUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DCB09A21F93AB7007E2E41 /* CoeurUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoeurUITests.swift; sourceTree = "<group>"; };
 		74DCB09C21F93AB7007E2E41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74E7A0E5222F6FF600329141 /* MeasurementResultViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeasurementResultViewController.storyboard; sourceTree = "<group>"; };
 		DC3DA666222CBD7D00678537 /* MeasurementResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementResultViewController.swift; sourceTree = "<group>"; };
 		DC5B2923220245AB007DED78 /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
 		DCC8DB4421F9452C000C8E5F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				DC5B2923220245AB007DED78 /* ProfileDetailViewController.swift */,
 				DCF6B83B2210BA82001C0C56 /* MeasureViewController.swift */,
 				DC3DA666222CBD7D00678537 /* MeasurementResultViewController.swift */,
+				74E7A0E5222F6FF600329141 /* MeasurementResultViewController.storyboard */,
 			);
 			path = Coeur;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74DCB08521F93AB7007E2E41 /* LaunchScreen.storyboard in Resources */,
+				74E7A0E6222F6FF600329141 /* MeasurementResultViewController.storyboard in Resources */,
 				74DCB08221F93AB7007E2E41 /* Assets.xcassets in Resources */,
 				74DCB08021F93AB4007E2E41 /* Main.storyboard in Resources */,
 			);
