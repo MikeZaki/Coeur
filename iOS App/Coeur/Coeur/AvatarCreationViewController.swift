@@ -9,11 +9,5 @@
 import UIKit
 
 class AvatarCreationViewController: UIViewController {
-    
-    @IBAction func onNewUserPressed(_ sender: UIButton) {
-        if self.view.backgroundColor == .green {
-            
-        }
-        self.view.backgroundColor = (self.view.backgroundColor == .green) ? .red : .green
-    }
+  
 }

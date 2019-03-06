@@ -8,21 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		74DCB07B21F93AB4007E2E41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DCB07A21F93AB4007E2E41 /* AppDelegate.swift */; };
-		74DCB07D21F93AB4007E2E41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DCB07C21F93AB4007E2E41 /* ViewController.swift */; };
 		74DCB08021F93AB4007E2E41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DCB07E21F93AB4007E2E41 /* Main.storyboard */; };
 		74DCB08221F93AB7007E2E41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74DCB08121F93AB7007E2E41 /* Assets.xcassets */; };
 		74DCB08521F93AB7007E2E41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DCB08321F93AB7007E2E41 /* LaunchScreen.storyboard */; };
 		74DCB09021F93AB7007E2E41 /* CoeurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DCB08F21F93AB7007E2E41 /* CoeurTests.swift */; };
 		74DCB09B21F93AB7007E2E41 /* CoeurUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DCB09A21F93AB7007E2E41 /* CoeurUITests.swift */; };
-		74E7A0E6222F6FF600329141 /* MeasurementResultViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74E7A0E5222F6FF600329141 /* MeasurementResultViewController.storyboard */; };
-		DC3DA667222CBD7D00678537 /* MeasurementResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3DA666222CBD7D00678537 /* MeasurementResultViewController.swift */; };
-		74E7A0E4222F654800329141 /* MeasureViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74E7A0E3222F654800329141 /* MeasureViewController.storyboard */; };
-		DCF6B83C2210BA82001C0C56 /* MeasureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF6B83B2210BA82001C0C56 /* MeasureViewController.swift */; };
 		74E7A0E2222F5EB800329141 /* ProfileDetailStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74E7A0E1222F5EB800329141 /* ProfileDetailStoryBoard.storyboard */; };
+		74E7A0E4222F654800329141 /* MeasureViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74E7A0E3222F654800329141 /* MeasureViewController.storyboard */; };
+		74E7A0E6222F6FF600329141 /* MeasurementResultViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74E7A0E5222F6FF600329141 /* MeasurementResultViewController.storyboard */; };
+		74E7A0EF222F7A0900329141 /* coeur_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E7A0EE222F7A0900329141 /* coeur_icon.png */; };
+		DC3DA667222CBD7D00678537 /* MeasurementResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3DA666222CBD7D00678537 /* MeasurementResultViewController.swift */; };
 		DC5B2924220245AB007DED78 /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B2923220245AB007DED78 /* ProfileDetailViewController.swift */; };
 		DCC8DB4521F9452C000C8E5F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC8DB4421F9452C000C8E5F /* HomeViewController.swift */; };
-		F5C77AF7222F4A6F00327385 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C77AF6222F4A6F00327385 /* DashboardViewController.swift */; };
+		DCF6B83C2210BA82001C0C56 /* MeasureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF6B83B2210BA82001C0C56 /* MeasureViewController.swift */; };
 		F5A8AD07220245B500E03A3D /* AvatarCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A8AD06220245B500E03A3D /* AvatarCreationViewController.swift */; };
+		F5C77AF7222F4A6F00327385 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C77AF6222F4A6F00327385 /* DashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,6 @@
 /* Begin PBXFileReference section */
 		74DCB07721F93AB4007E2E41 /* Coeur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coeur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DCB07A21F93AB4007E2E41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		74DCB07C21F93AB4007E2E41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		74DCB07F21F93AB4007E2E41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74DCB08121F93AB7007E2E41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74DCB08421F93AB7007E2E41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +55,16 @@
 		74DCB09621F93AB7007E2E41 /* CoeurUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoeurUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DCB09A21F93AB7007E2E41 /* CoeurUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoeurUITests.swift; sourceTree = "<group>"; };
 		74DCB09C21F93AB7007E2E41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		74E7A0E5222F6FF600329141 /* MeasurementResultViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeasurementResultViewController.storyboard; sourceTree = "<group>"; };
-		DC3DA666222CBD7D00678537 /* MeasurementResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementResultViewController.swift; sourceTree = "<group>"; };
-		74E7A0E3222F654800329141 /* MeasureViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeasureViewController.storyboard; sourceTree = "<group>"; };
-		DCF6B83B2210BA82001C0C56 /* MeasureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureViewController.swift; sourceTree = "<group>"; };
 		74E7A0E1222F5EB800329141 /* ProfileDetailStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileDetailStoryBoard.storyboard; sourceTree = "<group>"; };
+		74E7A0E3222F654800329141 /* MeasureViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeasureViewController.storyboard; sourceTree = "<group>"; };
+		74E7A0E5222F6FF600329141 /* MeasurementResultViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeasurementResultViewController.storyboard; sourceTree = "<group>"; };
+		74E7A0EE222F7A0900329141 /* coeur_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coeur_icon.png; sourceTree = "<group>"; };
+		DC3DA666222CBD7D00678537 /* MeasurementResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementResultViewController.swift; sourceTree = "<group>"; };
 		DC5B2923220245AB007DED78 /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
 		DCC8DB4421F9452C000C8E5F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		F5C77AF6222F4A6F00327385 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		DCF6B83B2210BA82001C0C56 /* MeasureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureViewController.swift; sourceTree = "<group>"; };
 		F5A8AD06220245B500E03A3D /* AvatarCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCreationViewController.swift; sourceTree = "<group>"; };
+		F5C77AF6222F4A6F00327385 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,13 +115,9 @@
 		74DCB07921F93AB4007E2E41 /* Coeur */ = {
 			isa = PBXGroup;
 			children = (
-				74DCB07A21F93AB4007E2E41 /* AppDelegate.swift */,
-				74DCB07C21F93AB4007E2E41 /* ViewController.swift */,
-				74DCB07E21F93AB4007E2E41 /* Main.storyboard */,
+				74E7A0E7222F78E900329141 /* Source */,
 				74DCB08121F93AB7007E2E41 /* Assets.xcassets */,
-				74DCB08321F93AB7007E2E41 /* LaunchScreen.storyboard */,
 				74DCB08621F93AB7007E2E41 /* Info.plist */,
-				DCC8DB4421F9452C000C8E5F /* HomeViewController.swift */,
 				DCF6B83B2210BA82001C0C56 /* MeasureViewController.swift */,
 				DC3DA666222CBD7D00678537 /* MeasurementResultViewController.swift */,
 				74E7A0E5222F6FF600329141 /* MeasurementResultViewController.storyboard */,
@@ -150,6 +146,66 @@
 				74DCB09C21F93AB7007E2E41 /* Info.plist */,
 			);
 			path = CoeurUITests;
+			sourceTree = "<group>";
+		};
+		74E7A0E7222F78E900329141 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				74E7A0EC222F790700329141 /* Common */,
+				74E7A0EB222F790300329141 /* App */,
+				74E7A0E8222F78EF00329141 /* Feature */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		74E7A0E8222F78EF00329141 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				74E7A0E9222F78F500329141 /* Home */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		74E7A0E9222F78F500329141 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				74E7A0EA222F78FB00329141 /* UI */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		74E7A0EA222F78FB00329141 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DCC8DB4421F9452C000C8E5F /* HomeViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		74E7A0EB222F790300329141 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				74DCB07A21F93AB4007E2E41 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		74E7A0EC222F790700329141 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				74E7A0ED222F79FC00329141 /* Assets */,
+				74DCB08321F93AB7007E2E41 /* LaunchScreen.storyboard */,
+				74DCB07E21F93AB4007E2E41 /* Main.storyboard */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		74E7A0ED222F79FC00329141 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				74E7A0EE222F7A0900329141 /* coeur_icon.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +316,7 @@
 				74DCB08521F93AB7007E2E41 /* LaunchScreen.storyboard in Resources */,
 				74E7A0E6222F6FF600329141 /* MeasurementResultViewController.storyboard in Resources */,
 				74DCB08221F93AB7007E2E41 /* Assets.xcassets in Resources */,
+				74E7A0EF222F7A0900329141 /* coeur_icon.png in Resources */,
 				74E7A0E2222F5EB800329141 /* ProfileDetailStoryBoard.storyboard in Resources */,
 				74DCB08021F93AB4007E2E41 /* Main.storyboard in Resources */,
 			);
@@ -287,7 +344,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5A8AD07220245B500E03A3D /* AvatarCreationViewController.swift in Sources */,
-				74DCB07D21F93AB4007E2E41 /* ViewController.swift in Sources */,
 				DC5B2924220245AB007DED78 /* ProfileDetailViewController.swift in Sources */,
 				74DCB07B21F93AB4007E2E41 /* AppDelegate.swift in Sources */,
 				DCF6B83C2210BA82001C0C56 /* MeasureViewController.swift in Sources */,
@@ -471,6 +527,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T4X7R2GSNH;
 				INFOPLIST_FILE = Coeur/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -489,6 +546,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T4X7R2GSNH;
 				INFOPLIST_FILE = Coeur/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
