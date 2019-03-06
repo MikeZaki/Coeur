@@ -17,6 +17,7 @@
 		74E7A0E2222F5EB800329141 /* ProfileDetailStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74E7A0E1222F5EB800329141 /* ProfileDetailStoryBoard.storyboard */; };
 		DC5B2924220245AB007DED78 /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5B2923220245AB007DED78 /* ProfileDetailViewController.swift */; };
 		DCC8DB4521F9452C000C8E5F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC8DB4421F9452C000C8E5F /* HomeViewController.swift */; };
+		F5C77AF7222F4A6F00327385 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C77AF6222F4A6F00327385 /* DashboardViewController.swift */; };
 		F5A8AD07220245B500E03A3D /* AvatarCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A8AD06220245B500E03A3D /* AvatarCreationViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		74E7A0E1222F5EB800329141 /* ProfileDetailStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileDetailStoryBoard.storyboard; sourceTree = "<group>"; };
 		DC5B2923220245AB007DED78 /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
 		DCC8DB4421F9452C000C8E5F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F5C77AF6222F4A6F00327385 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F5A8AD06220245B500E03A3D /* AvatarCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCreationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +114,7 @@
 				74DCB08321F93AB7007E2E41 /* LaunchScreen.storyboard */,
 				74DCB08621F93AB7007E2E41 /* Info.plist */,
 				DCC8DB4421F9452C000C8E5F /* HomeViewController.swift */,
+				F5C77AF6222F4A6F00327385 /* DashboardViewController.swift */,
 				F5A8AD06220245B500E03A3D /* AvatarCreationViewController.swift */,
 				DC5B2923220245AB007DED78 /* ProfileDetailViewController.swift */,
 				74E7A0E1222F5EB800329141 /* ProfileDetailStoryBoard.storyboard */,
@@ -274,6 +277,7 @@
 				DC5B2924220245AB007DED78 /* ProfileDetailViewController.swift in Sources */,
 				74DCB07B21F93AB4007E2E41 /* AppDelegate.swift in Sources */,
 				DCC8DB4521F9452C000C8E5F /* HomeViewController.swift in Sources */,
+				F5C77AF7222F4A6F00327385 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
