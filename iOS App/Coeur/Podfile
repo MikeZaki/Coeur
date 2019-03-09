@@ -7,6 +7,7 @@ target 'Coeur' do
 
   # Pods for Coeur
   pod 'FirebaseUI'
+  pod 'Firebase/Core'
 
   target 'CoeurTests' do
     inherit! :search_paths

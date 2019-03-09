@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		2DB11A0CD98CB80A487D6529 /* Pods_CoeurTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ADDE4598FDA494E960B7EC7 /* Pods_CoeurTests.framework */; };
 		37A58774F824522A18DAAA25 /* Pods_Coeur.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 027E12F4168837102C6DFC45 /* Pods_Coeur.framework */; };
+		7402B72B2230BE6C00DB60E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7402B72A2230BE6C00DB60E8 /* GoogleService-Info.plist */; };
+		7402B72F2230D1D700DB60E8 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7402B72E2230D1D700DB60E8 /* SignInViewController.swift */; };
+		7402B7322230E89400DB60E8 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7402B7312230E89400DB60E8 /* Colors.swift */; };
+		7402B7A9223228C000DB60E8 /* CoeurIconiOS.png in Resources */ = {isa = PBXBuildFile; fileRef = 7402B7A8223228C000DB60E8 /* CoeurIconiOS.png */; };
+		7402B7AC22322A3700DB60E8 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7402B7AB22322A3700DB60E8 /* GradientView.swift */; };
+		7402B7AE22323CDC00DB60E8 /* CoeurIconiOS_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7402B7AD22323CDC00DB60E8 /* CoeurIconiOS_3x.png */; };
 		74DCB07B21F93AB4007E2E41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DCB07A21F93AB4007E2E41 /* AppDelegate.swift */; };
 		74DCB08021F93AB4007E2E41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DCB07E21F93AB4007E2E41 /* Main.storyboard */; };
 		74DCB08221F93AB7007E2E41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74DCB08121F93AB7007E2E41 /* Assets.xcassets */; };
@@ -55,6 +61,13 @@
 		372191542DA728FA53F5B172 /* Pods-CoeurUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoeurUITests.release.xcconfig"; path = "Target Support Files/Pods-CoeurUITests/Pods-CoeurUITests.release.xcconfig"; sourceTree = "<group>"; };
 		46B845B13FFD1712072FDA42 /* Pods-CoeurUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoeurUITests.debug.xcconfig"; path = "Target Support Files/Pods-CoeurUITests/Pods-CoeurUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4A0B3DE6058D56FE5D7639B9 /* Pods-CoeurTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoeurTests.debug.xcconfig"; path = "Target Support Files/Pods-CoeurTests/Pods-CoeurTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7402B72A2230BE6C00DB60E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7402B72E2230D1D700DB60E8 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		7402B7312230E89400DB60E8 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		7402B73322310B1E00DB60E8 /* Coeur.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Coeur.entitlements; sourceTree = "<group>"; };
+		7402B7A8223228C000DB60E8 /* CoeurIconiOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CoeurIconiOS.png; sourceTree = "<group>"; };
+		7402B7AB22322A3700DB60E8 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		7402B7AD22323CDC00DB60E8 /* CoeurIconiOS_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CoeurIconiOS_3x.png; sourceTree = "<group>"; };
 		74DCB07721F93AB4007E2E41 /* Coeur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coeur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DCB07A21F93AB4007E2E41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74DCB07F21F93AB4007E2E41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,7 +130,6 @@
 				46B845B13FFD1712072FDA42 /* Pods-CoeurUITests.debug.xcconfig */,
 				372191542DA728FA53F5B172 /* Pods-CoeurUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -129,6 +141,38 @@
 				0CCCF25B8F580ADDFF2863FB /* Pods_CoeurUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7402B72C2230D1C300DB60E8 /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+				7402B72D2230D1C800DB60E8 /* UI */,
+			);
+			path = "Sign In";
+			sourceTree = "<group>";
+		};
+		7402B72D2230D1C800DB60E8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7402B72E2230D1D700DB60E8 /* SignInViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7402B7302230E88900DB60E8 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				7402B7312230E89400DB60E8 /* Colors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		7402B7AA22322A2900DB60E8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7402B7AB22322A3700DB60E8 /* GradientView.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		74DCB06E21F93AB4007E2E41 = {
@@ -156,6 +200,7 @@
 		74DCB07921F93AB4007E2E41 /* Coeur */ = {
 			isa = PBXGroup;
 			children = (
+				7402B73322310B1E00DB60E8 /* Coeur.entitlements */,
 				74E7A0E7222F78E900329141 /* Source */,
 				74DCB08121F93AB7007E2E41 /* Assets.xcassets */,
 				74DCB08621F93AB7007E2E41 /* Info.plist */,
@@ -167,6 +212,7 @@
 				F5A8AD06220245B500E03A3D /* AvatarCreationViewController.swift */,
 				DC5B2923220245AB007DED78 /* ProfileDetailViewController.swift */,
 				74E7A0E1222F5EB800329141 /* ProfileDetailStoryBoard.storyboard */,
+				7402B72A2230BE6C00DB60E8 /* GoogleService-Info.plist */,
 			);
 			path = Coeur;
 			sourceTree = "<group>";
@@ -202,6 +248,7 @@
 		74E7A0E8222F78EF00329141 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				7402B72C2230D1C300DB60E8 /* Sign In */,
 				74E7A0E9222F78F500329141 /* Home */,
 			);
 			path = Feature;
@@ -234,6 +281,8 @@
 		74E7A0EC222F790700329141 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7402B7AA22322A2900DB60E8 /* UI */,
+				7402B7302230E88900DB60E8 /* Colors */,
 				74E7A0ED222F79FC00329141 /* Assets */,
 				74DCB08321F93AB7007E2E41 /* LaunchScreen.storyboard */,
 				74DCB07E21F93AB4007E2E41 /* Main.storyboard */,
@@ -244,6 +293,8 @@
 		74E7A0ED222F79FC00329141 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				7402B7AD22323CDC00DB60E8 /* CoeurIconiOS_3x.png */,
+				7402B7A8223228C000DB60E8 /* CoeurIconiOS.png */,
 				74E7A0EE222F7A0900329141 /* coeur_icon.png */,
 			);
 			path = Assets;
@@ -322,6 +373,11 @@
 				TargetAttributes = {
 					74DCB07621F93AB4007E2E41 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					74DCB08A21F93AB7007E2E41 = {
 						CreatedOnToolsVersion = 10.1;
@@ -359,12 +415,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				74E7A0E4222F654800329141 /* MeasureViewController.storyboard in Resources */,
+				7402B72B2230BE6C00DB60E8 /* GoogleService-Info.plist in Resources */,
 				74DCB08521F93AB7007E2E41 /* LaunchScreen.storyboard in Resources */,
 				74E7A0E6222F6FF600329141 /* MeasurementResultViewController.storyboard in Resources */,
+				7402B7AE22323CDC00DB60E8 /* CoeurIconiOS_3x.png in Resources */,
 				74DCB08221F93AB7007E2E41 /* Assets.xcassets in Resources */,
 				74E7A0EF222F7A0900329141 /* coeur_icon.png in Resources */,
 				74E7A0E2222F5EB800329141 /* ProfileDetailStoryBoard.storyboard in Resources */,
 				74DCB08021F93AB4007E2E41 /* Main.storyboard in Resources */,
+				7402B7A9223228C000DB60E8 /* CoeurIconiOS.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,9 +606,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5A8AD07220245B500E03A3D /* AvatarCreationViewController.swift in Sources */,
+				7402B7322230E89400DB60E8 /* Colors.swift in Sources */,
+				7402B7AC22322A3700DB60E8 /* GradientView.swift in Sources */,
 				DC5B2924220245AB007DED78 /* ProfileDetailViewController.swift in Sources */,
 				74DCB07B21F93AB4007E2E41 /* AppDelegate.swift in Sources */,
 				DCF6B83C2210BA82001C0C56 /* MeasureViewController.swift in Sources */,
+				7402B72F2230D1D700DB60E8 /* SignInViewController.swift in Sources */,
 				DC3DA667222CBD7D00678537 /* MeasurementResultViewController.swift in Sources */,
 				DCC8DB4521F9452C000C8E5F /* HomeViewController.swift in Sources */,
 				F5C77AF7222F4A6F00327385 /* DashboardViewController.swift in Sources */,
@@ -728,6 +790,7 @@
 			baseConfigurationReference = 0F01026057EBF0304E4AEEA8 /* Pods-Coeur.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Coeur/Coeur.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T4X7R2GSNH;
 				INFOPLIST_FILE = Coeur/Info.plist;
@@ -736,7 +799,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = FYDP.Coeur;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FYDP.Coeur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -748,6 +811,7 @@
 			baseConfigurationReference = 2E560902402B9B15D70212BE /* Pods-Coeur.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Coeur/Coeur.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T4X7R2GSNH;
 				INFOPLIST_FILE = Coeur/Info.plist;
@@ -756,7 +820,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = FYDP.Coeur;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FYDP.Coeur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
