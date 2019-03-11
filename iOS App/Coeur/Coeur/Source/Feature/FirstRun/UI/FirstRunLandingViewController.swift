@@ -10,4 +10,10 @@ import UIKit
 
 class FirstRunLandingViewController: UIViewController {
 
+  @IBOutlet weak var getStartedButton: UIButton!
+
+  override func viewWillAppear(_ animated: Bool) {
+    getStartedButton.layer.cornerRadius = getStartedButton.bounds.height / 2
+    getStartedButton.backgroundColor = Colors.coeurLime
+  }
 }

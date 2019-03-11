@@ -44,12 +44,20 @@ class HomeViewController: UIViewController, FUIAuthDelegate {
     authenticatorUI?.providers = providers
   }
 
-  override func viewWillAppear(_ animated: Bool) {
+  override func viewDidAppear(_ animated: Bool) {
+    // Check if we have a signed in user
+    if let _ = Auth.auth().currentUser {
+      showWelcomeIfNeeded()
+    }
   }
 
   func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
     // handle user (`authDataResult.user`) and error as necessary
-    print(authDataResult)
+    guard let result = authDataResult, error == nil else { return }
+    let user = result.user
+
+    userDefaults.set(user.uid, forKey: CoeurUserDefaultKeys.kFirebaseUserId)
+    self.showWelcomeIfNeeded()
   }
 
   func authPickerViewController(forAuthUI authUI: FUIAuth) -> FUIAuthPickerViewController {
@@ -59,6 +67,31 @@ class HomeViewController: UIViewController, FUIAuthDelegate {
   @IBAction func onSignInPressed(_ sender: UIButton) {
     // Present the auth view controller and then implement the sign in callback.
     let authViewController = authenticatorUI!.authViewController()
+    guard let signInViewController = authViewController.viewControllers.first as? SignInViewController else {
+      return
+    }
+
+    signInViewController.onEmailSignInCallback = { email, password in
+      Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+        // First Dismiss the Sign In View Controller
+        self.dismiss(animated: true, completion: nil)
+
+        guard let result = authResult, error == nil else { return }
+        let user = result.user
+
+        self.userDefaults.set(user.uid, forKey: CoeurUserDefaultKeys.kFirebaseUserId)
+        self.showWelcomeIfNeeded()
+      }
+    }
+
     present(authViewController, animated: true, completion: nil)
+  }
+
+  private func showWelcomeIfNeeded() {
+    if userDefaults.bool(forKey: CoeurUserDefaultKeys.kkHasSeenWelcome) {
+      performSegue(withIdentifier: "GoToDashboard", sender: self)
+    }
+
+    performSegue(withIdentifier: "GoToWelcome", sender: self)
   }
 }

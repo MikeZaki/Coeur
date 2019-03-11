@@ -46,14 +46,14 @@ class CoeurTabBar: UIView {
         with: newImageView,
         duration:0.3,
         options: .transitionCrossDissolve,
-        animations: { newImageView.image = newValue.imageSet.selectedImage },
+        animations: { previousImageView.image = self.currentPage.imageSet.deselectedImage },
         completion: nil)
 
       UIView.transition(
         with: newImageView,
         duration:0.3,
         options: .transitionCrossDissolve,
-        animations: { previousImageView.image = self.currentPage.imageSet.deselectedImage },
+        animations: { newImageView.image = newValue.imageSet.selectedImage },
         completion: nil)
     }
   }

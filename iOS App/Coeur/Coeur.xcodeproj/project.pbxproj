@@ -58,6 +58,8 @@
 		7402B8012233F11700DB60E8 /* TabBarContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7402B8002233F11700DB60E8 /* TabBarContainerViewController.swift */; };
 		7402B8032233F1CA00DB60E8 /* CoeurTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7402B8022233F1CA00DB60E8 /* CoeurTabBar.swift */; };
 		7402B8052233F26C00DB60E8 /* CoeurTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7402B8042233F26C00DB60E8 /* CoeurTabBar.xib */; };
+		745E8A9F22367EEB0029AF5B /* pikachu.png in Resources */ = {isa = PBXBuildFile; fileRef = 745E8A9E22367EE80029AF5B /* pikachu.png */; };
+		745E8AA122368AF60029AF5B /* CoeurUserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E8AA022368AF60029AF5B /* CoeurUserDefaultKeys.swift */; };
 		748186E32235081D00D6CCDE /* TrendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748186E22235081D00D6CCDE /* TrendsViewController.swift */; };
 		748186E7223512CB00D6CCDE /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748186E6223512CB00D6CCDE /* DashboardViewController.swift */; };
 		748186EB223520D100D6CCDE /* challengesIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 748186E8223520CE00D6CCDE /* challengesIcon.png */; };
@@ -202,6 +204,8 @@
 		7402B8002233F11700DB60E8 /* TabBarContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarContainerViewController.swift; sourceTree = "<group>"; };
 		7402B8022233F1CA00DB60E8 /* CoeurTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoeurTabBar.swift; sourceTree = "<group>"; };
 		7402B8042233F26C00DB60E8 /* CoeurTabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoeurTabBar.xib; sourceTree = "<group>"; };
+		745E8A9E22367EE80029AF5B /* pikachu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pikachu.png; sourceTree = "<group>"; };
+		745E8AA022368AF60029AF5B /* CoeurUserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoeurUserDefaultKeys.swift; sourceTree = "<group>"; };
 		748186E22235081D00D6CCDE /* TrendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsViewController.swift; sourceTree = "<group>"; };
 		748186E6223512CB00D6CCDE /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		748186E8223520CE00D6CCDE /* challengesIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = challengesIcon.png; sourceTree = "<group>"; };
@@ -544,6 +548,7 @@
 				74E7A0EC222F790700329141 /* Common */,
 				74E7A0EB222F790300329141 /* App */,
 				74E7A0E8222F78EF00329141 /* Feature */,
+				745E8AA022368AF60029AF5B /* CoeurUserDefaultKeys.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -606,6 +611,7 @@
 				7481873C223664D600D6CCDE /* ArticleImage1.png */,
 				7481873D223664D900D6CCDE /* ArticleImage2.png */,
 				7481870122361E5C00D6CCDE /* Arrow Right.png */,
+				745E8A9E22367EE80029AF5B /* pikachu.png */,
 				748186EE2235E90D00D6CCDE /* BPIcon.png */,
 				748186E8223520CE00D6CCDE /* challengesIcon.png */,
 				748186E9223520D000D6CCDE /* scheduleIcon.png */,
@@ -892,6 +898,7 @@
 				7402B7D22233B3D200DB60E8 /* Measure Icon.png in Resources */,
 				7402B7DB2233B3D200DB60E8 /* Button.png in Resources */,
 				7402B7EF2233B3D200DB60E8 /* dashboardActiveIcon.png in Resources */,
+				745E8A9F22367EEB0029AF5B /* pikachu.png in Resources */,
 				7402B7FD2233E7D200DB60E8 /* SF-Pro-Text-RegularItalic.otf in Resources */,
 				7402B7FE2233E7D900DB60E8 /* SF-Pro-Display-Regular.otf in Resources */,
 				7402B7DE2233B3D200DB60E8 /* Dashboard Icon.png in Resources */,
@@ -1101,6 +1108,7 @@
 				748187412236666400D6CCDE /* LearnArticleTableViewCell.swift in Sources */,
 				7402B8032233F1CA00DB60E8 /* CoeurTabBar.swift in Sources */,
 				74DCB07B21F93AB4007E2E41 /* AppDelegate.swift in Sources */,
+				745E8AA122368AF60029AF5B /* CoeurUserDefaultKeys.swift in Sources */,
 				7402B72F2230D1D700DB60E8 /* SignInViewController.swift in Sources */,
 				7481870D2236445500D6CCDE /* CoeurTabPageDeleagate.swift in Sources */,
 				7402B7F32233CE1500DB60E8 /* FirstRunLandingViewController.swift in Sources */,

@@ -62,6 +62,7 @@ class SignInViewController: FUIAuthPickerViewController, UITextFieldDelegate {
     textField.layer.cornerRadius = 26
     textField.backgroundColor = .white
     textField.textAlignment = .center
+    textField.isSecureTextEntry = true
     textField.translatesAutoresizingMaskIntoConstraints = false
     textField.tag = 1 // Identify as password textfield
     return textField
@@ -82,16 +83,19 @@ class SignInViewController: FUIAuthPickerViewController, UITextFieldDelegate {
       scrollView.backgroundColor = .white
       if let weirdView = scrollView.subviews.first {
         let frame = CGRect(x: 0,
-                           y: -308,
+                           y: -370,
                            width: view.bounds.width,
-                           height: view.bounds.height + 100)
+                           height: view.bounds.height + 125)
         weirdView.layer.insertSublayer(GradientView(color1: Colors.coeurLime, color2: .white, frame: frame).layer, at: 0)
       }
     }
     setupUI()
     emailTextField.delegate = self
     passwordTextField.delegate = self
+    hideKeyboardWhenTappedAround()
   }
+
+  public var onEmailSignInCallback: ((String, String) -> Void)?
 
   func setupUI() {
     self.navigationController?.navigationBar.isHidden = true
@@ -127,15 +131,25 @@ class SignInViewController: FUIAuthPickerViewController, UITextFieldDelegate {
   }
 
   func textFieldDidBeginEditing(_ textField: UITextField) {
-    handleFieldsAreValid()
+    handleFieldsAreValid(emailText: emailTextField.text, passwordText: passwordTextField.text)
   }
 
   func textFieldDidEndEditing(_ textField: UITextField) {
-    handleFieldsAreValid()
+    handleFieldsAreValid(emailText: emailTextField.text, passwordText: passwordTextField.text)
   }
 
   func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-    handleFieldsAreValid()
+    guard let currentString = textField.text as NSString? else { return true }
+    let newString = currentString.replacingCharacters(in: range, with: string)
+    
+    if textField === passwordTextField {
+      handleFieldsAreValid(emailText: emailTextField.text, passwordText: newString)
+    }
+
+    if textField === emailTextField {
+      handleFieldsAreValid(emailText: newString, passwordText: passwordTextField.text)
+    }
+
     return true
   }
 
@@ -143,14 +157,12 @@ class SignInViewController: FUIAuthPickerViewController, UITextFieldDelegate {
   func signIn() {
     guard let email = emailTextField.text,
           let password = passwordTextField.text,
-          emailAndPasswordAreValid()
+          emailAndPasswordAreValid(emailText: email, passwordText: password)
     else {
         return
     }
 
-    Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-      self.dismiss(animated: true, completion: nil)
-    }
+    onEmailSignInCallback?(email, password)
   }
 
   private func isValidEmail(testStr:String) -> Bool {
@@ -160,10 +172,18 @@ class SignInViewController: FUIAuthPickerViewController, UITextFieldDelegate {
     return emailTest.evaluate(with: testStr)
   }
 
-  private func emailAndPasswordAreValid() -> Bool {
-    guard let password = passwordTextField.text,
-          password.count > 7,
-          let email = emailTextField.text,
+  private func isValidPassword(testStr: String) -> Bool {
+    guard testStr.count >= 8 else {
+      return false
+    }
+
+    return true
+  }
+
+  private func emailAndPasswordAreValid(emailText: String?, passwordText: String?) -> Bool {
+    guard let password = passwordText,
+          let email = emailText,
+          isValidPassword(testStr: password),
           isValidEmail(testStr: email)
       else {
         return false
@@ -172,13 +192,25 @@ class SignInViewController: FUIAuthPickerViewController, UITextFieldDelegate {
     return true
   }
 
-  private func handleFieldsAreValid() {
-    if emailAndPasswordAreValid() {
+  private func handleFieldsAreValid(emailText: String?, passwordText: String?) {
+    if emailAndPasswordAreValid(emailText: emailText, passwordText: passwordText) {
       signInButton.isEnabled = true
       signInButton.alpha = 1
     } else {
       signInButton.isEnabled = false
       signInButton.alpha = 0.5
     }
+  }
+}
+
+extension UIViewController {
+  func hideKeyboardWhenTappedAround() {
+    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+    tap.cancelsTouchesInView = false
+    view.addGestureRecognizer(tap)
+  }
+
+  @objc func dismissKeyboard() {
+    view.endEditing(true)
   }
 }

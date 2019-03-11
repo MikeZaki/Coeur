@@ -11,13 +11,24 @@ import UIKit
 class FirstRunProfileViewController: UIViewController {
 
   @IBOutlet weak var back: NSLayoutConstraint!
+  @IBOutlet weak var finishButton: UIButton!
 
+  override func viewWillAppear(_ animated: Bool) {
+    // By Default the button is innactive.
+//    finishButton.isEnabled = false
+//    finishButton.alpha = 0.5
 
-  @IBAction func `continue`(_ sender: UIButton) {
-    self.dismiss(animated: true, completion: nil)
+    finishButton.layer.cornerRadius = finishButton.bounds.height / 2
+    finishButton.backgroundColor = Colors.coeurLime
   }
 
   @IBAction func back(_ sender: UIButton) {
     self.navigationController?.popViewController(animated: true)
+  }
+
+  @IBAction func onFinishPressed(_ sender: UIButton) {
+    // If the user made it this far, save that they have now seen the welcome flow
+    UserDefaults.standard.set(true, forKey: CoeurUserDefaultKeys.kkHasSeenWelcome)
+    self.dismiss(animated: true, completion: nil)
   }
 }

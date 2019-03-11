@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     pageControl.pageIndicatorTintColor = Colors.coeurShadowColor
     pageControl.currentPageIndicatorTintColor = Colors.coeurLime
     pageControl.backgroundColor = .clear
+
     return true
   }
 
