@@ -10,5 +10,6 @@ import Foundation
 
 public struct CoeurUserDefaultKeys {
   public static let kFirebaseUserId = "firebase_user_id"
+  public static let kFirebaseUserDisplayName = "firebase_user_display_name"
   public static let kkHasSeenWelcome = "has_seen_welcome"
 }

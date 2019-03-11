@@ -60,6 +60,14 @@
 		7402B8052233F26C00DB60E8 /* CoeurTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7402B8042233F26C00DB60E8 /* CoeurTabBar.xib */; };
 		745E8A9F22367EEB0029AF5B /* pikachu.png in Resources */ = {isa = PBXBuildFile; fileRef = 745E8A9E22367EE80029AF5B /* pikachu.png */; };
 		745E8AA122368AF60029AF5B /* CoeurUserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E8AA022368AF60029AF5B /* CoeurUserDefaultKeys.swift */; };
+		745E8AAA2236A9CF0029AF5B /* PulsePPGOrgan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E8AA42236A9CE0029AF5B /* PulsePPGOrgan.swift */; };
+		745E8AAB2236A9CF0029AF5B /* AVCaptureDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E8AA52236A9CE0029AF5B /* AVCaptureDeviceExtension.swift */; };
+		745E8AAC2236A9CF0029AF5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E8AA62236A9CE0029AF5B /* ViewController.swift */; };
+		745E8AAD2236A9CF0029AF5B /* PulseCaptureOrgan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E8AA72236A9CE0029AF5B /* PulseCaptureOrgan.swift */; };
+		745E8AAE2236A9CF0029AF5B /* FilterOrgan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E8AA82236A9CF0029AF5B /* FilterOrgan.swift */; };
+		745E8AAF2236A9CF0029AF5B /* DataProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E8AA92236A9CF0029AF5B /* DataProcessor.swift */; };
+		745E8AB12236E53A0029AF5B /* CoeurAnimatedHeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E8AB02236E53A0029AF5B /* CoeurAnimatedHeartView.swift */; };
+		745E8AB32236FD8E0029AF5B /* CaptureSessionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745E8AB22236FD8D0029AF5B /* CaptureSessionSpec.swift */; };
 		748186E32235081D00D6CCDE /* TrendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748186E22235081D00D6CCDE /* TrendsViewController.swift */; };
 		748186E7223512CB00D6CCDE /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748186E6223512CB00D6CCDE /* DashboardViewController.swift */; };
 		748186EB223520D100D6CCDE /* challengesIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 748186E8223520CE00D6CCDE /* challengesIcon.png */; };
@@ -206,6 +214,14 @@
 		7402B8042233F26C00DB60E8 /* CoeurTabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoeurTabBar.xib; sourceTree = "<group>"; };
 		745E8A9E22367EE80029AF5B /* pikachu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pikachu.png; sourceTree = "<group>"; };
 		745E8AA022368AF60029AF5B /* CoeurUserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoeurUserDefaultKeys.swift; sourceTree = "<group>"; };
+		745E8AA42236A9CE0029AF5B /* PulsePPGOrgan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PulsePPGOrgan.swift; path = ../../../../../../DataCollectionApp/Pulse_iOS/Pulse_iOS/PulsePPGOrgan.swift; sourceTree = "<group>"; };
+		745E8AA52236A9CE0029AF5B /* AVCaptureDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AVCaptureDeviceExtension.swift; path = ../../../../../../DataCollectionApp/Pulse_iOS/Pulse_iOS/AVCaptureDeviceExtension.swift; sourceTree = "<group>"; };
+		745E8AA62236A9CE0029AF5B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../../../../DataCollectionApp/Pulse_iOS/Pulse_iOS/ViewController.swift; sourceTree = "<group>"; };
+		745E8AA72236A9CE0029AF5B /* PulseCaptureOrgan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PulseCaptureOrgan.swift; path = ../../../../../../DataCollectionApp/Pulse_iOS/Pulse_iOS/PulseCaptureOrgan.swift; sourceTree = "<group>"; };
+		745E8AA82236A9CF0029AF5B /* FilterOrgan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterOrgan.swift; path = ../../../../../../DataCollectionApp/Pulse_iOS/Pulse_iOS/FilterOrgan.swift; sourceTree = "<group>"; };
+		745E8AA92236A9CF0029AF5B /* DataProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataProcessor.swift; path = ../../../../../../DataCollectionApp/Pulse_iOS/Pulse_iOS/DataProcessor.swift; sourceTree = "<group>"; };
+		745E8AB02236E53A0029AF5B /* CoeurAnimatedHeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoeurAnimatedHeartView.swift; sourceTree = "<group>"; };
+		745E8AB22236FD8D0029AF5B /* CaptureSessionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CaptureSessionSpec.swift; path = ../../../../../../DataCollectionApp/Pulse_iOS/Pulse_iOS/Model/CaptureSessionSpec.swift; sourceTree = "<group>"; };
 		748186E22235081D00D6CCDE /* TrendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsViewController.swift; sourceTree = "<group>"; };
 		748186E6223512CB00D6CCDE /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		748186E8223520CE00D6CCDE /* challengesIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = challengesIcon.png; sourceTree = "<group>"; };
@@ -363,6 +379,7 @@
 				7402B7AB22322A3700DB60E8 /* GradientView.swift */,
 				7402B8022233F1CA00DB60E8 /* CoeurTabBar.swift */,
 				7402B8042233F26C00DB60E8 /* CoeurTabBar.xib */,
+				745E8AB02236E53A0029AF5B /* CoeurAnimatedHeartView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -394,6 +411,20 @@
 				7481870C2236445500D6CCDE /* CoeurTabPageDeleagate.swift */,
 			);
 			path = TabBarContainer;
+			sourceTree = "<group>";
+		};
+		745E8AA22236A97C0029AF5B /* Pulse */ = {
+			isa = PBXGroup;
+			children = (
+				745E8AB22236FD8D0029AF5B /* CaptureSessionSpec.swift */,
+				745E8AA52236A9CE0029AF5B /* AVCaptureDeviceExtension.swift */,
+				745E8AA92236A9CF0029AF5B /* DataProcessor.swift */,
+				745E8AA82236A9CF0029AF5B /* FilterOrgan.swift */,
+				745E8AA72236A9CE0029AF5B /* PulseCaptureOrgan.swift */,
+				745E8AA42236A9CE0029AF5B /* PulsePPGOrgan.swift */,
+				745E8AA62236A9CE0029AF5B /* ViewController.swift */,
+			);
+			path = Pulse;
 			sourceTree = "<group>";
 		};
 		748186E0223507EC00D6CCDE /* Trends */ = {
@@ -556,6 +587,7 @@
 		74E7A0E8222F78EF00329141 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				745E8AA22236A97C0029AF5B /* Pulse */,
 				748187102236546500D6CCDE /* Learn */,
 				7481870322361F1200D6CCDE /* Measure */,
 				748186E4223512B000D6CCDE /* Dashboard */,
@@ -1097,23 +1129,31 @@
 				7402B7322230E89400DB60E8 /* Colors.swift in Sources */,
 				7481870622361F2800D6CCDE /* MeasureViewController.swift in Sources */,
 				7402B7AC22322A3700DB60E8 /* GradientView.swift in Sources */,
+				745E8AAA2236A9CF0029AF5B /* PulsePPGOrgan.swift in Sources */,
 				74818713223654D400D6CCDE /* LearnViewController.swift in Sources */,
 				748186E32235081D00D6CCDE /* TrendsViewController.swift in Sources */,
+				745E8AAC2236A9CF0029AF5B /* ViewController.swift in Sources */,
 				748186FE2235F83100D6CCDE /* CoeurTabBarButton.swift in Sources */,
 				7402B7F82233E19900DB60E8 /* FirstRunProfileViewController.swift in Sources */,
+				745E8AB32236FD8E0029AF5B /* CaptureSessionSpec.swift in Sources */,
 				748187002235FB9E00D6CCDE /* CoeurTabBarPage.swift in Sources */,
 				7481871522365C7500D6CCDE /* LearnLandingViewController.swift in Sources */,
+				745E8AAF2236A9CF0029AF5B /* DataProcessor.swift in Sources */,
 				748186FC2235F59600D6CCDE /* TrendsTableViewCell.swift in Sources */,
 				748187092236337C00D6CCDE /* CoeurMeasureTutorialPageViewController.swift in Sources */,
 				748187412236666400D6CCDE /* LearnArticleTableViewCell.swift in Sources */,
 				7402B8032233F1CA00DB60E8 /* CoeurTabBar.swift in Sources */,
 				74DCB07B21F93AB4007E2E41 /* AppDelegate.swift in Sources */,
 				745E8AA122368AF60029AF5B /* CoeurUserDefaultKeys.swift in Sources */,
+				745E8AB12236E53A0029AF5B /* CoeurAnimatedHeartView.swift in Sources */,
 				7402B72F2230D1D700DB60E8 /* SignInViewController.swift in Sources */,
+				745E8AAD2236A9CF0029AF5B /* PulseCaptureOrgan.swift in Sources */,
+				745E8AAE2236A9CF0029AF5B /* FilterOrgan.swift in Sources */,
 				7481870D2236445500D6CCDE /* CoeurTabPageDeleagate.swift in Sources */,
 				7402B7F32233CE1500DB60E8 /* FirstRunLandingViewController.swift in Sources */,
 				DCC8DB4521F9452C000C8E5F /* HomeViewController.swift in Sources */,
 				7402B8012233F11700DB60E8 /* TabBarContainerViewController.swift in Sources */,
+				745E8AAB2236A9CF0029AF5B /* AVCaptureDeviceExtension.swift in Sources */,
 				748186E7223512CB00D6CCDE /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,4 +10,5 @@ import Foundation
 
 public protocol CoeurTabPageDelegate: class {
   func shouldChangeDisplay(toPage page: CoeurTabBarPage)
+  func shouldChangeTabBarVisibility(shown: Bool)
 }

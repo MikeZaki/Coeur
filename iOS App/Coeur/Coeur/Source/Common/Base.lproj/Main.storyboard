@@ -1078,13 +1078,18 @@ that you would be interested in.</string>
                                     <constraint firstAttribute="height" constant="54" id="Mzx-Lp-jWo"/>
                                     <constraint firstAttribute="width" constant="214" id="gEK-7a-Kyq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="16"/>
                                 <state key="normal" title="START">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onStartButtonPressed:" destination="ZTU-Is-j8g" eventType="touchUpInside" id="gu3-8h-48h"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your last reading was NORMAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6f-ki-ENC">
-                                <rect key="frame" x="0.0" y="80" width="375" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6f-ki-ENC">
+                                <rect key="frame" x="0.0" y="80" width="375" height="57.5"/>
+                                <string key="text">Your last reading was 
+NORMAL</string>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1096,6 +1101,10 @@ that you would be interested in.</string>
                                     <constraint firstAttribute="height" constant="263" id="pSa-Ee-YNf"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HbO-Xl-P8p" customClass="CoeurAnimatedHeartView" customModule="Coeur" customModuleProvider="target">
+                                <rect key="frame" x="30.5" y="284.5" width="314" height="263"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQc-o7-Mmb">
                                 <rect key="frame" x="329" y="25" width="22" height="22"/>
                                 <constraints>
@@ -1109,24 +1118,43 @@ that you would be interested in.</string>
                                     <action selector="infoButtonPressed:" destination="ZTU-Is-j8g" eventType="touchUpInside" id="BUl-Wl-BsU"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wY8-Ij-1xA">
+                                <rect key="frame" x="90.5" y="696" width="0.0" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="HbO-Xl-P8p" firstAttribute="leading" secondItem="MGa-t4-8KS" secondAttribute="leading" id="51m-CE-LF3"/>
                             <constraint firstItem="ey1-OE-g1Q" firstAttribute="trailing" secondItem="Z6f-ki-ENC" secondAttribute="trailing" id="5wt-9x-avd"/>
+                            <constraint firstItem="HbO-Xl-P8p" firstAttribute="bottom" secondItem="MGa-t4-8KS" secondAttribute="bottom" id="G3P-v8-5zi"/>
+                            <constraint firstItem="wY8-Ij-1xA" firstAttribute="bottom" secondItem="sAz-5J-5GF" secondAttribute="bottom" constant="-10" id="G68-LJ-hzl"/>
                             <constraint firstItem="Z6f-ki-ENC" firstAttribute="top" secondItem="ey1-OE-g1Q" secondAttribute="top" constant="60" id="OPh-zs-Gaz"/>
+                            <constraint firstItem="wY8-Ij-1xA" firstAttribute="leading" secondItem="sAz-5J-5GF" secondAttribute="leading" constant="10" id="P87-pQ-Poo"/>
                             <constraint firstItem="ey1-OE-g1Q" firstAttribute="trailing" secondItem="sQc-o7-Mmb" secondAttribute="trailing" constant="24" id="SeX-Ym-NHW"/>
                             <constraint firstItem="Z6f-ki-ENC" firstAttribute="leading" secondItem="ey1-OE-g1Q" secondAttribute="leading" id="UYh-Ig-nBh"/>
                             <constraint firstItem="MGa-t4-8KS" firstAttribute="centerX" secondItem="ey1-OE-g1Q" secondAttribute="centerX" id="VC7-SO-Kcb"/>
+                            <constraint firstItem="wY8-Ij-1xA" firstAttribute="trailing" secondItem="sAz-5J-5GF" secondAttribute="leading" constant="10" id="XAt-UU-R2j"/>
                             <constraint firstItem="MGa-t4-8KS" firstAttribute="centerY" secondItem="ey1-OE-g1Q" secondAttribute="centerY" id="gCZ-09-Ma2"/>
+                            <constraint firstItem="HbO-Xl-P8p" firstAttribute="trailing" secondItem="MGa-t4-8KS" secondAttribute="trailing" id="kHi-Wa-w2W"/>
+                            <constraint firstItem="HbO-Xl-P8p" firstAttribute="top" secondItem="MGa-t4-8KS" secondAttribute="top" id="kJm-1O-xUm"/>
                             <constraint firstItem="sAz-5J-5GF" firstAttribute="centerX" secondItem="ey1-OE-g1Q" secondAttribute="centerX" id="s2z-fn-nw9"/>
                             <constraint firstItem="sQc-o7-Mmb" firstAttribute="top" secondItem="ey1-OE-g1Q" secondAttribute="top" constant="5" id="trW-s2-u9Q"/>
                             <constraint firstItem="ey1-OE-g1Q" firstAttribute="bottom" secondItem="sAz-5J-5GF" secondAttribute="bottom" constant="72" id="vpg-lg-387"/>
+                            <constraint firstItem="wY8-Ij-1xA" firstAttribute="top" secondItem="sAz-5J-5GF" secondAttribute="top" constant="10" id="xPS-SC-5yK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ey1-OE-g1Q"/>
                     </view>
                     <size key="freeformSize" width="375" height="812"/>
                     <connections>
+                        <outlet property="animatedHeartView" destination="HbO-Xl-P8p" id="6HK-d6-7WZ"/>
+                        <outlet property="iconImageViewVerticalConstraint" destination="gCZ-09-Ma2" id="Vl4-HQ-KN7"/>
+                        <outlet property="infoButton" destination="sQc-o7-Mmb" id="dqB-nX-nvz"/>
+                        <outlet property="lastReadingLabel" destination="Z6f-ki-ENC" id="SZd-3d-tNn"/>
+                        <outlet property="progressView" destination="wY8-Ij-1xA" id="ysK-vs-8yr"/>
+                        <outlet property="progressViewTrailingConstraint" destination="XAt-UU-R2j" id="NlA-NE-r8d"/>
                         <outlet property="startButton" destination="sAz-5J-5GF" id="8rN-qp-elZ"/>
+                        <outlet property="startButtonWidthConstraint" destination="gEK-7a-Kyq" id="wcL-yF-Css"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jD4-HU-0Ik" userLabel="First Responder" sceneMemberID="firstResponder"/>

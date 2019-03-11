@@ -1,7 +1,7 @@
 import AVFoundation
 
 extension AVCaptureDevice {
-  
+
   /// <#Description#>
   ///
   /// - Parameter preferredFps: <#preferredFps description#>
@@ -15,7 +15,7 @@ extension AVCaptureDevice {
     }
     return availableFormats
   }
-  
+
   /// <#Description#>
   ///
   /// - Parameter availableFormats: <#availableFormats description#>
@@ -35,7 +35,7 @@ extension AVCaptureDevice {
     }
     return selectedFormat
   }
-  
+
   /// <#Description#>
   ///
   /// - Parameters:
@@ -51,17 +51,17 @@ extension AVCaptureDevice {
       return size.width >= Int32(preferredSize.width) && size.height >= Int32(preferredSize.height)
     }).first
   }
-  
+
   /// <#Description#>
   ///
   /// - Parameter preferredSpec: <#preferredSpec description#>
   public func updateFormatWithPreferredCaptureSessionSpec(preferredSpec: CaptureSessionSpec) {
     let availableFormats: [AVCaptureDevice.Format]
     availableFormats = availableFormatsFor(preferredFps: Float64(preferredSpec.fps))
-    
+
     var format: AVCaptureDevice.Format?
     format = formatFor(preferredSize: preferredSpec.size, availableFormats: availableFormats)
-    
+
     guard let selectedFormat = format else {return}
     print("selected format: \(selectedFormat)")
     do {
@@ -70,9 +70,9 @@ extension AVCaptureDevice {
       fatalError("")
     }
     activeFormat = selectedFormat
-    
-    activeVideoMinFrameDuration = CMTimeMake(1, preferredSpec.fps)
-    activeVideoMaxFrameDuration = CMTimeMake(1, preferredSpec.fps)
+
+    activeVideoMinFrameDuration = CMTimeMake(value: 1, timescale: preferredSpec.fps)
+    activeVideoMaxFrameDuration = CMTimeMake(value: 1, timescale: preferredSpec.fps)
     unlockForConfiguration()
   }
 }

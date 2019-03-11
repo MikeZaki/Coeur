@@ -63,6 +63,8 @@ class FirstRunDisplayNameViewController: UIViewController, UITextFieldDelegate {
     changeRequest?.commitChanges { (error) in
       guard error == nil else { return }
 
+      UserDefaults.standard.set(self.displaynameTextField.text,
+                                forKey: CoeurUserDefaultKeys.kFirebaseUserDisplayName)
       self.performSegue(withIdentifier: "GoToProfileDetail", sender: self)
     }
   }

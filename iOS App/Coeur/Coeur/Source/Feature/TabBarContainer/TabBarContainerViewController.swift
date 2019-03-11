@@ -172,6 +172,10 @@ extension TabBarContainerViewController: CoeurTabPageDelegate {
       handleTabBarVisibility(shouldShowTabBar: false)
     }
   }
+
+  func shouldChangeTabBarVisibility(shown: Bool) {
+    handleTabBarVisibility(shouldShowTabBar: shown)
+  }
 }
 
 extension TabBarContainerViewController:

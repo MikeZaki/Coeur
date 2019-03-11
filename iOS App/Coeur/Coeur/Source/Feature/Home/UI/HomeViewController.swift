@@ -76,7 +76,9 @@ class HomeViewController: UIViewController, FUIAuthDelegate {
         // First Dismiss the Sign In View Controller
         self.dismiss(animated: true, completion: nil)
 
-        guard let result = authResult, error == nil else { return }
+        guard let result = authResult, error == nil else {
+          return
+        }
         let user = result.user
 
         self.userDefaults.set(user.uid, forKey: CoeurUserDefaultKeys.kFirebaseUserId)
