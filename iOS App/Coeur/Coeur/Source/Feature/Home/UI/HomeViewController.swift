@@ -13,7 +13,6 @@ import FirebaseUI
 class HomeViewController: UIViewController, FUIAuthDelegate {
 
   @IBOutlet weak var newUserButton: UIButton!
-  @IBOutlet weak var returningUserButton: UIButton!
 
   private var userDefaults: UserDefaults = UserDefaults.standard
   private var authenticatorUI: FUIAuth?
@@ -23,7 +22,7 @@ class HomeViewController: UIViewController, FUIAuthDelegate {
   }
 
   func setupUI() {
-    newUserButton.layer.cornerRadius = 10
+    newUserButton.layer.cornerRadius = 26
   }
 
   func checkLoginState() {

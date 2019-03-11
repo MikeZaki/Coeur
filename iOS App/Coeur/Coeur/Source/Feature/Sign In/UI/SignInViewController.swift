@@ -71,7 +71,7 @@ class SignInViewController: FUIAuthPickerViewController, UITextFieldDelegate {
     let label = UILabel(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
     label.text = "COEUR"
     label.textColor = .black
-    label.font = UIFont.systemFont(ofSize: 36)
+    label.font = UIFont(name: "JosefinSans-Light", size: 36)
     label.translatesAutoresizingMaskIntoConstraints = false
     return label
   }()
@@ -127,71 +127,28 @@ class SignInViewController: FUIAuthPickerViewController, UITextFieldDelegate {
   }
 
   func textFieldDidBeginEditing(_ textField: UITextField) {
-    // Email Text Field
-    if textField.tag == 0 {
-      guard let email = textField.text, isValidEmail(testStr: email) else {
-        signInButton.isEnabled = false
-        signInButton.alpha = 0.5
-        return
-      }
-
-      signInButton.isEnabled = true
-      signInButton.alpha = 1
-    }
-
-    // Password Text Field
-    if textField.tag == 1 {
-      guard let password = textField.text, password.count > 7 else {
-        signInButton.isEnabled = false
-        signInButton.alpha = 0.5
-        return
-      }
-
-      signInButton.isEnabled = true
-      signInButton.alpha = 1
-    }
+    handleFieldsAreValid()
   }
 
   func textFieldDidEndEditing(_ textField: UITextField) {
-    // Email Text Field
-    if textField.tag == 0 {
-      guard let email = textField.text, isValidEmail(testStr: email) else {
-        signInButton.isEnabled = false
-        signInButton.alpha = 0.5
-        return
-      }
-
-      signInButton.isEnabled = true
-      signInButton.alpha = 1
-    }
-
-    // Password Text Field
-    if textField.tag == 1 {
-      guard let password = textField.text, password.count > 7 else {
-        signInButton.isEnabled = false
-        signInButton.alpha = 0.5
-        return
-      }
-
-      signInButton.isEnabled = true
-      signInButton.alpha = 1
-    }
+    handleFieldsAreValid()
   }
 
   func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-    return true;
+    handleFieldsAreValid()
+    return true
   }
 
   @objc
   func signIn() {
-    guard let password = passwordTextField.text, password.count > 7,
-          let email = emailTextField.text, isValidEmail(testStr: email)
+    guard let email = emailTextField.text,
+          let password = passwordTextField.text,
+          emailAndPasswordAreValid()
     else {
-      return
+        return
     }
 
     Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-      print(authResult)
       self.dismiss(animated: true, completion: nil)
     }
   }
@@ -204,6 +161,24 @@ class SignInViewController: FUIAuthPickerViewController, UITextFieldDelegate {
   }
 
   private func emailAndPasswordAreValid() -> Bool {
-    return true 
+    guard let password = passwordTextField.text,
+          password.count > 7,
+          let email = emailTextField.text,
+          isValidEmail(testStr: email)
+      else {
+        return false
+    }
+
+    return true
+  }
+
+  private func handleFieldsAreValid() {
+    if emailAndPasswordAreValid() {
+      signInButton.isEnabled = true
+      signInButton.alpha = 1
+    } else {
+      signInButton.isEnabled = false
+      signInButton.alpha = 0.5
+    }
   }
 }
