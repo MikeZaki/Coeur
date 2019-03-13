@@ -96,15 +96,24 @@ class TabBarContainerViewController: UIViewController {
   private func tabBarController(forPage page:CoeurTabBarPage) -> UIViewController {
     switch page {
     case .dashboard:
-      return DashboardViewController.dashboardViewController()
+      let vc = DashboardViewController.dashboardViewController()
+      let navController = UINavigationController(rootViewController: vc)
+      return navController
     case .trends:
       let vc = TrendsViewController.trendsViewController()
       let navController = UINavigationController(rootViewController: vc)
       return navController
     case .measure:
+      if !UserDefaults.standard.bool(forKey: CoeurUserDefaultKeys.kkHasSeenMeasureTutorial) {
+        UserDefaults.standard.set(true, forKey: CoeurUserDefaultKeys.kkHasSeenMeasureTutorial)
+        handleTabBarVisibility(shouldShowTabBar: true)
+        return tabBarController(forPage: .tutorial)
+      }
+
       let measureViewController = MeasureViewController.measureViewController()
       measureViewController.delegate = self
       return measureViewController
+
     case .tutorial:
       guard let tutorialPageViewController = pageViewController else {
         return MeasureViewController.measureViewController()
@@ -112,17 +121,18 @@ class TabBarContainerViewController: UIViewController {
       return tutorialPageViewController
 
     case .learn:
-      if hasSeenLearnLanding {
-        let vc = LearnViewController.learnViewController()
-        let navController = UINavigationController(rootViewController: vc)
-        return navController
+      if !UserDefaults.standard.bool(forKey: CoeurUserDefaultKeys.kkHasSeenLearnLandingPage) {
+        UserDefaults.standard.set(true, forKey: CoeurUserDefaultKeys.kkHasSeenLearnLandingPage)
+        let vc = LearnLandingViewController.learnLandingViewController()
+        vc.delegate = self
+        hasSeenLearnLanding = true
+        return vc
       }
 
-      let vc = LearnLandingViewController.learnLandingViewController()
-      vc.delegate = self
-      hasSeenLearnLanding = true
-      return vc
-
+      let vc = LearnViewController.learnViewController()
+      let navController = UINavigationController(rootViewController: vc)
+      return navController
+      
     default:
       return DashboardViewController.dashboardViewController()
     }
@@ -159,7 +169,6 @@ extension TabBarContainerViewController: CoeurTabBarDelegate {
   func tabBarButtonPressed(forPage page: CoeurTabBarPage) {
     let vc = tabBarController(forPage: page)
     add(asChildViewController: vc)
-    handleTabBarVisibility(shouldShowTabBar: true)
   }
 }
 

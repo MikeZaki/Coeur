@@ -51,8 +51,11 @@ public class PulsePPGOrgan:
     self.captureOrgan.start()
   }
 
-  public func captureOutput(_ output: AVCaptureOutput, didOutputSampleBuffer sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-//     first we want to grab the pixel buffer from the sample buffer.
+  public func kill() {
+    self.captureOrgan.stop()
+  }
+
+  public func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
     guard let cvimagebuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
       return
     }

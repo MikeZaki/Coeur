@@ -28,6 +28,7 @@ class FirstRunDisplayNameViewController: UIViewController, UITextFieldDelegate {
     
     continueButton.layer.cornerRadius = continueButton.bounds.height / 2
     continueButton.backgroundColor = Colors.coeurLime
+    hideKeyboardWhenTappedAround()
   }
 
   @IBAction func back(_ sender: UIButton) {
@@ -65,7 +66,8 @@ class FirstRunDisplayNameViewController: UIViewController, UITextFieldDelegate {
 
       UserDefaults.standard.set(self.displaynameTextField.text,
                                 forKey: CoeurUserDefaultKeys.kFirebaseUserDisplayName)
-      self.performSegue(withIdentifier: "GoToProfileDetail", sender: self)
     }
+
+    self.performSegue(withIdentifier: "GoToProfileDetail", sender: self)
   }
 }

@@ -12,12 +12,12 @@ fileprivate struct Constants {
   static let tableViewCellHeight: CGFloat = 100
 }
 
-class TrendsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TrendsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
   @IBOutlet weak var trendsTableView: UITableView!
 
-  static func trendsViewController() -> TrendsViewController {
-    let newViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TrendsViewController") as! TrendsViewController
+  static func trendsViewController() -> TrendsTableViewController {
+    let newViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TrendsTableViewController") as! TrendsTableViewController
     return newViewController
   }
 

@@ -77,15 +77,29 @@ final class PulseCaptureOrgan: NSObject {
     }
   }
 
-  public func configureTorch() {
+  public func configureTorch(isOn: Bool) {
     guard let camera = self.camera else { return }
+
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+      self.setTorchLevel(device: camera, to: isOn ? 0 : 1)
+    }
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+      self.setTorchLevel(device: camera, to: isOn ? 1 : 0)
+    }
+  }
+
+  private func setTorchLevel(device: AVCaptureDevice, to intensity: Float) {
     do {
-      try camera.lockForConfiguration()
-
-      camera.torchMode = .on
-
-      camera.unlockForConfiguration()
-    } catch {}
+      try device.lockForConfiguration()
+      if intensity > 0.1 {
+        try device.setTorchModeOn(level: intensity)
+      } else {
+        device.torchMode = .off
+      }
+      device.unlockForConfiguration()
+    } catch(let error) {
+      print(error)
+    }
   }
 
   // MARK: Public Interface
@@ -109,6 +123,12 @@ final class PulseCaptureOrgan: NSObject {
   public func start() {
     sessionQueue.async {
       self.captureSession.startRunning()
+    }
+  }
+
+  public func stop() {
+    sessionQueue.async {
+      self.captureSession.stopRunning()
     }
   }
 }

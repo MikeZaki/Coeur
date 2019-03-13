@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 fileprivate struct Constants {
   public static let iconImageViewOffset: CGFloat = -100
@@ -18,16 +19,26 @@ fileprivate struct Constants {
 
 class MeasureViewController: UIViewController {
 
+  @IBOutlet weak var iconImageView: UIImageView!
   @IBOutlet weak var animatedHeartView: CoeurAnimatedHeartView!
   @IBOutlet weak var infoButton: UIButton!
   @IBOutlet weak var startButton: UIButton!
   @IBOutlet weak var lastReadingLabel: UILabel!
-  @IBOutlet weak var iconImageViewVerticalConstraint: NSLayoutConstraint!
   @IBOutlet weak var startButtonWidthConstraint: NSLayoutConstraint!
   @IBOutlet weak var progressView: UIView!
   @IBOutlet weak var progressViewTrailingConstraint: NSLayoutConstraint!
 
   public weak var delegate: CoeurTabPageDelegate?
+
+  // Image Capture Vars
+  private let captureOrgan: PulseCaptureOrgan = PulseCaptureOrgan()
+  private var ppgCSV: [String:Double] = [:]
+  private var ppg: [Double] = []
+
+  // Responsible for capturing PPG
+  private lazy var ppgOrgan: PulsePPGOrgan = {
+    return PulsePPGOrgan(captureOrgan: self.captureOrgan)
+  }()
 
   static func measureViewController() -> MeasureViewController {
     let newViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MeasureViewController") as! MeasureViewController
@@ -51,17 +62,17 @@ class MeasureViewController: UIViewController {
     // Add Last Reading Logic
     lastReadingLabel.text = "You haven't taken a measurement yet.\nTry taking one now!"
 
+    // Capture Setup
+    ppgOrgan.delegate = self
+
+    animatedHeartView.isHidden = true
+
     // Gradient
     view.layer.insertSublayer(GradientView(color1: Colors.coeurLime, color2: .white, frame: view.bounds).layer, at: 0)
   }
 
-  @IBAction func infoButtonPressed(_ sender: Any) {
-    delegate?.shouldChangeDisplay(toPage: .tutorial)
-  }
-
   private func transformViewForMesurement() {
     // Move the heart Icon and the Start Button.
-    iconImageViewVerticalConstraint.constant = Constants.iconImageViewOffset
     startButtonWidthConstraint.constant = Constants.measurementStartButtonWidth
     UIView.animate(withDuration: 0.5, animations: {
       self.view.layoutIfNeeded()
@@ -70,6 +81,7 @@ class MeasureViewController: UIViewController {
       self.infoButton.isHidden = true
       self.startButton.setTitleColor(.clear, for: .normal)
       self.lastReadingLabel.isHidden = true
+      self.animatedHeartView.isHidden = false
     }) { _ in
       UIView.animate(withDuration: 0.5, animations: {
         self.progressView.isHidden = false
@@ -78,14 +90,84 @@ class MeasureViewController: UIViewController {
 
         UIView.animate(withDuration: 10, delay: 0.0, options: .curveEaseInOut, animations: {
           self.view.layoutIfNeeded()
-        }, completion: nil)
+        }, completion: { _ in
+          self.endMeausurement()
+        })
       }
     }
   }
 
+  private func transformViewForResult() {
+    self.progressViewTrailingConstraint.constant = Constants.measurementProgressViewTrailingDistance
+
+    // Set the correct text
+    self.startButton.setTitle("FINISH", for: .normal)
+    self.lastReadingLabel.text = "Your Blood pressure is:\nSlightly High"
+    UIView.animate(withDuration: 0.5, animations: {
+      self.view.layoutIfNeeded()
+
+      // Hide the start button title label and show the progress bar.
+      self.startButton.setTitleColor(.black, for: .normal)
+      self.lastReadingLabel.isHidden = false
+      self.iconImageView.isHidden = true
+      self.animatedHeartView.isHidden = true
+      self.progressView.isHidden = true
+    }) { _ in
+      self.startButtonWidthConstraint.constant = Constants.originalStartButtonWidth
+      UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseInOut, animations: {
+        self.view.layoutIfNeeded()
+      }, completion: { _ in })
+    }
+  }
+
+  private func endMeausurement() {
+    // Turn off the flash and Kill the capture session
+    transformViewForResult()
+    captureOrgan.configureTorch(isOn: false)
+    ppgOrgan.kill()
+
+    if ppg.count > 1000 {
+      let trimmedPPG = ppg[300...(ppg.count - 1)]
+      createCSV(from: Array(trimmedPPG))
+    }
+  }
+
+  func createCSV(from ppg:[Double]) {
+    var csvString = "\("ppg")\n\n"
+    for value in ppg {
+      csvString = csvString.appending("\(value)\n")
+    }
+
+    let fileManager = FileManager.default
+    do {
+      let path = try fileManager.url(for: .documentDirectory, in: .allDomainsMask, appropriateFor: nil, create: false)
+      let fileURL = path.appendingPathComponent("CSVRec-\(Auth.auth().currentUser?.uid ?? "unkownUser").csv")
+      try csvString.write(to: fileURL, atomically: true, encoding: .utf8)
+    } catch {
+      print("error creating file")
+    }
+  }
+
   @IBAction func onStartButtonPressed(_ sender: UIButton) {
-    delegate?.shouldChangeTabBarVisibility(shown: false)
-    transformViewForMesurement()
-    animatedHeartView.begin()
+    if ppg.count == 0 {
+      delegate?.shouldChangeTabBarVisibility(shown: false)
+      transformViewForMesurement()
+      animatedHeartView.begin()
+      ppgOrgan.beat()
+      captureOrgan.configureTorch(isOn: true)
+    } else {
+      delegate?.shouldChangeDisplay(toPage: .measure)
+      delegate?.shouldChangeTabBarVisibility(shown: true)
+    }
+  }
+
+  @IBAction func infoButtonPressed(_ sender: Any) {
+    delegate?.shouldChangeDisplay(toPage: .tutorial)
+  }
+}
+
+extension MeasureViewController: ppgOrganDelegate {
+  func ppgOrgan(_ ppgOrgan: PulsePPGOrgan, didCapture ppgValue: Double) {
+    ppg.append(ppgValue)
   }
 }

@@ -12,26 +12,26 @@ class CoeurAnimatedHeartView: UIView {
   //// UpperHeart Drawing
   let upperHeartPath: UIBezierPath = {
     let upperHeartPath = UIBezierPath()
-    upperHeartPath.move(to: CGPoint(x: 30.54, y: 148.38))
-    upperHeartPath.addLine(to: CGPoint(x: 93.72, y: 147.93))
-    upperHeartPath.addLine(to: CGPoint(x: 110.89, y: 117.01))
-    upperHeartPath.addLine(to: CGPoint(x: 135.93, y: 165.28))
-    upperHeartPath.addLine(to: CGPoint(x: 165.82, y: 90.81))
-    upperHeartPath.addLine(to: CGPoint(x: 189.37, y: 180.8))
-    upperHeartPath.addLine(to: CGPoint(x: 218.82, y: 147.72))
-    upperHeartPath.addLine(to: CGPoint(x: 266.12, y: 148.55))
-    upperHeartPath.addLine(to: CGPoint(x: 281.24, y: 115.04))
-    upperHeartPath.addLine(to: CGPoint(x: 267.33, y: 64.79))
-    upperHeartPath.addLine(to: CGPoint(x: 227.19, y: 39.23))
-    upperHeartPath.addLine(to: CGPoint(x: 183.03, y: 45.35))
-    upperHeartPath.addLine(to: CGPoint(x: 149.44, y: 70.51))
-    upperHeartPath.addLine(to: CGPoint(x: 112.3, y: 44.7))
-    upperHeartPath.addLine(to: CGPoint(x: 68.49, y: 40.09))
-    upperHeartPath.addLine(to: CGPoint(x: 29.41, y: 64.21))
-    upperHeartPath.addLine(to: CGPoint(x: 14.4, y: 100.24))
-    upperHeartPath.addLine(to: CGPoint(x: 28.17, y: 145.95))
-    UIColor.white.setStroke()
-    upperHeartPath.lineWidth = 5
+    upperHeartPath.move(to: CGPoint(x: 31.92, y: 142.19))
+    upperHeartPath.addLine(to: CGPoint(x: 98.09, y: 141.72))
+    upperHeartPath.addLine(to: CGPoint(x: 116.07, y: 109.34))
+    upperHeartPath.addLine(to: CGPoint(x: 142.29, y: 159.89))
+    upperHeartPath.addLine(to: CGPoint(x: 173.59, y: 81.9))
+    upperHeartPath.addLine(to: CGPoint(x: 198.26, y: 176.14))
+    upperHeartPath.addLine(to: CGPoint(x: 229.1, y: 141.5))
+    upperHeartPath.addLine(to: CGPoint(x: 278.63, y: 142.37))
+    upperHeartPath.addLine(to: CGPoint(x: 294.46, y: 107.28))
+    upperHeartPath.addLine(to: CGPoint(x: 279.89, y: 54.65))
+    upperHeartPath.addLine(to: CGPoint(x: 237.86, y: 27.89))
+    upperHeartPath.addLine(to: CGPoint(x: 191.62, y: 34.29))
+    upperHeartPath.addLine(to: CGPoint(x: 156.44, y: 60.65))
+    upperHeartPath.addLine(to: CGPoint(x: 117.54, y: 33.62))
+    upperHeartPath.addLine(to: CGPoint(x: 71.67, y: 28.79))
+    upperHeartPath.addLine(to: CGPoint(x: 30.75, y: 54.05))
+    upperHeartPath.addLine(to: CGPoint(x: 15.02, y: 91.78))
+    upperHeartPath.addLine(to: CGPoint(x: 31.85, y: 142.37))
+    UIColor.red.setStroke()
+    upperHeartPath.lineWidth = 6
     upperHeartPath.lineCapStyle = .round
     upperHeartPath.lineJoinStyle = .round
     upperHeartPath.stroke()
@@ -41,28 +41,23 @@ class CoeurAnimatedHeartView: UIView {
   //// LowerHeart Drawing
   let lowerHeartPath: UIBezierPath = {
     let lowerHeartPath = UIBezierPath()
-    lowerHeartPath.move(to: CGPoint(x: 29.5, y: 148.5))
-    lowerHeartPath.addLine(to: CGPoint(x: 93.8, y: 147.83))
-    lowerHeartPath.addLine(to: CGPoint(x: 111.02, y: 117.03))
-    lowerHeartPath.addLine(to: CGPoint(x: 135.82, y: 165.6))
-    lowerHeartPath.addLine(to: CGPoint(x: 165.72, y: 90.75))
-    lowerHeartPath.addLine(to: CGPoint(x: 188.91, y: 180.63))
-    lowerHeartPath.addLine(to: CGPoint(x: 219.17, y: 148.03))
-    lowerHeartPath.addLine(to: CGPoint(x: 267.03, y: 148.43))
-    lowerHeartPath.addLine(to: CGPoint(x: 214.63, y: 190.68))
-    lowerHeartPath.addLine(to: CGPoint(x: 148.18, y: 243.27))
-    lowerHeartPath.addLine(to: CGPoint(x: 32.69, y: 152.03))
-    UIColor.white.setStroke()
-    lowerHeartPath.lineWidth = 5
+    lowerHeartPath.move(to: CGPoint(x: 33.24, y: 143.69))
+    lowerHeartPath.addLine(to: CGPoint(x: 98.99, y: 143.01))
+    lowerHeartPath.addLine(to: CGPoint(x: 116.59, y: 111.51))
+    lowerHeartPath.addLine(to: CGPoint(x: 141.94, y: 161.17))
+    lowerHeartPath.addLine(to: CGPoint(x: 172.52, y: 84.63))
+    lowerHeartPath.addLine(to: CGPoint(x: 196.23, y: 176.54))
+    lowerHeartPath.addLine(to: CGPoint(x: 227.17, y: 143.2))
+    lowerHeartPath.addLine(to: CGPoint(x: 276.11, y: 143.61))
+    lowerHeartPath.addLine(to: CGPoint(x: 222.53, y: 186.82))
+    lowerHeartPath.addLine(to: CGPoint(x: 154.59, y: 240.59))
+    lowerHeartPath.addLine(to: CGPoint(x: 33.66, y: 143.91))
+    UIColor.red.setStroke()
+    lowerHeartPath.lineWidth = 6
     lowerHeartPath.lineCapStyle = .round
     lowerHeartPath.lineJoinStyle = .round
     lowerHeartPath.stroke()
     return lowerHeartPath
-  }()
-
-  let backgroundImageView: UIImageView = {
-    let imageView = UIImageView(image: UIImage(named: "CoeurIconiOS_3x.png"))
-    return imageView
   }()
 
   private var upperHeartLayer = CAShapeLayer()
@@ -70,22 +65,22 @@ class CoeurAnimatedHeartView: UIView {
 
   func setup() {
     backgroundColor = .clear
-
-    upperHeartLayer.frame = CGRect(x: 8, y: -5, width: self.frame.size.width, height: self.frame.size.height)
+    let strokeColor = UIColor.black.cgColor
+    upperHeartLayer.frame = CGRect(x: 2, y: 0, width: self.frame.size.width, height: self.frame.size.height)
     upperHeartLayer.path = upperHeartPath.cgPath
-    upperHeartLayer.lineWidth = 5
-    upperHeartLayer.strokeColor = UIColor.white.cgColor
+    upperHeartLayer.lineWidth = 6
+    upperHeartLayer.strokeColor = strokeColor
     upperHeartLayer.fillColor = nil
-    upperHeartLayer.strokeEnd = 0.0
+    upperHeartLayer.lineCap = .round
+    upperHeartLayer.lineJoin = .round
 
-    lowerHeartLayer.frame = CGRect(x: 8, y: -5, width: self.frame.size.width, height: self.frame.size.height)
+    lowerHeartLayer.frame = CGRect(x: 2, y: 0, width: self.frame.size.width, height: self.frame.size.height)
     lowerHeartLayer.path = lowerHeartPath.cgPath
-    lowerHeartLayer.lineWidth = 5
-    lowerHeartLayer.strokeColor = UIColor.white.cgColor
+    lowerHeartLayer.lineWidth = 6
+    lowerHeartLayer.strokeColor = strokeColor
     lowerHeartLayer.fillColor = nil
-
-    backgroundImageView.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
-    addSubview(backgroundImageView)
+    lowerHeartLayer.lineCap = .round
+    lowerHeartLayer.lineJoin = .round
 
     layer.addSublayer(upperHeartLayer)
     layer.addSublayer(lowerHeartLayer)

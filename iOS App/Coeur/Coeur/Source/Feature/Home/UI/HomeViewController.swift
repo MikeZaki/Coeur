@@ -77,6 +77,7 @@ class HomeViewController: UIViewController, FUIAuthDelegate {
         self.dismiss(animated: true, completion: nil)
 
         guard let result = authResult, error == nil else {
+          // Display Error
           return
         }
         let user = result.user

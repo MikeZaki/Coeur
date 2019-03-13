@@ -12,4 +12,6 @@ public struct CoeurUserDefaultKeys {
   public static let kFirebaseUserId = "firebase_user_id"
   public static let kFirebaseUserDisplayName = "firebase_user_display_name"
   public static let kkHasSeenWelcome = "has_seen_welcome"
+  public static let kkHasSeenMeasureTutorial = "has_seen_measure_tutorial"
+  public static let kkHasSeenLearnLandingPage = "has_seen_learn_landing_page"
 }
