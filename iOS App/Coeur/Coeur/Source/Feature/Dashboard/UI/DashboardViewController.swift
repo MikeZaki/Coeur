@@ -11,7 +11,7 @@ import Firebase
 
 fileprivate struct Constants {
   public static let cardViewOffsetOriginalOffset: CGFloat = -200
-  public static let validCardBottomConstantRange: ClosedRange<CGFloat> = (-200)...(-30)
+  public static let validCardBottomConstantRange: ClosedRange<CGFloat> = (-200)...(0)
   public static let progressRingsOriginalHeight: CGFloat = 300
   public static let validProgressRingsConstantRange: ClosedRange<CGFloat> = 148...300
 }
@@ -72,6 +72,7 @@ class DashboardViewController: UIViewController {
     // Load the user's imageview if it exhists
     if let imageURL = Auth.auth().currentUser?.photoURL {
       guard let largeImageURL = URL(string: imageURL.absoluteString + "?type=large") else { return }
+      print("################### IMG URL: \(largeImageURL)")
       userProfileImageView.image(fromUrl: largeImageURL)
     }
 
@@ -108,8 +109,8 @@ class DashboardViewController: UIViewController {
       options: [],
       animations:
       {
-        self.progressRingContainer.ring1.progress = Double(arc4random() % 200) / 100.0
-        self.progressRingContainer.ring2.progress = Double(arc4random() % 200) / 100.0
+        self.progressRingContainer.ring1.progress = Double(arc4random() % 100) / 100.0
+        self.progressRingContainer.ring2.progress = Double(arc4random() % 100) / 100.0
     }, completion: nil)
   }
 

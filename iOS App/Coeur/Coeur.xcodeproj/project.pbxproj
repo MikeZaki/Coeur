@@ -149,6 +149,10 @@
 		74BC1E5722391DCA002A80E7 /* dashboard_challenges_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BC1E5422391DC7002A80E7 /* dashboard_challenges_icon.png */; };
 		74BC1E5822391DCA002A80E7 /* dashboard_monitor_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BC1E5522391DC8002A80E7 /* dashboard_monitor_icon.png */; };
 		74BC1E5922391DCA002A80E7 /* dashboard_streaks_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BC1E5622391DC9002A80E7 /* dashboard_streaks_icon.png */; };
+		74BC1E5D22392D7E002A80E7 /* DashboardLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BC1E5C22392D7E002A80E7 /* DashboardLandingViewController.swift */; };
+		74BC1E5F223934F3002A80E7 /* rings_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BC1E5E223934F2002A80E7 /* rings_icon.png */; };
+		74BC1E622239392B002A80E7 /* challenge icon_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BC1E602239392A002A80E7 /* challenge icon_large.png */; };
+		74BC1E632239392B002A80E7 /* streak icon_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BC1E612239392A002A80E7 /* streak icon_large.png */; };
 		74DCB07B21F93AB4007E2E41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DCB07A21F93AB4007E2E41 /* AppDelegate.swift */; };
 		74DCB08021F93AB4007E2E41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DCB07E21F93AB4007E2E41 /* Main.storyboard */; };
 		74DCB08221F93AB7007E2E41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74DCB08121F93AB7007E2E41 /* Assets.xcassets */; };
@@ -244,7 +248,7 @@
 		745E8AA022368AF60029AF5B /* CoeurUserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoeurUserDefaultKeys.swift; sourceTree = "<group>"; };
 		745E8AA42236A9CE0029AF5B /* PulsePPGOrgan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PulsePPGOrgan.swift; path = ../../../../../../DataCollectionApp/Pulse_iOS/Pulse_iOS/PulsePPGOrgan.swift; sourceTree = "<group>"; };
 		745E8AA52236A9CE0029AF5B /* AVCaptureDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AVCaptureDeviceExtension.swift; path = ../../../../../../DataCollectionApp/Pulse_iOS/Pulse_iOS/AVCaptureDeviceExtension.swift; sourceTree = "<group>"; };
-		745E8AA62236A9CE0029AF5B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../../../../DataCollectionApp/Pulse_iOS/Pulse_iOS/ViewController.swift; sourceTree = "<group>"; };
+		745E8AA62236A9CE0029AF5B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		745E8AA72236A9CE0029AF5B /* PulseCaptureOrgan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PulseCaptureOrgan.swift; path = ../../../../../../DataCollectionApp/Pulse_iOS/Pulse_iOS/PulseCaptureOrgan.swift; sourceTree = "<group>"; };
 		745E8AA82236A9CF0029AF5B /* FilterOrgan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterOrgan.swift; path = ../../../../../../DataCollectionApp/Pulse_iOS/Pulse_iOS/FilterOrgan.swift; sourceTree = "<group>"; };
 		745E8AA92236A9CF0029AF5B /* DataProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataProcessor.swift; path = ../../../../../../DataCollectionApp/Pulse_iOS/Pulse_iOS/DataProcessor.swift; sourceTree = "<group>"; };
@@ -303,6 +307,10 @@
 		74BC1E5422391DC7002A80E7 /* dashboard_challenges_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dashboard_challenges_icon.png; sourceTree = "<group>"; };
 		74BC1E5522391DC8002A80E7 /* dashboard_monitor_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dashboard_monitor_icon.png; sourceTree = "<group>"; };
 		74BC1E5622391DC9002A80E7 /* dashboard_streaks_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dashboard_streaks_icon.png; sourceTree = "<group>"; };
+		74BC1E5C22392D7E002A80E7 /* DashboardLandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardLandingViewController.swift; sourceTree = "<group>"; };
+		74BC1E5E223934F2002A80E7 /* rings_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rings_icon.png; sourceTree = "<group>"; };
+		74BC1E602239392A002A80E7 /* challenge icon_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "challenge icon_large.png"; sourceTree = "<group>"; };
+		74BC1E612239392A002A80E7 /* streak icon_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "streak icon_large.png"; sourceTree = "<group>"; };
 		74DCB07721F93AB4007E2E41 /* Coeur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coeur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DCB07A21F93AB4007E2E41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74DCB07F21F93AB4007E2E41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -473,13 +481,13 @@
 		745E8AA22236A97C0029AF5B /* Pulse */ = {
 			isa = PBXGroup;
 			children = (
+				74BC1E5B22392D39002A80E7 /* UI */,
 				745E8AB22236FD8D0029AF5B /* CaptureSessionSpec.swift */,
 				745E8AA52236A9CE0029AF5B /* AVCaptureDeviceExtension.swift */,
 				745E8AA92236A9CF0029AF5B /* DataProcessor.swift */,
 				745E8AA82236A9CF0029AF5B /* FilterOrgan.swift */,
 				745E8AA72236A9CE0029AF5B /* PulseCaptureOrgan.swift */,
 				745E8AA42236A9CE0029AF5B /* PulsePPGOrgan.swift */,
-				745E8AA62236A9CE0029AF5B /* ViewController.swift */,
 			);
 			path = Pulse;
 			sourceTree = "<group>";
@@ -507,6 +515,7 @@
 		748186E4223512B000D6CCDE /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				74BC1E5A22392D29002A80E7 /* Tutorial */,
 				748186E5223512B900D6CCDE /* UI */,
 			);
 			path = Dashboard;
@@ -597,6 +606,22 @@
 				74BC1E4422388B02002A80E7 /* ProfileSettingsViewController.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		74BC1E5A22392D29002A80E7 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				74BC1E5C22392D7E002A80E7 /* DashboardLandingViewController.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		74BC1E5B22392D39002A80E7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				745E8AA62236A9CE0029AF5B /* ViewController.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		74DCB06E21F93AB4007E2E41 = {
@@ -724,6 +749,9 @@
 				7481873C223664D600D6CCDE /* ArticleImage1.png */,
 				74BC1E5222391CE8002A80E7 /* bp icon_new.png */,
 				74BC1E4E22391CA5002A80E7 /* challengesIcon_4x.png */,
+				74BC1E602239392A002A80E7 /* challenge icon_large.png */,
+				74BC1E612239392A002A80E7 /* streak icon_large.png */,
+				74BC1E5E223934F2002A80E7 /* rings_icon.png */,
 				74BC1E5422391DC7002A80E7 /* dashboard_challenges_icon.png */,
 				74BC1E5522391DC8002A80E7 /* dashboard_monitor_icon.png */,
 				74BC1E5622391DC9002A80E7 /* dashboard_streaks_icon.png */,
@@ -996,6 +1024,7 @@
 				7481873022365FD300D6CCDE /* SF-Pro-Display-UltralightItalic.otf in Resources */,
 				7481871622365FBB00D6CCDE /* JosefinSans-Bold.ttf in Resources */,
 				74BC1E5022391CA8002A80E7 /* challengesIcon_4x.png in Resources */,
+				74BC1E632239392B002A80E7 /* streak icon_large.png in Resources */,
 				7481871722365FBB00D6CCDE /* JosefinSans-BoldItalic.ttf in Resources */,
 				7481871822365FBB00D6CCDE /* JosefinSans-Italic.ttf in Resources */,
 				7481871922365FBB00D6CCDE /* JosefinSans-Light.ttf in Resources */,
@@ -1031,6 +1060,7 @@
 				7402B7DD2233B3D200DB60E8 /* slightly low label.png in Resources */,
 				74EACD6E223727B8008EAAD0 /* CoeurIconThinLine.png in Resources */,
 				74BC1E5922391DCA002A80E7 /* dashboard_streaks_icon.png in Resources */,
+				74BC1E5F223934F3002A80E7 /* rings_icon.png in Resources */,
 				7402B7E12233B3D200DB60E8 /* dashboardIcon.png in Resources */,
 				74BC1E5822391DCA002A80E7 /* dashboard_monitor_icon.png in Resources */,
 				74DCB08221F93AB7007E2E41 /* Assets.xcassets in Resources */,
@@ -1053,6 +1083,7 @@
 				7402B7DB2233B3D200DB60E8 /* Button.png in Resources */,
 				7402B7EF2233B3D200DB60E8 /* dashboardActiveIcon.png in Resources */,
 				745E8A9F22367EEB0029AF5B /* pikachu.png in Resources */,
+				74BC1E622239392B002A80E7 /* challenge icon_large.png in Resources */,
 				7402B7FD2233E7D200DB60E8 /* SF-Pro-Text-RegularItalic.otf in Resources */,
 				7402B7FE2233E7D900DB60E8 /* SF-Pro-Display-Regular.otf in Resources */,
 				74BC1E4D22391648002A80E7 /* trend graph slide.png in Resources */,
@@ -1097,6 +1128,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Coeur/Pods-Coeur-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
@@ -1118,6 +1150,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
@@ -1257,6 +1290,7 @@
 				7402B7F62233D2AA00DB60E8 /* FirstRunDisplayNameViewController.swift in Sources */,
 				7402B7322230E89400DB60E8 /* Colors.swift in Sources */,
 				74BC1E392238792E002A80E7 /* TrendsGraphViewController.swift in Sources */,
+				74BC1E5D22392D7E002A80E7 /* DashboardLandingViewController.swift in Sources */,
 				7481870622361F2800D6CCDE /* MeasureViewController.swift in Sources */,
 				7402B7AC22322A3700DB60E8 /* GradientView.swift in Sources */,
 				745E8AAA2236A9CF0029AF5B /* PulsePPGOrgan.swift in Sources */,

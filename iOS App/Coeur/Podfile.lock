@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.8.1)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -181,12 +182,14 @@ PODS:
     - TwitterCore (>= 3.2.0)
 
 DEPENDENCIES:
+  - Alamofire
   - Firebase/Core
   - FirebaseUI
   - iCarousel
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - Bolts
     - BoringSSL-GRPC
     - FBSDKCoreKit
@@ -217,6 +220,7 @@ SPEC REPOS:
     - TwitterKit
 
 SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BoringSSL-GRPC: 2a230d9cd93e7ce39916044f645cebb31f37dde6
   FBSDKCoreKit: ae214474b25033399c131dc81d258e412582a2ba
@@ -246,6 +250,6 @@ SPEC CHECKSUMS:
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: 71ff53a7bd6754c252d5fe4af3833272712d09df
+PODFILE CHECKSUM: c9f720d7d695baed06b45d38238e5b12b4f99728
 
 COCOAPODS: 1.6.1

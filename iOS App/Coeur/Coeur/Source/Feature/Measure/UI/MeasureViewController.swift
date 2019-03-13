@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Alamofire
 
 fileprivate struct Constants {
   public static let iconImageViewOffset: CGFloat = -100
@@ -34,6 +35,7 @@ class MeasureViewController: UIViewController {
   private let captureOrgan: PulseCaptureOrgan = PulseCaptureOrgan()
   private var ppgCSV: [String:Double] = [:]
   private var ppg: [Double] = []
+  private var ppgFileURL: URL?
 
   // Responsible for capturing PPG
   private lazy var ppgOrgan: PulsePPGOrgan = {
@@ -109,7 +111,7 @@ class MeasureViewController: UIViewController {
       // Hide the start button title label and show the progress bar.
       self.startButton.setTitleColor(.black, for: .normal)
       self.lastReadingLabel.isHidden = false
-      self.iconImageView.isHidden = true
+//      self.iconImageView.isHidden = true
       self.animatedHeartView.isHidden = true
       self.progressView.isHidden = true
     }) { _ in
@@ -144,6 +146,7 @@ class MeasureViewController: UIViewController {
     do {
       let path = try fileManager.url(for: .documentDirectory, in: .allDomainsMask, appropriateFor: nil, create: false)
       let fileURL = path.appendingPathComponent("CSVRec-\(Auth.auth().currentUser?.uid ?? "unkownUser").json")
+      self.ppgFileURL = fileURL
       try jsonData.write(to: fileURL)
     } catch {
       print("error creating file")
@@ -158,13 +161,37 @@ class MeasureViewController: UIViewController {
       ppgOrgan.beat()
       captureOrgan.configureTorch(isOn: true)
     } else {
-      delegate?.shouldChangeDisplay(toPage: .measure)
-      delegate?.shouldChangeTabBarVisibility(shown: true)
+
+      // Here's where shit gets real...
+      print("LOADING........")
+      guard let ppgJsonURL = self.ppgFileURL else {
+        print("NO FILE URL")
+        return
+      }
+      Alamofire.upload(
+        ppgJsonURL,
+        to: "https://coeur-ios.herokuapp.com/ppg",
+        method: .post,
+        headers: ["Content-Type":"application/json"]
+        ).uploadProgress { progress in
+          print("UPLOAD PROGRESS: \(progress.fractionCompleted)")
+        }.response(completionHandler: { (response) in
+          guard let data = response.data else {
+            print("COULD NOT RETRIEVE DATA")
+            return
+          }
+
+          self.iconImageView.image = UIImage(data: data)
+
+
+          self.delegate?.shouldChangeDisplay(toPage: .measure)
+          self.delegate?.shouldChangeTabBarVisibility(shown: true)
+      })
     }
   }
 
   @IBAction func infoButtonPressed(_ sender: Any) {
-    delegate?.shouldChangeDisplay(toPage: .tutorial)
+    delegate?.shouldChangeDisplay(toPage: .measureTutorial)
   }
 }
 

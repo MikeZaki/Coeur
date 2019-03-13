@@ -14,7 +14,8 @@ public enum CoeurTabBarPage: Int {
   case measure = 2
   case learn = 3
   case community = 4
-  case tutorial = 5
+  case measureTutorial = 5
+  case dashboardTutorial = 6
 
   var imageSet: CoeurTabBarButtonImageSet {
     switch self {
@@ -33,7 +34,10 @@ public enum CoeurTabBarPage: Int {
     case .community:
       return  CoeurTabBarButtonImageSet(selectedImage: UIImage(named: "communityActiveIcon.png"),
                                         deselectedImage: UIImage(named: "communityIcon.png"))
-    case .tutorial:
+    case .measureTutorial:
+      return CoeurTabBarButtonImageSet(selectedImage: nil, deselectedImage: nil)
+
+    case .dashboardTutorial:
       return CoeurTabBarButtonImageSet(selectedImage: nil, deselectedImage: nil)
     }
   }

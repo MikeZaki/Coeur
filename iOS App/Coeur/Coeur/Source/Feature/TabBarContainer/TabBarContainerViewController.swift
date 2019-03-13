@@ -12,6 +12,11 @@ fileprivate struct StyleConstants {
   public static let tabBarBottomOffset:CGFloat = 100
 }
 
+enum CoeurTutorialType {
+  case measure
+  case dashboard
+}
+
 class TabBarContainerViewController: UIViewController {
 
   @IBOutlet weak var containerView: UIView!
@@ -21,16 +26,13 @@ class TabBarContainerViewController: UIViewController {
   
   private var pageViewController: UIPageViewController?
   private var currentViewController: UIViewController?
-  private var hasSeenLearnLanding: Bool = false
+  private var tutorialType: CoeurTutorialType = .dashboard // dashboard by default
 
   override func viewDidLoad() {
     // Set up for the MEasure Tutorial Screens
     self.pageViewController = storyboard?.instantiateViewController(withIdentifier: "MeasureTutorialPageViewController") as? CoeurMeasureTutorialPageViewController
     pageViewController?.delegate = self
     pageViewController?.dataSource = self
-
-    guard let startingViewController = pageController(atIndex: 0) else { return }
-    pageViewController?.setViewControllers([startingViewController], direction: .forward, animated: true, completion: nil)
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -44,8 +46,7 @@ class TabBarContainerViewController: UIViewController {
     tabBar.topAnchor.constraint(equalTo: tabBarContainerView.topAnchor).isActive = true
     tabBar.bottomAnchor.constraint(equalTo: tabBarContainerView.bottomAnchor).isActive = true
 
-    // Default View is Dashboard
-    let vc = DashboardViewController.dashboardViewController()
+    let vc = tabBarController(forPage: .dashboard)
     add(asChildViewController: vc)
 
     // By Default the X button is hidden
@@ -96,6 +97,13 @@ class TabBarContainerViewController: UIViewController {
   private func tabBarController(forPage page:CoeurTabBarPage) -> UIViewController {
     switch page {
     case .dashboard:
+      if !UserDefaults.standard.bool(forKey: CoeurUserDefaultKeys.kkHasSeenMeasureDashboardTutorial) {
+        UserDefaults.standard.set(true, forKey: CoeurUserDefaultKeys.kkHasSeenMeasureDashboardTutorial)
+        let vc = DashboardLandingViewController.dashboardLandingViewController()
+        vc.delegate = self
+        return vc
+      }
+
       let vc = DashboardViewController.dashboardViewController()
       let navController = UINavigationController(rootViewController: vc)
       return navController
@@ -104,20 +112,25 @@ class TabBarContainerViewController: UIViewController {
       let navController = UINavigationController(rootViewController: vc)
       return navController
     case .measure:
-      if !UserDefaults.standard.bool(forKey: CoeurUserDefaultKeys.kkHasSeenMeasureTutorial) {
-        UserDefaults.standard.set(true, forKey: CoeurUserDefaultKeys.kkHasSeenMeasureTutorial)
-        handleTabBarVisibility(shouldShowTabBar: true)
-        return tabBarController(forPage: .tutorial)
+      if !UserDefaults.standard.bool(forKey: CoeurUserDefaultKeys.kkHasSeenMeasureMeasureTutorial) {
+        UserDefaults.standard.set(true, forKey: CoeurUserDefaultKeys.kkHasSeenMeasureMeasureTutorial)
+        handleTabBarVisibility(shouldShowTabBar: false)
+        return tabBarController(forPage: .measureTutorial)
       }
 
       let measureViewController = MeasureViewController.measureViewController()
       measureViewController.delegate = self
       return measureViewController
 
-    case .tutorial:
+    case .measureTutorial:
       guard let tutorialPageViewController = pageViewController else {
-        return MeasureViewController.measureViewController()
+        return tabBarController(forPage: .measure)
       }
+
+      tutorialType = .measure
+      guard let startingViewController = pageController(atIndex: 0) else { return tabBarController(forPage: .measure) }
+      pageViewController?.setViewControllers([startingViewController], direction: .forward, animated: true, completion: nil)
+
       return tutorialPageViewController
 
     case .learn:
@@ -125,16 +138,26 @@ class TabBarContainerViewController: UIViewController {
         UserDefaults.standard.set(true, forKey: CoeurUserDefaultKeys.kkHasSeenLearnLandingPage)
         let vc = LearnLandingViewController.learnLandingViewController()
         vc.delegate = self
-        hasSeenLearnLanding = true
         return vc
       }
 
       let vc = LearnViewController.learnViewController()
       let navController = UINavigationController(rootViewController: vc)
       return navController
-      
-    default:
-      return DashboardViewController.dashboardViewController()
+
+    case .community:
+      return tabBarController(forPage: .measure)
+
+    case .dashboardTutorial:
+      guard let tutorialPageViewController = pageViewController else {
+        return tabBarController(forPage: .dashboard)
+      }
+
+      tutorialType = .dashboard
+      guard let startingViewController = pageController(atIndex: 0) else { return tabBarController(forPage: .dashboard) }
+      pageViewController?.setViewControllers([startingViewController], direction: .forward, animated: true, completion: nil)
+
+      return tutorialPageViewController
     }
   }
 
@@ -159,8 +182,15 @@ class TabBarContainerViewController: UIViewController {
 
   @IBAction func onCloseButtonPressed(_ sender: UIButton) {
     // If the close button is pressed, return to the measure page.
-    let vc = tabBarController(forPage: .measure)
-    add(asChildViewController: vc)
+    switch tutorialType {
+    case .dashboard:
+      let vc = tabBarController(forPage: .dashboard)
+      add(asChildViewController: vc)
+    default:
+      let vc = tabBarController(forPage: .measure)
+      add(asChildViewController: vc)
+    }
+
     handleTabBarVisibility(shouldShowTabBar: true)
   }
 }
@@ -177,8 +207,10 @@ extension TabBarContainerViewController: CoeurTabPageDelegate {
     let vc = tabBarController(forPage: page)
     add(asChildViewController: vc)
 
-    if case .tutorial = page {
+    switch page {
+    case .measureTutorial, .dashboardTutorial:
       handleTabBarVisibility(shouldShowTabBar: false)
+    default: return
     }
   }
 
@@ -192,7 +224,7 @@ extension TabBarContainerViewController:
   UIPageViewControllerDataSource
 {
 
-  fileprivate struct TutorialDataSource {
+  fileprivate struct MeasureTutorialDataSource {
     // Data Source
     public static let tutorialPages = [
       CoeurTutorialPageData(tutorialPageImage: UIImage(named: "tutorial1Icon"),
@@ -212,6 +244,24 @@ extension TabBarContainerViewController:
                             tutorialPageText: "• Press the 'Start' button when you are ready\n• Wait for 1 minute until measurement is complete",
                             tutorialPageIndex: 3)
       ]
+  }
+
+  fileprivate struct DashboardTutorialDataSource {
+    // Data Source
+    public static let tutorialPages = [
+      CoeurTutorialPageData(tutorialPageImage: UIImage(named: "challenge icon_large.png"),
+                            tutorialPageTitle: "CHALLENGES",
+                            tutorialPageText: "Every day you will get a set of challenges to complete. These are recommendations to help manage your blood pressure.",
+                            tutorialPageIndex: 0),
+      CoeurTutorialPageData(tutorialPageImage: UIImage(named: "streak icon_large.png"),
+                            tutorialPageTitle: "STREAKS",
+                            tutorialPageText: "Keep up your streak by logging into the app and measuring your blood pressure at least once a day",
+                            tutorialPageIndex: 1),
+      CoeurTutorialPageData(tutorialPageImage: UIImage(named: "rings_icon.png"),
+                            tutorialPageTitle: "COMPLETE YOUR RINGS",
+                            tutorialPageText: "Frequent blood pressure monitoring, completion of challenges, and keeping up with your streaks will add progress to your rings.\n\nComplete all challenges within the week to complete the outer ring.\n\nMaintain a 7-day streak to complete the inner ring",
+                            tutorialPageIndex: 2),
+    ]
   }
 
   func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -237,21 +287,29 @@ extension TabBarContainerViewController:
   }
 
   private func pageController(atIndex index: Int) -> CoeurMeasureTutorialPageController? {
-    guard index < TutorialDataSource.tutorialPages.count,
-          let tutorialPage = self.storyboard?.instantiateViewController(
-            withIdentifier: "MeasureTutorialPage") as? CoeurMeasureTutorialPageController
-    else {
-      return nil
+    guard let tutorialPage = self.storyboard?.instantiateViewController(withIdentifier: "MeasureTutorialPage") as? CoeurMeasureTutorialPageController else { return  nil }
+
+    switch tutorialType {
+    case .dashboard:
+      guard index < DashboardTutorialDataSource.tutorialPages.count else { return nil }
+      tutorialPage.configure(pageData: DashboardTutorialDataSource.tutorialPages[index])
+    case .measure:
+      guard index < MeasureTutorialDataSource.tutorialPages.count else { return nil }
+      tutorialPage.configure(pageData: MeasureTutorialDataSource.tutorialPages[index])
     }
 
-    tutorialPage.configure(pageData: TutorialDataSource.tutorialPages[index])
     tutorialPage.view.frame = containerView.bounds
 
     return tutorialPage
   }
 
   func presentationCount(for pageViewController: UIPageViewController) -> Int {
-    return TutorialDataSource.tutorialPages.count
+    switch tutorialType {
+    case .dashboard:
+      return DashboardTutorialDataSource.tutorialPages.count
+    case .measure:
+      return MeasureTutorialDataSource.tutorialPages.count
+    }
   }
 
   func presentationIndex(for pageViewController: UIPageViewController) -> Int {
