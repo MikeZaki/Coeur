@@ -165,6 +165,7 @@ PODS:
     - nanopb (~> 0.3)
   - gRPC-Core/Interface (1.17.0)
   - GTMSessionFetcher/Core (1.2.1)
+  - iCarousel (1.8.3)
   - leveldb-library (1.20)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
@@ -182,6 +183,7 @@ PODS:
 DEPENDENCIES:
   - Firebase/Core
   - FirebaseUI
+  - iCarousel
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -206,6 +208,7 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
+    - iCarousel
     - leveldb-library
     - nanopb
     - Protobuf
@@ -235,6 +238,7 @@ SPEC CHECKSUMS:
   "gRPC-C++": e76441995900ac90e9bd98644ab4733f12521edf
   gRPC-Core: 4028031ed2c5267cca0d846c876d8046b1ecb9b6
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
+  iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
@@ -242,6 +246,6 @@ SPEC CHECKSUMS:
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
-PODFILE CHECKSUM: 2a8062c50030eddff47296db64a160231bc32657
+PODFILE CHECKSUM: 71ff53a7bd6754c252d5fe4af3833272712d09df
 
 COCOAPODS: 1.6.1

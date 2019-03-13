@@ -140,6 +140,15 @@
 		74BC1E422238898A002A80E7 /* Settings icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BC1E4122388989002A80E7 /* Settings icon.png */; };
 		74BC1E4522388B02002A80E7 /* ProfileSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BC1E4422388B02002A80E7 /* ProfileSettingsViewController.swift */; };
 		74BC1E472238A8C8002A80E7 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BC1E462238A8C8002A80E7 /* ArticleDetailViewController.swift */; };
+		74BC1E4922390010002A80E7 /* TrendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BC1E4822390010002A80E7 /* TrendsViewController.swift */; };
+		74BC1E4B22391618002A80E7 /* Article component.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BC1E4A22391616002A80E7 /* Article component.png */; };
+		74BC1E4D22391648002A80E7 /* trend graph slide.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BC1E4C22391647002A80E7 /* trend graph slide.png */; };
+		74BC1E5022391CA8002A80E7 /* challengesIcon_4x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BC1E4E22391CA5002A80E7 /* challengesIcon_4x.png */; };
+		74BC1E5122391CA8002A80E7 /* Lightning_4x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BC1E4F22391CA7002A80E7 /* Lightning_4x.png */; };
+		74BC1E5322391CE8002A80E7 /* bp icon_new.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BC1E5222391CE8002A80E7 /* bp icon_new.png */; };
+		74BC1E5722391DCA002A80E7 /* dashboard_challenges_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BC1E5422391DC7002A80E7 /* dashboard_challenges_icon.png */; };
+		74BC1E5822391DCA002A80E7 /* dashboard_monitor_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BC1E5522391DC8002A80E7 /* dashboard_monitor_icon.png */; };
+		74BC1E5922391DCA002A80E7 /* dashboard_streaks_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BC1E5622391DC9002A80E7 /* dashboard_streaks_icon.png */; };
 		74DCB07B21F93AB4007E2E41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DCB07A21F93AB4007E2E41 /* AppDelegate.swift */; };
 		74DCB08021F93AB4007E2E41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DCB07E21F93AB4007E2E41 /* Main.storyboard */; };
 		74DCB08221F93AB7007E2E41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74DCB08121F93AB7007E2E41 /* Assets.xcassets */; };
@@ -285,6 +294,15 @@
 		74BC1E4122388989002A80E7 /* Settings icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings icon.png"; sourceTree = "<group>"; };
 		74BC1E4422388B02002A80E7 /* ProfileSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsViewController.swift; sourceTree = "<group>"; };
 		74BC1E462238A8C8002A80E7 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
+		74BC1E4822390010002A80E7 /* TrendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsViewController.swift; sourceTree = "<group>"; };
+		74BC1E4A22391616002A80E7 /* Article component.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Article component.png"; sourceTree = "<group>"; };
+		74BC1E4C22391647002A80E7 /* trend graph slide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trend graph slide.png"; sourceTree = "<group>"; };
+		74BC1E4E22391CA5002A80E7 /* challengesIcon_4x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = challengesIcon_4x.png; sourceTree = "<group>"; };
+		74BC1E4F22391CA7002A80E7 /* Lightning_4x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lightning_4x.png; sourceTree = "<group>"; };
+		74BC1E5222391CE8002A80E7 /* bp icon_new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bp icon_new.png"; sourceTree = "<group>"; };
+		74BC1E5422391DC7002A80E7 /* dashboard_challenges_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dashboard_challenges_icon.png; sourceTree = "<group>"; };
+		74BC1E5522391DC8002A80E7 /* dashboard_monitor_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dashboard_monitor_icon.png; sourceTree = "<group>"; };
+		74BC1E5622391DC9002A80E7 /* dashboard_streaks_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dashboard_streaks_icon.png; sourceTree = "<group>"; };
 		74DCB07721F93AB4007E2E41 /* Coeur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coeur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DCB07A21F93AB4007E2E41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74DCB07F21F93AB4007E2E41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -481,6 +499,7 @@
 				748186FB2235F59600D6CCDE /* TrendsTableViewCell.swift */,
 				74BC1E382238792E002A80E7 /* TrendsGraphViewController.swift */,
 				74BC1E3A2238793A002A80E7 /* TrendsDetailViewController.swift */,
+				74BC1E4822390010002A80E7 /* TrendsViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -703,8 +722,16 @@
 			children = (
 				74BC1E4122388989002A80E7 /* Settings icon.png */,
 				7481873C223664D600D6CCDE /* ArticleImage1.png */,
+				74BC1E5222391CE8002A80E7 /* bp icon_new.png */,
+				74BC1E4E22391CA5002A80E7 /* challengesIcon_4x.png */,
+				74BC1E5422391DC7002A80E7 /* dashboard_challenges_icon.png */,
+				74BC1E5522391DC8002A80E7 /* dashboard_monitor_icon.png */,
+				74BC1E5622391DC9002A80E7 /* dashboard_streaks_icon.png */,
+				74BC1E4F22391CA7002A80E7 /* Lightning_4x.png */,
+				74BC1E4A22391616002A80E7 /* Article component.png */,
 				74BC1E322237B957002A80E7 /* ProfileImage.png */,
 				74BC1E36223876D1002A80E7 /* Trends Page.png */,
+				74BC1E4C22391647002A80E7 /* trend graph slide.png */,
 				74BC1E3422387603002A80E7 /* baseline-bar_chart-24px.png */,
 				7481873D223664D900D6CCDE /* ArticleImage2.png */,
 				74BC1E2A2237AFC8002A80E7 /* Flag.png */,
@@ -943,6 +970,7 @@
 				7481873822365FDE00D6CCDE /* SF-Pro-Text-MediumItalic.otf in Resources */,
 				7481873922365FDE00D6CCDE /* SF-Pro-Text-Regular.otf in Resources */,
 				7481873A22365FDE00D6CCDE /* SF-Pro-Text-Semibold.otf in Resources */,
+				74BC1E5122391CA8002A80E7 /* Lightning_4x.png in Resources */,
 				7481873B22365FDE00D6CCDE /* SF-Pro-Text-SemiboldItalic.otf in Resources */,
 				7481873F223664DA00D6CCDE /* ArticleImage2.png in Resources */,
 				7481872022365FD300D6CCDE /* SF-Pro-Display-Black.otf in Resources */,
@@ -961,11 +989,13 @@
 				7481872C22365FD300D6CCDE /* SF-Pro-Display-SemiboldItalic.otf in Resources */,
 				7481872D22365FD300D6CCDE /* SF-Pro-Display-Thin.otf in Resources */,
 				74BC1E2B2237AFC9002A80E7 /* Lightning.png in Resources */,
+				74BC1E5322391CE8002A80E7 /* bp icon_new.png in Resources */,
 				74BC1E2F2237B068002A80E7 /* Flag (1).png in Resources */,
 				7481872E22365FD300D6CCDE /* SF-Pro-Display-ThinItalic.otf in Resources */,
 				7481872F22365FD300D6CCDE /* SF-Pro-Display-Ultralight.otf in Resources */,
 				7481873022365FD300D6CCDE /* SF-Pro-Display-UltralightItalic.otf in Resources */,
 				7481871622365FBB00D6CCDE /* JosefinSans-Bold.ttf in Resources */,
+				74BC1E5022391CA8002A80E7 /* challengesIcon_4x.png in Resources */,
 				7481871722365FBB00D6CCDE /* JosefinSans-BoldItalic.ttf in Resources */,
 				7481871822365FBB00D6CCDE /* JosefinSans-Italic.ttf in Resources */,
 				7481871922365FBB00D6CCDE /* JosefinSans-Light.ttf in Resources */,
@@ -1000,11 +1030,14 @@
 				7402B7D82233B3D200DB60E8 /* Back.png in Resources */,
 				7402B7DD2233B3D200DB60E8 /* slightly low label.png in Resources */,
 				74EACD6E223727B8008EAAD0 /* CoeurIconThinLine.png in Resources */,
+				74BC1E5922391DCA002A80E7 /* dashboard_streaks_icon.png in Resources */,
 				7402B7E12233B3D200DB60E8 /* dashboardIcon.png in Resources */,
+				74BC1E5822391DCA002A80E7 /* dashboard_monitor_icon.png in Resources */,
 				74DCB08221F93AB7007E2E41 /* Assets.xcassets in Resources */,
 				74E7A0EF222F7A0900329141 /* coeur_icon.png in Resources */,
 				74BC1E2C2237AFC9002A80E7 /* Flag.png in Resources */,
 				7402B7EC2233B3D200DB60E8 /* measureIcon.png in Resources */,
+				74BC1E4B22391618002A80E7 /* Article component.png in Resources */,
 				7402B8052233F26C00DB60E8 /* CoeurTabBar.xib in Resources */,
 				7481873E223664DA00D6CCDE /* ArticleImage1.png in Resources */,
 				7402B7EB2233B3D200DB60E8 /* tutorial3Icon.png in Resources */,
@@ -1022,11 +1055,13 @@
 				745E8A9F22367EEB0029AF5B /* pikachu.png in Resources */,
 				7402B7FD2233E7D200DB60E8 /* SF-Pro-Text-RegularItalic.otf in Resources */,
 				7402B7FE2233E7D900DB60E8 /* SF-Pro-Display-Regular.otf in Resources */,
+				74BC1E4D22391648002A80E7 /* trend graph slide.png in Resources */,
 				7402B7DE2233B3D200DB60E8 /* Dashboard Icon.png in Resources */,
 				7402B7DC2233B3D200DB60E8 /* tutorial1Icon.png in Resources */,
 				748186EF2235E90D00D6CCDE /* BPIcon.png in Resources */,
 				7402B7E92233B3D200DB60E8 /* Add button.png in Resources */,
 				74DCB08021F93AB4007E2E41 /* Main.storyboard in Resources */,
+				74BC1E5722391DCA002A80E7 /* dashboard_challenges_icon.png in Resources */,
 				74BC1E302237B068002A80E7 /* Lightning (1).png in Resources */,
 				7402B7D12233B3D200DB60E8 /* communityIcon.png in Resources */,
 				7402B7FC2233E6F500DB60E8 /* CouerWhiteIcon.png in Resources */,
@@ -1075,6 +1110,7 @@
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/iCarousel/iCarousel.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -1095,6 +1131,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iCarousel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -1250,6 +1287,7 @@
 				74EACD7722379462008EAAD0 /* MKRingProgressView.swift in Sources */,
 				7481870D2236445500D6CCDE /* CoeurTabPageDeleagate.swift in Sources */,
 				7402B7F32233CE1500DB60E8 /* FirstRunLandingViewController.swift in Sources */,
+				74BC1E4922390010002A80E7 /* TrendsViewController.swift in Sources */,
 				DCC8DB4521F9452C000C8E5F /* HomeViewController.swift in Sources */,
 				7402B8012233F11700DB60E8 /* TabBarContainerViewController.swift in Sources */,
 				74BC1E3B2238793A002A80E7 /* TrendsDetailViewController.swift in Sources */,

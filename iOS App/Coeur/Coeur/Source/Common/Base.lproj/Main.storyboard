@@ -940,16 +940,19 @@ that you would be interested in.</string>
             </objects>
             <point key="canvasLocation" x="5079.1999999999998" y="1024.5877061469266"/>
         </scene>
-        <!--View Controller-->
+        <!--Trends View Controller-->
         <scene sceneID="COf-bk-pwm">
             <objects>
-                <viewController id="QB3-9O-DEi" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="c4u-W9-FVE">
+                <viewController storyboardIdentifier="TrendsViewController" id="QB3-9O-DEi" customClass="TrendsViewController" customModule="Coeur" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c4u-W9-FVE" customClass="iCarousel">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Dcb-bE-bTK"/>
                     </view>
+                    <connections>
+                        <outlet property="trendsCarousel" destination="c4u-W9-FVE" id="khG-aL-Ych"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uiY-sN-ycS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -958,20 +961,20 @@ that you would be interested in.</string>
         <!--Trends Table View Controller-->
         <scene sceneID="y0p-jX-KYg">
             <objects>
-                <viewController storyboardIdentifier="TrendsViewController" id="mQr-tq-Jmp" customClass="TrendsTableViewController" customModule="Coeur" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrendsTableViewController" id="mQr-tq-Jmp" customClass="TrendsTableViewController" customModule="Coeur" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qEL-CY-fdq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TMe-uL-NIR">
-                                <rect key="frame" x="0.0" y="20" width="375" height="792"/>
+                                <rect key="frame" x="26" y="388" width="323" height="393"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrendsTableViewCell" rowHeight="98" id="5wR-cF-MSd" customClass="TrendsTableViewCell" customModule="Coeur" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="98"/>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrendsTableViewCell" rowHeight="98" id="5wR-cF-MSd" customClass="TrendsTableViewCell" customModule="Coeur" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="323" height="98"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5wR-cF-MSd" id="p0v-Wt-aIe">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="97.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="323" height="97.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fv5-y3-gRu" userLabel="pillContainerView">
@@ -1007,13 +1010,13 @@ that you would be interested in.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:33 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cm-Zj-9bE">
-                                                    <rect key="frame" x="294.5" y="33.5" width="52.5" height="17"/>
+                                                    <rect key="frame" x="322.5" y="33.5" width="52.5" height="17"/>
                                                     <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                                                     <color key="textColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="March 6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZS-Ak-16Q">
-                                                    <rect key="frame" x="295.5" y="16.5" width="51.5" height="17"/>
+                                                    <rect key="frame" x="323.5" y="16.5" width="51.5" height="17"/>
                                                     <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                                                     <color key="textColor" red="0.59215686270000001" green="0.59215686270000001" blue="0.59215686270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -1042,13 +1045,22 @@ that you would be interested in.</string>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trend graph slide.png" translatesAutoresizingMaskIntoConstraints="NO" id="ct3-OZ-r7I">
+                                <rect key="frame" x="-26" y="71" width="427" height="287"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ct3-OZ-r7I" secondAttribute="height" multiplier="125:84" id="5sn-m1-Ctu"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="TMe-uL-NIR" firstAttribute="leading" secondItem="bA4-xO-kQD" secondAttribute="leading" id="3fM-hb-KHb"/>
-                            <constraint firstItem="TMe-uL-NIR" firstAttribute="top" secondItem="bA4-xO-kQD" secondAttribute="top" id="8C0-5u-0R4"/>
-                            <constraint firstItem="bA4-xO-kQD" firstAttribute="bottom" secondItem="TMe-uL-NIR" secondAttribute="bottom" id="bkR-Ey-6d8"/>
-                            <constraint firstItem="bA4-xO-kQD" firstAttribute="trailing" secondItem="TMe-uL-NIR" secondAttribute="trailing" id="q0i-HB-TLZ"/>
+                            <constraint firstItem="TMe-uL-NIR" firstAttribute="leading" secondItem="bA4-xO-kQD" secondAttribute="leading" constant="26" id="3fM-hb-KHb"/>
+                            <constraint firstItem="TMe-uL-NIR" firstAttribute="top" secondItem="bA4-xO-kQD" secondAttribute="top" constant="368" id="8C0-5u-0R4"/>
+                            <constraint firstItem="ct3-OZ-r7I" firstAttribute="top" secondItem="bA4-xO-kQD" secondAttribute="top" constant="51" id="LQQ-Zv-vDH"/>
+                            <constraint firstItem="ct3-OZ-r7I" firstAttribute="leading" secondItem="bA4-xO-kQD" secondAttribute="leading" constant="-26" id="Lv1-Fw-M7F"/>
+                            <constraint firstItem="bA4-xO-kQD" firstAttribute="trailing" secondItem="ct3-OZ-r7I" secondAttribute="trailing" constant="-26" id="bRb-Jh-2Vp"/>
+                            <constraint firstItem="bA4-xO-kQD" firstAttribute="bottom" secondItem="TMe-uL-NIR" secondAttribute="bottom" constant="31" id="bkR-Ey-6d8"/>
+                            <constraint firstItem="bA4-xO-kQD" firstAttribute="trailing" secondItem="TMe-uL-NIR" secondAttribute="trailing" constant="26" id="q0i-HB-TLZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bA4-xO-kQD"/>
                     </view>
@@ -1558,23 +1570,23 @@ NORMAL</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x9U-JW-0cX" userLabel="IconView">
                                 <rect key="frame" x="173.5" y="40" width="36" height="72"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Flag.png" translatesAutoresizingMaskIntoConstraints="NO" id="9a3-G0-Dci">
-                                        <rect key="frame" x="4.5" y="2" width="25" height="25"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="challengesIcon_4x.png" translatesAutoresizingMaskIntoConstraints="NO" id="9a3-G0-Dci">
+                                        <rect key="frame" x="2.5" y="2" width="29" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="9a3-G0-Dci" secondAttribute="height" multiplier="1:1" id="N42-tu-9HZ"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lightning.png" translatesAutoresizingMaskIntoConstraints="NO" id="M4W-sZ-WTH">
-                                        <rect key="frame" x="-0.5" y="37" width="29" height="29"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lightning_4x.png" translatesAutoresizingMaskIntoConstraints="NO" id="M4W-sZ-WTH">
+                                        <rect key="frame" x="0.5" y="41" width="27" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="M4W-sZ-WTH" secondAttribute="height" multiplier="1:1" id="9a0-X9-fcs"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="M4W-sZ-WTH" firstAttribute="width" secondItem="x9U-JW-0cX" secondAttribute="width" multiplier="0.8" id="2Vc-2f-8c6"/>
+                                    <constraint firstItem="M4W-sZ-WTH" firstAttribute="width" secondItem="x9U-JW-0cX" secondAttribute="width" multiplier="0.75" id="2Vc-2f-8c6"/>
                                     <constraint firstAttribute="width" secondItem="x9U-JW-0cX" secondAttribute="height" multiplier="1:2" id="34B-uv-tlz"/>
-                                    <constraint firstItem="9a3-G0-Dci" firstAttribute="width" secondItem="x9U-JW-0cX" secondAttribute="width" multiplier="0.7" id="7Op-qJ-LfV"/>
+                                    <constraint firstItem="9a3-G0-Dci" firstAttribute="width" secondItem="x9U-JW-0cX" secondAttribute="width" multiplier="0.8" id="7Op-qJ-LfV"/>
                                     <constraint firstItem="9a3-G0-Dci" firstAttribute="top" secondItem="x9U-JW-0cX" secondAttribute="top" constant="2" id="j5R-DC-ox3"/>
                                     <constraint firstItem="M4W-sZ-WTH" firstAttribute="top" secondItem="9a3-G0-Dci" secondAttribute="bottom" constant="10" id="xF7-5q-3tu"/>
                                 </constraints>
@@ -1694,7 +1706,7 @@ NORMAL</string>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BPIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="XhB-cx-5l5">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bp icon_new.png" translatesAutoresizingMaskIntoConstraints="NO" id="XhB-cx-5l5">
                                                 <rect key="frame" x="0.0" y="25" width="70" height="72"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="72" id="0mf-ZQ-KoF"/>
@@ -1737,7 +1749,7 @@ NORMAL</string>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="challengesIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="bKH-PV-yTI">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashboard_challenges_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="bKH-PV-yTI">
                                                 <rect key="frame" x="0.0" y="25" width="70" height="72"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="72" id="r3p-8F-0FI"/>
@@ -1785,7 +1797,7 @@ NORMAL</string>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="streakIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="O4i-oJ-uya">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashboard_streaks_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="O4i-oJ-uya">
                                                 <rect key="frame" x="0.0" y="25" width="70" height="72"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="q3g-aX-Tvj"/>
@@ -1828,7 +1840,7 @@ NORMAL</string>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scheduleIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="IFs-Qi-vEc">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashboard_monitor_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="IFs-Qi-vEc">
                                                 <rect key="frame" x="0.0" y="25" width="70" height="72"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="6O5-RG-0wZ"/>
@@ -1909,6 +1921,7 @@ NORMAL</string>
                         <outlet property="dashboardCardView" destination="Mth-gE-PV3" id="PM5-dg-iCz"/>
                         <outlet property="dashboardCardViewBottomConstraint" destination="WRw-W8-NdV" id="Vuh-DC-pcQ"/>
                         <outlet property="displaynameLabel" destination="gyt-cb-xkQ" id="TNb-uY-O6W"/>
+                        <outlet property="iconViewSpacingConstraint" destination="xF7-5q-3tu" id="0TC-4G-A8E"/>
                         <outlet property="progressRingContainer" destination="ELt-5r-s3N" id="4YJ-cc-q1K"/>
                         <outlet property="progressRingsHeightConstraint" destination="hI4-up-F37" id="moE-qZ-laY"/>
                         <outlet property="userProfileImageView" destination="Ger-y7-cva" id="los-BO-Hq2"/>
@@ -2207,27 +2220,30 @@ NORMAL</string>
     </scenes>
     <resources>
         <image name="ArticleImage1.png" width="299" height="171"/>
-        <image name="BPIcon.png" width="207" height="216"/>
         <image name="Back.png" width="37" height="62"/>
         <image name="CoeurIconThinLine.png" width="940" height="789"/>
         <image name="CouerWhiteIcon.png" width="984" height="831"/>
         <image name="Description Icon.png" width="894" height="888"/>
-        <image name="Flag.png" width="26" height="32"/>
         <image name="Info icon.png" width="70" height="70"/>
         <image name="LearnIcon.png" width="93" height="93"/>
-        <image name="Lightning.png" width="16" height="36"/>
+        <image name="Lightning_4x.png" width="32" height="72"/>
         <image name="ProfileImage.png" width="216" height="216"/>
         <image name="Robbie_Blur.png" width="640" height="1410"/>
         <image name="Search icon.png" width="90" height="90"/>
         <image name="Settings icon.png" width="73" height="75"/>
         <image name="Trends Page.png" width="602" height="1064"/>
         <image name="Vector_close.png" width="51" height="51"/>
+        <image name="bp icon_new.png" width="207" height="207"/>
         <image name="challengesIcon.png" width="210" height="216"/>
+        <image name="challengesIcon_4x.png" width="92" height="88"/>
         <image name="communityIcon.png" width="90" height="93"/>
         <image name="dashboardIcon.png" width="90" height="93"/>
+        <image name="dashboard_challenges_icon.png" width="174" height="174"/>
+        <image name="dashboard_monitor_icon.png" width="195" height="195"/>
+        <image name="dashboard_streaks_icon.png" width="195" height="195"/>
         <image name="measureIcon.png" width="90" height="93"/>
-        <image name="scheduleIcon.png" width="207" height="216"/>
         <image name="streakIcon.png" width="207" height="219"/>
+        <image name="trend graph slide.png" width="1113" height="816"/>
         <image name="trendsIcon.png" width="93" height="93"/>
         <image name="tutorial1Icon.png" width="849" height="816"/>
     </resources>

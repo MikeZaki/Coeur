@@ -128,21 +128,23 @@ class MeasureViewController: UIViewController {
 
     if ppg.count > 1000 {
       let trimmedPPG = ppg[300...(ppg.count - 1)]
-      createCSV(from: Array(trimmedPPG))
+      createJson(from: Array(trimmedPPG))
     }
   }
 
-  func createCSV(from ppg:[Double]) {
-    var csvString = "\("ppg")\n\n"
-    for value in ppg {
-      csvString = csvString.appending("\(value)\n")
-    }
+  func createJson(from ppg:[Double]) {
+    let dict: [String: Any] = [ "ppg" : ppg ]
+    print(ppg.count)
+
+    let jsonData = try! JSONSerialization.data(withJSONObject: dict)
+    let jsonString = NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue)
+    print(jsonString!)
 
     let fileManager = FileManager.default
     do {
       let path = try fileManager.url(for: .documentDirectory, in: .allDomainsMask, appropriateFor: nil, create: false)
-      let fileURL = path.appendingPathComponent("CSVRec-\(Auth.auth().currentUser?.uid ?? "unkownUser").csv")
-      try csvString.write(to: fileURL, atomically: true, encoding: .utf8)
+      let fileURL = path.appendingPathComponent("CSVRec-\(Auth.auth().currentUser?.uid ?? "unkownUser").json")
+      try jsonData.write(to: fileURL)
     } catch {
       print("error creating file")
     }

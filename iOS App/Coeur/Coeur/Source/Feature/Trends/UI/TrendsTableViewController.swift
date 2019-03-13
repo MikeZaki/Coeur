@@ -16,14 +16,14 @@ class TrendsTableViewController: UIViewController, UITableViewDataSource, UITabl
 
   @IBOutlet weak var trendsTableView: UITableView!
 
-  static func trendsViewController() -> TrendsTableViewController {
+  static func trendsTableViewController() -> TrendsTableViewController {
     let newViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TrendsTableViewController") as! TrendsTableViewController
     return newViewController
   }
 
   override func viewDidLoad() {
     trendsTableView.delegate = self
-    trendsTableView.dataSource = self
+    trendsTableView.dataSource = self	
   }
 
   override func viewWillAppear(_ animated: Bool) {

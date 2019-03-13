@@ -26,6 +26,7 @@ class DashboardViewController: UIViewController {
 
   @IBOutlet weak var dashboardCardViewBottomConstraint: NSLayoutConstraint!
   @IBOutlet weak var progressRingsHeightConstraint: NSLayoutConstraint!
+  @IBOutlet weak var iconViewSpacingConstraint: NSLayoutConstraint!
 
   private var progressRingsStartingHeight: CGFloat = Constants.progressRingsOriginalHeight
   private var cardViewStartingVerticalOffset: CGFloat = Constants.cardViewOffsetOriginalOffset
@@ -153,6 +154,7 @@ class DashboardViewController: UIViewController {
       // Update the profile picture's corner radius
       self.userProfileImageView.layer.cornerRadius = self.userProfileImageView.bounds.height / 2
       self.progressRingContainer.ringWidth = CGFloat(34) * (newProgressRingsHeight / 300)
+      self.iconViewSpacingConstraint.constant = CGFloat(10) * (newProgressRingsHeight / 300)
     }
   }
 }
