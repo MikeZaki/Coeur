@@ -83,8 +83,7 @@ class DashboardViewController: UIViewController {
 
     // Gradient View
     view.layer.insertSublayer(GradientView(
-      color1: Colors.coeurSilver,
-      color2: .white,
+      colors: [Colors.coeurSilver, .white],
       frame: CGRect(
         x: 0,
         y: 0,
@@ -127,6 +126,10 @@ class DashboardViewController: UIViewController {
     case .ended:
       cardViewStartingVerticalOffset = dashboardCardViewBottomConstraint.constant
       progressRingsStartingHeight = progressRingsHeightConstraint.constant
+
+      dashboardCardView.isUserInteractionEnabled = true
+      dashboardCardStackView.isUserInteractionEnabled = true
+
       print("ended")
     default:
       print("Bye")
@@ -137,25 +140,26 @@ class DashboardViewController: UIViewController {
     let newCardViewPosition = cardViewStartingVerticalOffset - translation
     let newProgressRingsHeight = progressRingsStartingHeight + translation
 
-    // Make sure the new position is valid
-    DispatchQueue.main.async {
-      guard Constants.validCardBottomConstantRange.contains(newCardViewPosition) else {
-        print("NEW POSITION: \(Int(newCardViewPosition)), CURRENTPOSITION: \(Int(self.dashboardCardViewBottomConstraint.constant)), TRANSLATION: \(Int(translation))")
-        return
-      }
+    dashboardCardView.isUserInteractionEnabled = false
+    dashboardCardStackView.isUserInteractionEnabled = false
 
-      guard Constants.validProgressRingsConstantRange.contains(newProgressRingsHeight) else {
-        print("NEW POSITION: \(Int(newProgressRingsHeight)), CURRENTPOSITION: \(Int(self.progressRingsHeightConstraint.constant)), TRANSLATION: \(Int(translation))")
-        return
-      }
-
-      self.progressRingsHeightConstraint.constant = self.progressRingsStartingHeight + translation
-      self.dashboardCardViewBottomConstraint.constant = self.cardViewStartingVerticalOffset - translation
-
-      // Update the profile picture's corner radius
-      self.userProfileImageView.layer.cornerRadius = self.userProfileImageView.bounds.height / 2
-      self.progressRingContainer.ringWidth = CGFloat(34) * (newProgressRingsHeight / 300)
-      self.iconViewSpacingConstraint.constant = CGFloat(10) * (newProgressRingsHeight / 300)
+  // Make sure the new position is valid
+    guard Constants.validCardBottomConstantRange.contains(newCardViewPosition) else {
+      print("NEW POSITION: \(Int(newCardViewPosition)), CURRENTPOSITION: \(Int(self.dashboardCardViewBottomConstraint.constant)), TRANSLATION: \(Int(translation))")
+      return
     }
+
+    guard Constants.validProgressRingsConstantRange.contains(newProgressRingsHeight) else {
+      print("NEW POSITION: \(Int(newProgressRingsHeight)), CURRENTPOSITION: \(Int(self.progressRingsHeightConstraint.constant)), TRANSLATION: \(Int(translation))")
+      return
+    }
+
+    self.progressRingsHeightConstraint.constant = self.progressRingsStartingHeight + translation
+    self.dashboardCardViewBottomConstraint.constant = self.cardViewStartingVerticalOffset - translation
+
+    // Update the profile picture's corner radius
+    self.userProfileImageView.layer.cornerRadius = self.userProfileImageView.bounds.height / 2
+    self.progressRingContainer.ringWidth = CGFloat(34) * (newProgressRingsHeight / 300)
+    self.iconViewSpacingConstraint.constant = CGFloat(10) * (newProgressRingsHeight / 300)
   }
 }

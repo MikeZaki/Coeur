@@ -153,6 +153,7 @@
 		74BC1E5F223934F3002A80E7 /* rings_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BC1E5E223934F2002A80E7 /* rings_icon.png */; };
 		74BC1E622239392B002A80E7 /* challenge icon_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BC1E602239392A002A80E7 /* challenge icon_large.png */; };
 		74BC1E632239392B002A80E7 /* streak icon_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BC1E612239392A002A80E7 /* streak icon_large.png */; };
+		74BC1E6522396E0D002A80E7 /* UIViewRippleViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BC1E6422396E0D002A80E7 /* UIViewRippleViewExtension.swift */; };
 		74DCB07B21F93AB4007E2E41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DCB07A21F93AB4007E2E41 /* AppDelegate.swift */; };
 		74DCB08021F93AB4007E2E41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DCB07E21F93AB4007E2E41 /* Main.storyboard */; };
 		74DCB08221F93AB7007E2E41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74DCB08121F93AB7007E2E41 /* Assets.xcassets */; };
@@ -311,6 +312,7 @@
 		74BC1E5E223934F2002A80E7 /* rings_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rings_icon.png; sourceTree = "<group>"; };
 		74BC1E602239392A002A80E7 /* challenge icon_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "challenge icon_large.png"; sourceTree = "<group>"; };
 		74BC1E612239392A002A80E7 /* streak icon_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "streak icon_large.png"; sourceTree = "<group>"; };
+		74BC1E6422396E0D002A80E7 /* UIViewRippleViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewRippleViewExtension.swift; sourceTree = "<group>"; };
 		74DCB07721F93AB4007E2E41 /* Coeur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coeur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DCB07A21F93AB4007E2E41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74DCB07F21F93AB4007E2E41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -594,6 +596,7 @@
 		74BC1E3C22387C64002A80E7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				74BC1E6422396E0D002A80E7 /* UIViewRippleViewExtension.swift */,
 				74BC1E3D22387CDA002A80E7 /* UIButtonHighlitedColorExtension.swift */,
 				74BC1E3F2238860B002A80E7 /* UIImageURLExtension.swift */,
 			);
@@ -1291,6 +1294,7 @@
 				7402B7322230E89400DB60E8 /* Colors.swift in Sources */,
 				74BC1E392238792E002A80E7 /* TrendsGraphViewController.swift in Sources */,
 				74BC1E5D22392D7E002A80E7 /* DashboardLandingViewController.swift in Sources */,
+				74BC1E6522396E0D002A80E7 /* UIViewRippleViewExtension.swift in Sources */,
 				7481870622361F2800D6CCDE /* MeasureViewController.swift in Sources */,
 				7402B7AC22322A3700DB60E8 /* GradientView.swift in Sources */,
 				745E8AAA2236A9CF0029AF5B /* PulsePPGOrgan.swift in Sources */,
@@ -1503,16 +1507,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Coeur/Coeur.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T4X7R2GSNH;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = YEX56C85XH;
 				INFOPLIST_FILE = Coeur/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.FYDP.Coeur;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FYDP.Coeur.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Coeur-iOS-Profile";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1524,16 +1529,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Coeur/Coeur.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T4X7R2GSNH;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Coeur/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.FYDP.Coeur;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FYDP.Coeur.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

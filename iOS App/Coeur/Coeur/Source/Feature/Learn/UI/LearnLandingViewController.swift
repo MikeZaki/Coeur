@@ -23,7 +23,7 @@ class LearnLandingViewController: UIViewController {
     super.viewWillAppear(animated)
 
     self.navigationController?.navigationBar.isHidden = true
-    letsGoButton.backgroundColor = Colors.coeurLime
+    letsGoButton.backgroundColor = Colors.coeurTeal
     letsGoButton.layer.cornerRadius = letsGoButton.bounds.height / 2
   }
 

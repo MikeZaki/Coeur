@@ -11,15 +11,12 @@ import UIKit
 class GradientView: UIView {
   var gl:CAGradientLayer
 
-  init(color1: UIColor, color2: UIColor, frame: CGRect) {
-    let colorTop = color1.cgColor
-    let colorBottom = color2.cgColor
-
+  init(colors: [UIColor], locations: [NSNumber] = [0.0, 0.31, 1.0], frame: CGRect) {
     gl = CAGradientLayer()
-    gl.colors = [colorTop, colorBottom]
+    gl.colors = colors.map({ $0.cgColor })
     gl.startPoint = CGPoint(x: 0, y: 0)
-    gl.endPoint = CGPoint(x: 0, y: 0.8091)
-    gl.locations = [0.0, 1.0]
+    gl.endPoint = CGPoint(x: 0, y: 0.7774)
+    gl.locations = locations
     gl.frame = frame
 
     super.init(frame: frame)

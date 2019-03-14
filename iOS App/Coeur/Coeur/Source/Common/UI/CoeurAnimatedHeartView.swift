@@ -30,7 +30,6 @@ class CoeurAnimatedHeartView: UIView {
     upperHeartPath.addLine(to: CGPoint(x: 30.75, y: 54.05))
     upperHeartPath.addLine(to: CGPoint(x: 15.02, y: 91.78))
     upperHeartPath.addLine(to: CGPoint(x: 31.85, y: 142.37))
-    UIColor.red.setStroke()
     upperHeartPath.lineWidth = 6
     upperHeartPath.lineCapStyle = .round
     upperHeartPath.lineJoinStyle = .round
@@ -52,7 +51,6 @@ class CoeurAnimatedHeartView: UIView {
     lowerHeartPath.addLine(to: CGPoint(x: 222.53, y: 186.82))
     lowerHeartPath.addLine(to: CGPoint(x: 154.59, y: 240.59))
     lowerHeartPath.addLine(to: CGPoint(x: 33.66, y: 143.91))
-    UIColor.red.setStroke()
     lowerHeartPath.lineWidth = 6
     lowerHeartPath.lineCapStyle = .round
     lowerHeartPath.lineJoinStyle = .round

@@ -19,7 +19,9 @@ class FirstRunProfileViewController: UIViewController {
 //    finishButton.alpha = 0.5
 
     finishButton.layer.cornerRadius = finishButton.bounds.height / 2
-    finishButton.backgroundColor = Colors.coeurLime
+    finishButton.backgroundColor = .white
+    finishButton.layer.borderColor = Colors.coeurGray.cgColor
+    finishButton.layer.borderWidth = 1
   }
 
   @IBAction func back(_ sender: UIButton) {
@@ -28,7 +30,7 @@ class FirstRunProfileViewController: UIViewController {
 
   @IBAction func onFinishPressed(_ sender: UIButton) {
     // If the user made it this far, save that they have now seen the welcome flow
-    UserDefaults.standard.set(true, forKey: CoeurUserDefaultKeys.kkHasSeenWelcome)
+    UserDefaults.standard.set(true, forKey: CoeurUserDefaultKeys.kHasSeenWelcome)
     self.dismiss(animated: true, completion: nil)
   }
 }

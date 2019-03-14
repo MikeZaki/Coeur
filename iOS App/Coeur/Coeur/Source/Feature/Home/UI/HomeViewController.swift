@@ -25,12 +25,6 @@ class HomeViewController: UIViewController, FUIAuthDelegate {
     newUserButton.layer.cornerRadius = 26
   }
 
-  func checkLoginState() {
-    if let _ = userDefaults.string(forKey: "Coeur_User_Name") {
-      // Skip the home page and go straight to dashboard.
-    }
-  }
-
   func setupFirebaseAuth() {
     FirebaseApp.configure()
     authenticatorUI = FUIAuth.defaultAuthUI()
@@ -53,11 +47,12 @@ class HomeViewController: UIViewController, FUIAuthDelegate {
 
   func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
     // handle user (`authDataResult.user`) and error as necessary
-    guard let result = authDataResult, error == nil else { return }
+    guard let result = authDataResult, error == nil else {
+      return
+    }
     let user = result.user
 
     userDefaults.set(user.uid, forKey: CoeurUserDefaultKeys.kFirebaseUserId)
-    self.showWelcomeIfNeeded()
   }
 
   func authPickerViewController(forAuthUI authUI: FUIAuth) -> FUIAuthPickerViewController {
@@ -73,9 +68,6 @@ class HomeViewController: UIViewController, FUIAuthDelegate {
 
     signInViewController.onEmailSignInCallback = { email, password in
       Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-        // First Dismiss the Sign In View Controller
-        self.dismiss(animated: true, completion: nil)
-
         guard let result = authResult, error == nil else {
           // Display Error
           return
@@ -83,7 +75,9 @@ class HomeViewController: UIViewController, FUIAuthDelegate {
         let user = result.user
 
         self.userDefaults.set(user.uid, forKey: CoeurUserDefaultKeys.kFirebaseUserId)
-        self.showWelcomeIfNeeded()
+
+        // First Dismiss the Sign In View Controller
+        self.dismiss(animated: true, completion: nil)
       }
     }
 
@@ -91,10 +85,19 @@ class HomeViewController: UIViewController, FUIAuthDelegate {
   }
 
   private func showWelcomeIfNeeded() {
-    if userDefaults.bool(forKey: CoeurUserDefaultKeys.kkHasSeenWelcome) {
+    if userDefaults.bool(forKey: CoeurUserDefaultKeys.kHasSeenWelcome) {
       performSegue(withIdentifier: "GoToDashboard", sender: self)
+      return
     }
 
     performSegue(withIdentifier: "GoToWelcome", sender: self)
   }
+
+  @IBAction func firstRunPressed(_ sender: UIButton) {
+    UserDefaults.standard.set(false, forKey: CoeurUserDefaultKeys.kHasSeenWelcome)
+    UserDefaults.standard.set(false, forKey: CoeurUserDefaultKeys.kHasSeenLearnLandingPage)
+    UserDefaults.standard.set(false, forKey: CoeurUserDefaultKeys.kHasSeenMeasureTutorial)
+    UserDefaults.standard.set(false, forKey: CoeurUserDefaultKeys.kHasSeenDashboardTutorial)
+  }
+
 }

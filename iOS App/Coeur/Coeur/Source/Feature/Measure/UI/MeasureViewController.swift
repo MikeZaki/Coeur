@@ -20,6 +20,10 @@ fileprivate struct Constants {
 
 class MeasureViewController: UIViewController {
 
+  @IBOutlet weak var rippleView3: UIView!
+  @IBOutlet weak var rippleView2: UIView!
+  @IBOutlet weak var resultsView: UIView!
+  @IBOutlet weak var rippleView: UIView!
   @IBOutlet weak var iconImageView: UIImageView!
   @IBOutlet weak var animatedHeartView: CoeurAnimatedHeartView!
   @IBOutlet weak var infoButton: UIButton!
@@ -28,6 +32,7 @@ class MeasureViewController: UIViewController {
   @IBOutlet weak var startButtonWidthConstraint: NSLayoutConstraint!
   @IBOutlet weak var progressView: UIView!
   @IBOutlet weak var progressViewTrailingConstraint: NSLayoutConstraint!
+  @IBOutlet weak var lastReadLabelTopConstraint: NSLayoutConstraint!
 
   public weak var delegate: CoeurTabPageDelegate?
 
@@ -57,7 +62,7 @@ class MeasureViewController: UIViewController {
     progressView.layer.cornerRadius = progressView.bounds.height / 2
 
     startButton.layer.cornerRadius = startButton.bounds.height / 2
-    startButton.backgroundColor = Colors.coeurLime
+    startButton.backgroundColor = Colors.coeurTeal
 
     animatedHeartView.setup()
 
@@ -69,8 +74,15 @@ class MeasureViewController: UIViewController {
 
     animatedHeartView.isHidden = true
 
-    // Gradient
-    view.layer.insertSublayer(GradientView(color1: Colors.coeurLime, color2: .white, frame: view.bounds).layer, at: 0)
+    // Load the saved bp measurements.
+    guard let bpMeasurements = UserDefaults.standard.array(forKey: CoeurUserDefaultKeys.kBPMeasurements) else { return }
+    if bpMeasurements.count > 0 {
+      lastReadingLabel.text = "Your Last Measurement\n\(bpMeasurements.first!)"
+    }
+  }
+
+  override func viewDidAppear(_ animated: Bool) {
+    view.layer.insertSublayer(GradientView(colors: [Colors.coeurTrueBlue, Colors.coeurTeal, .white], frame: view.bounds).layer, at: 0)
   }
 
   private func transformViewForMesurement() {
@@ -100,22 +112,29 @@ class MeasureViewController: UIViewController {
   }
 
   private func transformViewForResult() {
-    self.progressViewTrailingConstraint.constant = Constants.measurementProgressViewTrailingDistance
+    progressViewTrailingConstraint.constant = Constants.measurementProgressViewTrailingDistance
 
     // Set the correct text
-    self.startButton.setTitle("FINISH", for: .normal)
-    self.lastReadingLabel.text = "Your Blood pressure is:\nSlightly High"
+    startButton.setTitle("FINISH", for: .normal)
+    lastReadingLabel.text = "Your Blood pressure is:\nSlightly High"
+    rippleView.addRippleEffect(withRippleCount: 3, delay: 0.1, spacing: 15)
+//    rippleView.addRippleEffect()
+//    rippleView2.addRippleEffect()
+//    rippleView3.addRippleEffect()
+
     UIView.animate(withDuration: 0.5, animations: {
       self.view.layoutIfNeeded()
 
       // Hide the start button title label and show the progress bar.
       self.startButton.setTitleColor(.black, for: .normal)
       self.lastReadingLabel.isHidden = false
-//      self.iconImageView.isHidden = true
+      self.iconImageView.isHidden = true
       self.animatedHeartView.isHidden = true
       self.progressView.isHidden = true
+      self.resultsView.isHidden = true
     }) { _ in
       self.startButtonWidthConstraint.constant = Constants.originalStartButtonWidth
+      self.lastReadLabelTopConstraint.constant = 206
       UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseInOut, animations: {
         self.view.layoutIfNeeded()
       }, completion: { _ in })
@@ -127,6 +146,9 @@ class MeasureViewController: UIViewController {
     transformViewForResult()
     captureOrgan.configureTorch(isOn: false)
     ppgOrgan.kill()
+
+    // DUMMY MEASUREMENT:
+    UserDefaults.standard.set(["135/90 mmHg"], forKey: CoeurUserDefaultKeys.kBPMeasurements)
 
     if ppg.count > 1000 {
       let trimmedPPG = ppg[300...(ppg.count - 1)]
@@ -182,11 +204,10 @@ class MeasureViewController: UIViewController {
           }
 
           self.iconImageView.image = UIImage(data: data)
-
-
-          self.delegate?.shouldChangeDisplay(toPage: .measure)
-          self.delegate?.shouldChangeTabBarVisibility(shown: true)
       })
+
+      self.delegate?.shouldChangeDisplay(toPage: .measure)
+      self.delegate?.shouldChangeTabBarVisibility(shown: true)
     }
   }
 

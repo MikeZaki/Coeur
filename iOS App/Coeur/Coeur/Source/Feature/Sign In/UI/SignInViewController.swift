@@ -16,7 +16,9 @@ class SignInViewController: FUIAuthPickerViewController, UITextFieldDelegate {
     button.setTitle("SIGN IN", for: .normal)
     button.setTitleColor(.white, for: .normal)
     button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-    button.backgroundColor = Colors.coeurLime
+    button.backgroundColor = UIColor.white
+    button.layer.borderColor = Colors.coeurGray.cgColor
+    button.layer.borderWidth = 1
     button.titleLabel?.textAlignment = .center
     button.layer.cornerRadius = 26
     button.layer.shadowColor = Colors.coeurShadowColor.cgColor
@@ -26,7 +28,7 @@ class SignInViewController: FUIAuthPickerViewController, UITextFieldDelegate {
     button.layer.masksToBounds = false
 
     // By Default The button is innactive.
-    button.alpha = 0.5
+    button.alpha = 0.3
     button.isEnabled = false
     button.addTarget(
       self,
@@ -83,10 +85,10 @@ class SignInViewController: FUIAuthPickerViewController, UITextFieldDelegate {
       scrollView.backgroundColor = .white
       if let weirdView = scrollView.subviews.first {
         let frame = CGRect(x: 0,
-                           y: -370,
+                           y: -306,
                            width: view.bounds.width,
-                           height: view.bounds.height + 125)
-        weirdView.layer.insertSublayer(GradientView(color1: Colors.coeurLime, color2: .white, frame: frame).layer, at: 0)
+                           height: view.bounds.height + 50)
+        weirdView.layer.insertSublayer(GradientView(colors: [Colors.coeurTrueBlue, Colors.coeurTeal, .white], frame: frame).layer, at: 0)
       }
     }
     setupUI()
@@ -109,7 +111,7 @@ class SignInViewController: FUIAuthPickerViewController, UITextFieldDelegate {
     iconImageView.heightAnchor.constraint(equalToConstant: 249).isActive = true
     iconImageView.widthAnchor.constraint(equalToConstant: 295).isActive = true
     iconImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 42).isActive = true
-    iconImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: -20).isActive = true
+    iconImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 38).isActive = true
 
     titleLabel.topAnchor.constraint(equalTo: iconImageView.bottomAnchor, constant: 20).isActive = true
     titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
@@ -198,7 +200,7 @@ class SignInViewController: FUIAuthPickerViewController, UITextFieldDelegate {
       signInButton.alpha = 1
     } else {
       signInButton.isEnabled = false
-      signInButton.alpha = 0.5
+      signInButton.alpha = 0.3
     }
   }
 }

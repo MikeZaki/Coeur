@@ -11,6 +11,9 @@ import UIKit
 class ArticleDetailViewController: UIViewController {
 
   override func viewWillAppear(_ animated: Bool) {
-    view.backgroundColor = Colors.coeurLime
+  }
+
+  @IBAction func back(_ sender: UIButton) {
+    self.navigationController?.popViewController(animated: true)
   }
 }

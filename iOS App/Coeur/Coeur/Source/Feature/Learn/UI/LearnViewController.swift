@@ -12,6 +12,22 @@ fileprivate struct Constants {
   public static let tableViewCellHeight: CGFloat = 385
 }
 
+public struct LearnArticleData {
+  let title: String
+  let shortDescription: String
+  let image: UIImage?
+  let fullText: String
+}
+
+fileprivate struct LearnArticleDataSource {
+  public static let articles = [
+    LearnArticleData(title: "High Blood Pressure",
+                     shortDescription: "High blood pressure is a common condition in which the long-term force of the blood against your artery walls is high enough that it may [...]",
+                     image: UIImage(named: "ArticleImage1.png"),
+                     fullText: "Overview High blood pressure is a common condition in which the long-term force of the blood against your artery walls is high enough that it may eventually cause health problems, such as heart disease. Blood pressure is determined both by the amount of blood your heart pumps and the amount of resistance to blood flow in your arteries. The more blood your heart pumps and the narrower your arteries, the higher your blood pressure. You can have high blood pressure (hypertension) for years without any symptoms. Even without symptoms, damage to blood vessels and your heart continues and can be detected. Uncontrolled high blood pressure increases your risk of serious health problems, including heart attack and stroke. High blood pressure generally develops over many years, and it affects nearly everyone eventually. Fortunately, high blood pressure can be easily detected.")
+  ]
+}
+
 class LearnViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   @IBOutlet weak var articleTableView: UITableView!

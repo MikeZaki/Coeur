@@ -81,12 +81,12 @@ public class RingProgressGroupView: UIView {
     private func setup() {
         addSubview(ring1)
         addSubview(ring2)
-      ring1.gradientImageScale = 0.5
-//      ring1.shadowOpacity = 0.0
+      ring1.gradientImageScale = 0.3
+      ring1.shadowOpacity = 0.0
       ring1.allowsAntialiasing = false
 
-      ring2.gradientImageScale = 0.5
-//      ring2.shadowOpacity = 0.0
+      ring2.gradientImageScale = 0.3
+      ring2.shadowOpacity = 0.0
       ring2.allowsAntialiasing = false
     }
     

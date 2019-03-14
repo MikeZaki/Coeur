@@ -97,8 +97,8 @@ class TabBarContainerViewController: UIViewController {
   private func tabBarController(forPage page:CoeurTabBarPage) -> UIViewController {
     switch page {
     case .dashboard:
-      if !UserDefaults.standard.bool(forKey: CoeurUserDefaultKeys.kkHasSeenMeasureDashboardTutorial) {
-        UserDefaults.standard.set(true, forKey: CoeurUserDefaultKeys.kkHasSeenMeasureDashboardTutorial)
+      if !UserDefaults.standard.bool(forKey: CoeurUserDefaultKeys.kHasSeenDashboardTutorial) {
+        UserDefaults.standard.set(true, forKey: CoeurUserDefaultKeys.kHasSeenDashboardTutorial)
         let vc = DashboardLandingViewController.dashboardLandingViewController()
         vc.delegate = self
         return vc
@@ -112,8 +112,8 @@ class TabBarContainerViewController: UIViewController {
       let navController = UINavigationController(rootViewController: vc)
       return navController
     case .measure:
-      if !UserDefaults.standard.bool(forKey: CoeurUserDefaultKeys.kkHasSeenMeasureMeasureTutorial) {
-        UserDefaults.standard.set(true, forKey: CoeurUserDefaultKeys.kkHasSeenMeasureMeasureTutorial)
+      if !UserDefaults.standard.bool(forKey: CoeurUserDefaultKeys.kHasSeenMeasureTutorial) {
+        UserDefaults.standard.set(true, forKey: CoeurUserDefaultKeys.kHasSeenMeasureTutorial)
         handleTabBarVisibility(shouldShowTabBar: false)
         return tabBarController(forPage: .measureTutorial)
       }
@@ -134,8 +134,8 @@ class TabBarContainerViewController: UIViewController {
       return tutorialPageViewController
 
     case .learn:
-      if !UserDefaults.standard.bool(forKey: CoeurUserDefaultKeys.kkHasSeenLearnLandingPage) {
-        UserDefaults.standard.set(true, forKey: CoeurUserDefaultKeys.kkHasSeenLearnLandingPage)
+      if !UserDefaults.standard.bool(forKey: CoeurUserDefaultKeys.kHasSeenLearnLandingPage) {
+        UserDefaults.standard.set(true, forKey: CoeurUserDefaultKeys.kHasSeenLearnLandingPage)
         let vc = LearnLandingViewController.learnLandingViewController()
         vc.delegate = self
         return vc
@@ -232,7 +232,7 @@ extension TabBarContainerViewController:
                             tutorialPageText: "• Relax and sit quietly\n• Uncross your legs and ankles\n• Support your back with a chair",
                             tutorialPageIndex: 0),
       CoeurTutorialPageData(tutorialPageImage: UIImage(named: "tutorial2Icon"),
-                            tutorialPageTitle: "PLACE TOUR FINGER",
+                            tutorialPageTitle: "PLACE YOUR FINGER",
                             tutorialPageText: "• Press your index finger on the back camera of your phone",
                             tutorialPageIndex: 1),
       CoeurTutorialPageData(tutorialPageImage: UIImage(named: "tutorial3Icon"),

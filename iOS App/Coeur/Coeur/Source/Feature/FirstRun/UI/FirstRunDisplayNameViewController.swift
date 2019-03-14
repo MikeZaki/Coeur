@@ -27,7 +27,9 @@ class FirstRunDisplayNameViewController: UIViewController, UITextFieldDelegate {
     displaynameTextField.delegate = self
     
     continueButton.layer.cornerRadius = continueButton.bounds.height / 2
-    continueButton.backgroundColor = Colors.coeurLime
+    continueButton.backgroundColor = .white
+    continueButton.layer.borderColor = Colors.coeurGray.cgColor
+    continueButton.layer.borderWidth = 1
     hideKeyboardWhenTappedAround()
   }
 

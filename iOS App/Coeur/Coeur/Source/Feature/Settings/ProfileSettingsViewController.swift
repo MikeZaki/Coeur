@@ -15,7 +15,7 @@ class ProfileSettingsViewController: UIViewController {
 
   override func viewWillAppear(_ animated: Bool) {
     logoutButton.layer.cornerRadius = logoutButton.bounds.height / 2
-    logoutButton.layer.borderColor = Colors.coeurBlack.cgColor
+    logoutButton.layer.borderColor = UIColor.black.cgColor
     logoutButton.layer.borderWidth = 1
   }
 
