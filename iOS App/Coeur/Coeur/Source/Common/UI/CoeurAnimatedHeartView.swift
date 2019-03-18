@@ -63,7 +63,7 @@ class CoeurAnimatedHeartView: UIView {
 
   func setup() {
     backgroundColor = .clear
-    let strokeColor = UIColor.black.cgColor
+    let strokeColor = UIColor.white.cgColor
     upperHeartLayer.frame = CGRect(x: 2, y: 0, width: self.frame.size.width, height: self.frame.size.height)
     upperHeartLayer.path = upperHeartPath.cgPath
     upperHeartLayer.lineWidth = 6

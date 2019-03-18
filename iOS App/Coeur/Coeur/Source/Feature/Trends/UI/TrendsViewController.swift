@@ -23,7 +23,7 @@ class TrendsViewController: UIViewController, iCarouselDelegate, iCarouselDataSo
 
     trendsCarousel.delegate = self
     trendsCarousel.dataSource = self
-    trendsCarousel.type = .linear
+    trendsCarousel.type = .coverFlow
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -39,7 +39,7 @@ class TrendsViewController: UIViewController, iCarouselDelegate, iCarouselDataSo
   func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
     guard let view = self.view else { return UIView() }
     let vc = TrendsTableViewController.trendsTableViewController()
-    vc.view.frame = CGRect(x: 26, y: 0, width: view.bounds.width - 52, height: view.bounds.height)
+    vc.view.frame = CGRect(x: 0, y: 64, width: view.bounds.width, height: view.bounds.height - 64)
 
     self.addChild(vc)
     vc.didMove(toParent: self)
@@ -47,10 +47,6 @@ class TrendsViewController: UIViewController, iCarouselDelegate, iCarouselDataSo
   }
 
   func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
-    if case .spacing = option {
-      return value * 1.05
-    }
-
     return value
   }
 }

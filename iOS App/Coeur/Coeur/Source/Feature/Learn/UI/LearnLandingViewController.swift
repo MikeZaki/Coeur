@@ -10,8 +10,6 @@ import UIKit
 
 class LearnLandingViewController: UIViewController {
 
-  @IBOutlet weak var letsGoButton: UIButton!
-
   public weak var delegate: CoeurTabPageDelegate?
 
   static func learnLandingViewController() -> LearnLandingViewController {
@@ -23,8 +21,6 @@ class LearnLandingViewController: UIViewController {
     super.viewWillAppear(animated)
 
     self.navigationController?.navigationBar.isHidden = true
-    letsGoButton.backgroundColor = Colors.coeurTeal
-    letsGoButton.layer.cornerRadius = letsGoButton.bounds.height / 2
   }
 
 

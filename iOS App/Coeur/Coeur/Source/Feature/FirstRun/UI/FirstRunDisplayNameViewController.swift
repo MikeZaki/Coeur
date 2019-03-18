@@ -20,8 +20,8 @@ class FirstRunDisplayNameViewController: UIViewController, UITextFieldDelegate {
 
   override func viewWillAppear(_ animated: Bool) {
     // By Default the button is innactive.
-    continueButton.isEnabled = false
-    continueButton.alpha = 0.5
+//    continueButton.isEnabled = false
+//    continueButton.alpha = 0.5
 
     displaynameTextField.layer.cornerRadius = displaynameTextField.bounds.height / 2
     displaynameTextField.delegate = self
@@ -51,13 +51,13 @@ class FirstRunDisplayNameViewController: UIViewController, UITextFieldDelegate {
   }
 
   private func handleFieldsAreValid(isValid: Bool) {
-    if isValid {
+//    if isValid {
       continueButton.isEnabled = true
       continueButton.alpha = 1
-    } else {
-      continueButton.isEnabled = false
-      continueButton.alpha = 0.5
-    }
+//    } else {
+//      continueButton.isEnabled = false
+//      continueButton.alpha = 0.5
+//    }
   }
 
   @IBAction func onContinuePressed(_ sender: UIButton) {

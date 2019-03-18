@@ -1,17 +1,19 @@
 //
-//  DashboardTutorialViewController.swift
+//  MeasureLandingViewController.swift
 //  Coeur
 //
-//  Created by Michael Zaki on 3/13/19.
+//  Created by Michael Zaki on 3/14/19.
 //  Copyright © 2019 Coeur. All rights reserved.
 //
 
+import Foundation
+
 import UIKit
 
-class DashboardLandingViewController: UIViewController, CoeurTutorialPage {
+class MeasureLandingViewController: UIViewController, CoeurTutorialPage {
 
-  static func dashboardLandingViewController() -> DashboardLandingViewController {
-    let newViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DashboardLandingViewController") as! DashboardLandingViewController
+  static func measureLandingViewController() -> MeasureLandingViewController {
+    let newViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MeasureLandingViewController") as! MeasureLandingViewController
     return newViewController
   }
 

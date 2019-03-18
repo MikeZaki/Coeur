@@ -126,6 +126,32 @@
 		7481873E223664DA00D6CCDE /* ArticleImage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7481873C223664D600D6CCDE /* ArticleImage1.png */; };
 		7481873F223664DA00D6CCDE /* ArticleImage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7481873D223664D900D6CCDE /* ArticleImage2.png */; };
 		748187412236666400D6CCDE /* LearnArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748187402236666400D6CCDE /* LearnArticleTableViewCell.swift */; };
+		74A09712223A415D00F07AE9 /* first time dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A09711223A415C00F07AE9 /* first time dashboard.png */; };
+		74A0971A223A5B5000F07AE9 /* rings_flat.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A09713223A5B4500F07AE9 /* rings_flat.png */; };
+		74A0971B223A5B5000F07AE9 /* streakIcon_dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A09714223A5B4800F07AE9 /* streakIcon_dashboard.png */; };
+		74A0971C223A5B5000F07AE9 /* scheduleIcon_dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A09715223A5B4900F07AE9 /* scheduleIcon_dashboard.png */; };
+		74A0971D223A5B5000F07AE9 /* challengesIcon_dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A09716223A5B4A00F07AE9 /* challengesIcon_dashboard.png */; };
+		74A0971E223A5B5000F07AE9 /* streakIcon_flat.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A09717223A5B4C00F07AE9 /* streakIcon_flat.png */; };
+		74A0971F223A5B5000F07AE9 /* challengesIcon_flat.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A09718223A5B4D00F07AE9 /* challengesIcon_flat.png */; };
+		74A09720223A5B5000F07AE9 /* measureIcon_dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A09719223A5B4F00F07AE9 /* measureIcon_dashboard.png */; };
+		74A09722223A5EF400F07AE9 /* first time dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A09721223A5EF300F07AE9 /* first time dashboard.png */; };
+		74A09724223A62D600F07AE9 /* trendGraph.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A09723223A62D500F07AE9 /* trendGraph.png */; };
+		74A09727223A6D8C00F07AE9 /* Info icon_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A09725223A6D8700F07AE9 /* Info icon_white.png */; };
+		74A09728223A6D8C00F07AE9 /* Back_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A09726223A6D8A00F07AE9 /* Back_white.png */; };
+		74A0972A223A715C00F07AE9 /* coeurAppWhiteIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A09729223A715A00F07AE9 /* coeurAppWhiteIcon.png */; };
+		74A0972C223A74B000F07AE9 /* learn landing page.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A0972B223A74AF00F07AE9 /* learn landing page.png */; };
+		74A0972E223A757500F07AE9 /* baseline-clear-24px.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A0972D223A757300F07AE9 /* baseline-clear-24px.png */; };
+		74A09730223A794E00F07AE9 /* first time dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A0972F223A794E00F07AE9 /* first time dashboard.png */; };
+		74A09732223A7C9A00F07AE9 /* Taking measurement new user screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A09731223A7C9700F07AE9 /* Taking measurement new user screen.png */; };
+		74A09734223A7CBA00F07AE9 /* MeasureLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A09733223A7CBA00F07AE9 /* MeasureLandingViewController.swift */; };
+		74A09739223A7EC000F07AE9 /* Group_tutorial.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A09735223A7EB900F07AE9 /* Group_tutorial.png */; };
+		74A0973A223A7EC000F07AE9 /* measureTutorialIcon4.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A09736223A7EBA00F07AE9 /* measureTutorialIcon4.png */; };
+		74A0973B223A7EC000F07AE9 /* tutorial1Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A09737223A7EBC00F07AE9 /* tutorial1Icon.png */; };
+		74A0973C223A7EC000F07AE9 /* tutorial4Icon 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A09738223A7EBE00F07AE9 /* tutorial4Icon 2.png */; };
+		74A0973F223A82D500F07AE9 /* measureTutorialIcon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A0973D223A82D200F07AE9 /* measureTutorialIcon2.png */; };
+		74A09740223A82D500F07AE9 /* tutorial1Icon_measure.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A0973E223A82D300F07AE9 /* tutorial1Icon_measure.png */; };
+		74A09742223AAD9700F07AE9 /* CoeurBP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A09741223AAD9700F07AE9 /* CoeurBP.swift */; };
+		74A09744223AAF9F00F07AE9 /* bp click in.png in Resources */ = {isa = PBXBuildFile; fileRef = 74A09743223AAF9C00F07AE9 /* bp click in.png */; };
 		74BC1E2B2237AFC9002A80E7 /* Lightning.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BC1E292237AFC6002A80E7 /* Lightning.png */; };
 		74BC1E2C2237AFC9002A80E7 /* Flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BC1E2A2237AFC8002A80E7 /* Flag.png */; };
 		74BC1E2F2237B068002A80E7 /* Flag (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 74BC1E2D2237B066002A80E7 /* Flag (1).png */; };
@@ -285,6 +311,32 @@
 		7481873C223664D600D6CCDE /* ArticleImage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ArticleImage1.png; sourceTree = "<group>"; };
 		7481873D223664D900D6CCDE /* ArticleImage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ArticleImage2.png; sourceTree = "<group>"; };
 		748187402236666400D6CCDE /* LearnArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnArticleTableViewCell.swift; sourceTree = "<group>"; };
+		74A09711223A415C00F07AE9 /* first time dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first time dashboard.png"; path = "../../../../../../../Downloads/first time dashboard.png"; sourceTree = "<group>"; };
+		74A09713223A5B4500F07AE9 /* rings_flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rings_flat.png; sourceTree = "<group>"; };
+		74A09714223A5B4800F07AE9 /* streakIcon_dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = streakIcon_dashboard.png; sourceTree = "<group>"; };
+		74A09715223A5B4900F07AE9 /* scheduleIcon_dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scheduleIcon_dashboard.png; sourceTree = "<group>"; };
+		74A09716223A5B4A00F07AE9 /* challengesIcon_dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = challengesIcon_dashboard.png; sourceTree = "<group>"; };
+		74A09717223A5B4C00F07AE9 /* streakIcon_flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = streakIcon_flat.png; sourceTree = "<group>"; };
+		74A09718223A5B4D00F07AE9 /* challengesIcon_flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = challengesIcon_flat.png; sourceTree = "<group>"; };
+		74A09719223A5B4F00F07AE9 /* measureIcon_dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = measureIcon_dashboard.png; sourceTree = "<group>"; };
+		74A09721223A5EF300F07AE9 /* first time dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first time dashboard.png"; path = "../../../../../../../Downloads/first time dashboard.png"; sourceTree = "<group>"; };
+		74A09723223A62D500F07AE9 /* trendGraph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trendGraph.png; sourceTree = "<group>"; };
+		74A09725223A6D8700F07AE9 /* Info icon_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Info icon_white.png"; sourceTree = "<group>"; };
+		74A09726223A6D8A00F07AE9 /* Back_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back_white.png; sourceTree = "<group>"; };
+		74A09729223A715A00F07AE9 /* coeurAppWhiteIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coeurAppWhiteIcon.png; sourceTree = "<group>"; };
+		74A0972B223A74AF00F07AE9 /* learn landing page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "learn landing page.png"; path = "../../../../../../../Downloads/learn landing page.png"; sourceTree = "<group>"; };
+		74A0972D223A757300F07AE9 /* baseline-clear-24px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "baseline-clear-24px.png"; sourceTree = "<group>"; };
+		74A0972F223A794E00F07AE9 /* first time dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first time dashboard.png"; path = "../../../../../../../Downloads/first time dashboard.png"; sourceTree = "<group>"; };
+		74A09731223A7C9700F07AE9 /* Taking measurement new user screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Taking measurement new user screen.png"; path = "../../../../../../../Downloads/Taking measurement new user screen.png"; sourceTree = "<group>"; };
+		74A09733223A7CBA00F07AE9 /* MeasureLandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureLandingViewController.swift; sourceTree = "<group>"; };
+		74A09735223A7EB900F07AE9 /* Group_tutorial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Group_tutorial.png; sourceTree = "<group>"; };
+		74A09736223A7EBA00F07AE9 /* measureTutorialIcon4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = measureTutorialIcon4.png; sourceTree = "<group>"; };
+		74A09737223A7EBC00F07AE9 /* tutorial1Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tutorial1Icon.png; path = ../../../../../../../Downloads/tutorial1Icon.png; sourceTree = "<group>"; };
+		74A09738223A7EBE00F07AE9 /* tutorial4Icon 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tutorial4Icon 2.png"; path = "../../../../../../../Downloads/tutorial4Icon 2.png"; sourceTree = "<group>"; };
+		74A0973D223A82D200F07AE9 /* measureTutorialIcon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = measureTutorialIcon2.png; sourceTree = "<group>"; };
+		74A0973E223A82D300F07AE9 /* tutorial1Icon_measure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial1Icon_measure.png; sourceTree = "<group>"; };
+		74A09741223AAD9700F07AE9 /* CoeurBP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoeurBP.swift; sourceTree = "<group>"; };
+		74A09743223AAF9C00F07AE9 /* bp click in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bp click in.png"; sourceTree = "<group>"; };
 		74BC1E292237AFC6002A80E7 /* Lightning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lightning.png; sourceTree = "<group>"; };
 		74BC1E2A2237AFC8002A80E7 /* Flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flag.png; sourceTree = "<group>"; };
 		74BC1E2D2237B066002A80E7 /* Flag (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Flag (1).png"; sourceTree = "<group>"; };
@@ -553,6 +605,7 @@
 			children = (
 				748187072236332D00D6CCDE /* Tutorial */,
 				7481870422361F1900D6CCDE /* UI */,
+				74A09741223AAD9700F07AE9 /* CoeurBP.swift */,
 			);
 			path = Measure;
 			sourceTree = "<group>";
@@ -570,6 +623,7 @@
 			children = (
 				748187082236337C00D6CCDE /* CoeurMeasureTutorialPageViewController.swift */,
 				7481870A2236339700D6CCDE /* CoeurMeasureTutorialPageController.swift */,
+				74A09733223A7CBA00F07AE9 /* MeasureLandingViewController.swift */,
 			);
 			path = Tutorial;
 			sourceTree = "<group>";
@@ -748,10 +802,24 @@
 		74E7A0ED222F79FC00329141 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				74A09716223A5B4A00F07AE9 /* challengesIcon_dashboard.png */,
+				74A09718223A5B4D00F07AE9 /* challengesIcon_flat.png */,
+				74A0972B223A74AF00F07AE9 /* learn landing page.png */,
+				74A09719223A5B4F00F07AE9 /* measureIcon_dashboard.png */,
+				74A09713223A5B4500F07AE9 /* rings_flat.png */,
+				74A09726223A6D8A00F07AE9 /* Back_white.png */,
+				74A09725223A6D8700F07AE9 /* Info icon_white.png */,
+				74A09715223A5B4900F07AE9 /* scheduleIcon_dashboard.png */,
+				74A09714223A5B4800F07AE9 /* streakIcon_dashboard.png */,
+				74A09717223A5B4C00F07AE9 /* streakIcon_flat.png */,
+				74A0972F223A794E00F07AE9 /* first time dashboard.png */,
 				74BC1E4122388989002A80E7 /* Settings icon.png */,
 				7481873C223664D600D6CCDE /* ArticleImage1.png */,
+				74A09723223A62D500F07AE9 /* trendGraph.png */,
 				74BC1E5222391CE8002A80E7 /* bp icon_new.png */,
 				74BC1E4E22391CA5002A80E7 /* challengesIcon_4x.png */,
+				74A09729223A715A00F07AE9 /* coeurAppWhiteIcon.png */,
+				74A09711223A415C00F07AE9 /* first time dashboard.png */,
 				74BC1E602239392A002A80E7 /* challenge icon_large.png */,
 				74BC1E612239392A002A80E7 /* streak icon_large.png */,
 				74BC1E5E223934F2002A80E7 /* rings_icon.png */,
@@ -772,6 +840,7 @@
 				7481870122361E5C00D6CCDE /* Arrow Right.png */,
 				745E8A9E22367EE80029AF5B /* pikachu.png */,
 				748186EE2235E90D00D6CCDE /* BPIcon.png */,
+				74A09721223A5EF300F07AE9 /* first time dashboard.png */,
 				74EACD6D223727B6008EAAD0 /* CoeurIconThinLine.png */,
 				748186E8223520CE00D6CCDE /* challengesIcon.png */,
 				748186E9223520D000D6CCDE /* scheduleIcon.png */,
@@ -803,6 +872,8 @@
 				7402B7C62233B3CE00DB60E8 /* normal label.png */,
 				7402B7CC2233B3D000DB60E8 /* Passive button.png */,
 				7402B7B92233B3CA00DB60E8 /* Search icon.png */,
+				74A0973D223A82D200F07AE9 /* measureTutorialIcon2.png */,
+				74A0973E223A82D300F07AE9 /* tutorial1Icon_measure.png */,
 				7402B7AF2233B3C400DB60E8 /* slightly high label.png */,
 				7402B7BC2233B3CB00DB60E8 /* slightly low label.png */,
 				7402B7C22233B3CC00DB60E8 /* Trends icon.png */,
@@ -810,8 +881,15 @@
 				7402B7B62233B3C800DB60E8 /* trendsIcon.png */,
 				7402B7BB2233B3CA00DB60E8 /* tutorial1Icon.png */,
 				7402B7B32233B3C700DB60E8 /* tutorial2Icon.png */,
+				74A09731223A7C9700F07AE9 /* Taking measurement new user screen.png */,
+				74A0972D223A757300F07AE9 /* baseline-clear-24px.png */,
 				7402B7CA2233B3CF00DB60E8 /* tutorial3Icon.png */,
+				74A09735223A7EB900F07AE9 /* Group_tutorial.png */,
+				74A09736223A7EBA00F07AE9 /* measureTutorialIcon4.png */,
+				74A09737223A7EBC00F07AE9 /* tutorial1Icon.png */,
+				74A09738223A7EBE00F07AE9 /* tutorial4Icon 2.png */,
 				7402B7C32233B3CD00DB60E8 /* tutorial4Icon.png */,
+				74A09743223AAF9C00F07AE9 /* bp click in.png */,
 				7402B7AD22323CDC00DB60E8 /* CoeurIconiOS_3x.png */,
 				7402B7A8223228C000DB60E8 /* CoeurIconiOS.png */,
 				74E7A0EE222F7A0900329141 /* coeur_icon.png */,
@@ -996,6 +1074,7 @@
 				7481873422365FDE00D6CCDE /* SF-Pro-Text-HeavyItalic.otf in Resources */,
 				7481873522365FDE00D6CCDE /* SF-Pro-Text-Light.otf in Resources */,
 				74BC1E332237B958002A80E7 /* ProfileImage.png in Resources */,
+				74A09728223A6D8C00F07AE9 /* Back_white.png in Resources */,
 				7481873622365FDE00D6CCDE /* SF-Pro-Text-LightItalic.otf in Resources */,
 				7481873722365FDE00D6CCDE /* SF-Pro-Text-Medium.otf in Resources */,
 				7481873822365FDE00D6CCDE /* SF-Pro-Text-MediumItalic.otf in Resources */,
@@ -1013,6 +1092,8 @@
 				7481872522365FD300D6CCDE /* SF-Pro-Display-HeavyItalic.otf in Resources */,
 				7481872622365FD300D6CCDE /* SF-Pro-Display-Light.otf in Resources */,
 				7481872722365FD300D6CCDE /* SF-Pro-Display-LightItalic.otf in Resources */,
+				74A09732223A7C9A00F07AE9 /* Taking measurement new user screen.png in Resources */,
+				74A09744223AAF9F00F07AE9 /* bp click in.png in Resources */,
 				7481872822365FD300D6CCDE /* SF-Pro-Display-Medium.otf in Resources */,
 				7481872922365FD300D6CCDE /* SF-Pro-Display-MediumItalic.otf in Resources */,
 				7481872A22365FD300D6CCDE /* SF-Pro-Display-RegularItalic.otf in Resources */,
@@ -1020,6 +1101,7 @@
 				7481872C22365FD300D6CCDE /* SF-Pro-Display-SemiboldItalic.otf in Resources */,
 				7481872D22365FD300D6CCDE /* SF-Pro-Display-Thin.otf in Resources */,
 				74BC1E2B2237AFC9002A80E7 /* Lightning.png in Resources */,
+				74A09724223A62D600F07AE9 /* trendGraph.png in Resources */,
 				74BC1E5322391CE8002A80E7 /* bp icon_new.png in Resources */,
 				74BC1E2F2237B068002A80E7 /* Flag (1).png in Resources */,
 				7481872E22365FD300D6CCDE /* SF-Pro-Display-ThinItalic.otf in Resources */,
@@ -1032,19 +1114,25 @@
 				7481871822365FBB00D6CCDE /* JosefinSans-Italic.ttf in Resources */,
 				7481871922365FBB00D6CCDE /* JosefinSans-Light.ttf in Resources */,
 				7481871A22365FBB00D6CCDE /* JosefinSans-LightItalic.ttf in Resources */,
+				74A0971C223A5B5000F07AE9 /* scheduleIcon_dashboard.png in Resources */,
 				7481871B22365FBB00D6CCDE /* JosefinSans-Regular.ttf in Resources */,
 				7481871C22365FBB00D6CCDE /* JosefinSans-SemiBold.ttf in Resources */,
+				74A0971E223A5B5000F07AE9 /* streakIcon_flat.png in Resources */,
 				7481871D22365FBB00D6CCDE /* JosefinSans-SemiBoldItalic.ttf in Resources */,
+				74A0973B223A7EC000F07AE9 /* tutorial1Icon.png in Resources */,
 				7481871E22365FBB00D6CCDE /* JosefinSans-Thin.ttf in Resources */,
 				7481871F22365FBB00D6CCDE /* JosefinSans-ThinItalic.ttf in Resources */,
 				7402B7D72233B3D200DB60E8 /* trendsIcon.png in Resources */,
 				7402B7D42233B3D200DB60E8 /* tutorial2Icon.png in Resources */,
 				7402B7D52233B3D200DB60E8 /* low label.png in Resources */,
 				7402B72B2230BE6C00DB60E8 /* GoogleService-Info.plist in Resources */,
+				74A0972A223A715C00F07AE9 /* coeurAppWhiteIcon.png in Resources */,
 				7402B7E42233B3D200DB60E8 /* tutorial4Icon.png in Resources */,
+				74A09727223A6D8C00F07AE9 /* Info icon_white.png in Resources */,
 				7402B7EA2233B3D200DB60E8 /* friendsIcon-29.png in Resources */,
 				748186EB223520D100D6CCDE /* challengesIcon.png in Resources */,
 				7402B7E62233B3D200DB60E8 /* Learn Icon.png in Resources */,
+				74A0972C223A74B000F07AE9 /* learn landing page.png in Resources */,
 				7402B7E82233B3D200DB60E8 /* Description Icon.png in Resources */,
 				74BC1E37223876D1002A80E7 /* Trends Page.png in Resources */,
 				74DCB08521F93AB7007E2E41 /* LaunchScreen.storyboard in Resources */,
@@ -1054,12 +1142,17 @@
 				7481870222361E5C00D6CCDE /* Arrow Right.png in Resources */,
 				7402B7ED2233B3D200DB60E8 /* Passive button.png in Resources */,
 				7402B7D32233B3D200DB60E8 /* LearnIcon.png in Resources */,
+				74A0971B223A5B5000F07AE9 /* streakIcon_dashboard.png in Resources */,
 				7402B7D62233B3D200DB60E8 /* communityActiveIcon.png in Resources */,
 				7402B7E02233B3D200DB60E8 /* LearnActiveIcon.png in Resources */,
+				74A0973F223A82D500F07AE9 /* measureTutorialIcon2.png in Resources */,
+				74A09730223A794E00F07AE9 /* first time dashboard.png in Resources */,
+				74A0971F223A5B5000F07AE9 /* challengesIcon_flat.png in Resources */,
 				7402B7E32233B3D200DB60E8 /* Trends icon.png in Resources */,
 				7402B7F02233B3D200DB60E8 /* dangerous label.png in Resources */,
 				7402B7E22233B3D200DB60E8 /* Line.png in Resources */,
 				7402B7D82233B3D200DB60E8 /* Back.png in Resources */,
+				74A0971A223A5B5000F07AE9 /* rings_flat.png in Resources */,
 				7402B7DD2233B3D200DB60E8 /* slightly low label.png in Resources */,
 				74EACD6E223727B8008EAAD0 /* CoeurIconThinLine.png in Resources */,
 				74BC1E5922391DCA002A80E7 /* dashboard_streaks_icon.png in Resources */,
@@ -1073,6 +1166,7 @@
 				74BC1E4B22391618002A80E7 /* Article component.png in Resources */,
 				7402B8052233F26C00DB60E8 /* CoeurTabBar.xib in Resources */,
 				7481873E223664DA00D6CCDE /* ArticleImage1.png in Resources */,
+				74A0973A223A7EC000F07AE9 /* measureTutorialIcon4.png in Resources */,
 				7402B7EB2233B3D200DB60E8 /* tutorial3Icon.png in Resources */,
 				7402B7E72233B3D200DB60E8 /* normal label.png in Resources */,
 				74BC1E3522387606002A80E7 /* baseline-bar_chart-24px.png in Resources */,
@@ -1081,7 +1175,9 @@
 				7481870F22364F3400D6CCDE /* Vector_close.png in Resources */,
 				7402B7D02233B3D200DB60E8 /* slightly high label.png in Resources */,
 				748186ED223520D100D6CCDE /* streakIcon.png in Resources */,
+				74A0971D223A5B5000F07AE9 /* challengesIcon_dashboard.png in Resources */,
 				7402B7D92233B3D200DB60E8 /* measureActiveIcon.png in Resources */,
+				74A0972E223A757500F07AE9 /* baseline-clear-24px.png in Resources */,
 				7402B7D22233B3D200DB60E8 /* Measure Icon.png in Resources */,
 				7402B7DB2233B3D200DB60E8 /* Button.png in Resources */,
 				7402B7EF2233B3D200DB60E8 /* dashboardActiveIcon.png in Resources */,
@@ -1093,9 +1189,15 @@
 				7402B7DE2233B3D200DB60E8 /* Dashboard Icon.png in Resources */,
 				7402B7DC2233B3D200DB60E8 /* tutorial1Icon.png in Resources */,
 				748186EF2235E90D00D6CCDE /* BPIcon.png in Resources */,
+				74A0973C223A7EC000F07AE9 /* tutorial4Icon 2.png in Resources */,
 				7402B7E92233B3D200DB60E8 /* Add button.png in Resources */,
+				74A09720223A5B5000F07AE9 /* measureIcon_dashboard.png in Resources */,
+				74A09740223A82D500F07AE9 /* tutorial1Icon_measure.png in Resources */,
 				74DCB08021F93AB4007E2E41 /* Main.storyboard in Resources */,
 				74BC1E5722391DCA002A80E7 /* dashboard_challenges_icon.png in Resources */,
+				74A09739223A7EC000F07AE9 /* Group_tutorial.png in Resources */,
+				74A09712223A415D00F07AE9 /* first time dashboard.png in Resources */,
+				74A09722223A5EF400F07AE9 /* first time dashboard.png in Resources */,
 				74BC1E302237B068002A80E7 /* Lightning (1).png in Resources */,
 				7402B7D12233B3D200DB60E8 /* communityIcon.png in Resources */,
 				7402B7FC2233E6F500DB60E8 /* CouerWhiteIcon.png in Resources */,
@@ -1305,6 +1407,7 @@
 				748186FE2235F83100D6CCDE /* CoeurTabBarButton.swift in Sources */,
 				74EACD742237945A008EAAD0 /* MKGradientGenerator.swift in Sources */,
 				7402B7F82233E19900DB60E8 /* FirstRunProfileViewController.swift in Sources */,
+				74A09734223A7CBA00F07AE9 /* MeasureLandingViewController.swift in Sources */,
 				745E8AB32236FD8E0029AF5B /* CaptureSessionSpec.swift in Sources */,
 				748187002235FB9E00D6CCDE /* CoeurTabBarPage.swift in Sources */,
 				7481871522365C7500D6CCDE /* LearnLandingViewController.swift in Sources */,
@@ -1330,6 +1433,7 @@
 				7402B8012233F11700DB60E8 /* TabBarContainerViewController.swift in Sources */,
 				74BC1E3B2238793A002A80E7 /* TrendsDetailViewController.swift in Sources */,
 				745E8AAB2236A9CF0029AF5B /* AVCaptureDeviceExtension.swift in Sources */,
+				74A09742223AAD9700F07AE9 /* CoeurBP.swift in Sources */,
 				748186E7223512CB00D6CCDE /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

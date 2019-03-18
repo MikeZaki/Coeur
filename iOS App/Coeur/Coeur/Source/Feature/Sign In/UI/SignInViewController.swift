@@ -14,7 +14,7 @@ class SignInViewController: FUIAuthPickerViewController, UITextFieldDelegate {
   private let signInButton: UIButton = {
     let button = UIButton()
     button.setTitle("SIGN IN", for: .normal)
-    button.setTitleColor(.white, for: .normal)
+    button.setTitleColor(.black, for: .normal)
     button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
     button.backgroundColor = UIColor.white
     button.layer.borderColor = Colors.coeurGray.cgColor

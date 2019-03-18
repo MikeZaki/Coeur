@@ -15,7 +15,7 @@ class GradientView: UIView {
     gl = CAGradientLayer()
     gl.colors = colors.map({ $0.cgColor })
     gl.startPoint = CGPoint(x: 0, y: 0)
-    gl.endPoint = CGPoint(x: 0, y: 0.7774)
+    gl.endPoint = CGPoint(x: 0, y: 1.0)
     gl.locations = locations
     gl.frame = frame
 

@@ -96,7 +96,6 @@ public class PulsePPGOrgan:
     }
 
     self.delegate?.ppgOrgan(self, didCapture: smoothedValue)
-
     CVPixelBufferUnlockBaseAddress(cvimagebuffer, CVPixelBufferLockFlags(rawValue: 0))
   }
 }

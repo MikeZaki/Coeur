@@ -13,9 +13,15 @@ public struct CoeurTutorialPageData {
   let tutorialPageTitle: String
   let tutorialPageText: String
   let tutorialPageIndex: Int
+  let backgroundImage: UIImage?
 }
 
-class CoeurMeasureTutorialPageController: UIViewController {
+public protocol CoeurTutorialPage: class {
+  var pageIndex: Int { get set }
+  func configure(pageData: CoeurTutorialPageData)
+}
+
+class CoeurMeasureTutorialPageController: UIViewController, CoeurTutorialPage {
 
   @IBOutlet weak var tutorialImageView: UIImageView! {
     didSet {

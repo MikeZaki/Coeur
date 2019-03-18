@@ -18,6 +18,7 @@ fileprivate struct Constants {
 
 class DashboardViewController: UIViewController {
 
+  @IBOutlet weak var bloodPressureLabel: UILabel!
   @IBOutlet weak var displaynameLabel: UILabel!
   @IBOutlet weak var progressRingContainer: RingProgressGroupView!
   @IBOutlet weak var dashboardCardView: UIView!
@@ -91,6 +92,14 @@ class DashboardViewController: UIViewController {
         height: 300
       )
     ).layer, at: 0)
+
+    guard let bpMeasurements = UserDefaults.standard.array(forKey: CoeurUserDefaultKeys.kBPMeasurements),
+          let bp = bpMeasurements.last else {
+      bloodPressureLabel.text = "-/-"
+      return
+    }
+
+    bloodPressureLabel.text = "\(bp)"
   }
 
   override func viewDidAppear(_ animated: Bool) {
